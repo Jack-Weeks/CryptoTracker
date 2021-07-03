@@ -181,10 +181,10 @@ def main():
         json.dump(storage, outfile, indent=4)
 
     data = analysis()
-    with open ('index.MD', 'w') as f:
+    with open ('docs/index.MD', 'w') as f:
         f.write('```yaml\n')
         f.close()
-    with open("index.MD", "a") as outfile:
+    with open("docs/index.MD", "a") as outfile:
         json.dump(data, outfile, indent=4)
     testing_my_patience = """<html>
     <head>
@@ -261,7 +261,7 @@ def main():
     #     outfile.write(testing_my_patience)
     #     outfile.close()
 
-    with open('index.MD', 'a+') as file:
+    with open('docs/index.MD', 'a+') as file:
         file.write("\n```")
         file.close()
 
