@@ -1,7 +1,7 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 299.46994513415314,
+        "Current Price": 298.2721570129596,
         "Current Balance": 0.166151507937,
         "Average_Hourly_Increase": 0.0,
         "Average_Hourly_Value_Increase": 0.0,
@@ -14,26 +14,26 @@
     },
     "XFX": {
         "Current Price": 0,
-        "Current Balance": 3.3868557842950002,
-        "Average_Hourly_Increase": 0.0005426673069404618,
+        "Current Balance": 3.394541521013,
+        "Average_Hourly_Increase": 0.0029236904439604162,
         "Average_Hourly_Value_Increase": 0.0,
-        "Average_Daily_Increase": 0.0005858889218499863,
+        "Average_Daily_Increase": 0.0009239769121428596,
         "Average_Daily_Value_Increase": 0.0,
-        "Average_Weekly_Increase": 0.0005858889218499863,
+        "Average_Weekly_Increase": 0.0009239769121428596,
         "Average_Weekly_Value_Increase": 0.0,
-        "Average_Monthly_Increase": 0.0005858889218499863,
+        "Average_Monthly_Increase": 0.0009239769121428596,
         "Average_Monthly_Value_Increase": 0.0
     },
     "CGN": {
         "Current Price": 0,
         "Current Balance": 5500.0,
-        "Average_Hourly_Increase": 22.727272727272727,
+        "Average_Hourly_Increase": 15.15151515151515,
         "Average_Hourly_Value_Increase": 0.0,
-        "Average_Daily_Increase": 29.41176470588235,
+        "Average_Daily_Increase": 27.77777777777778,
         "Average_Daily_Value_Increase": 0.0,
-        "Average_Weekly_Increase": 29.41176470588235,
+        "Average_Weekly_Increase": 27.77777777777778,
         "Average_Weekly_Value_Increase": 0.0,
-        "Average_Monthly_Increase": 29.41176470588235,
+        "Average_Monthly_Increase": 27.77777777777778,
         "Average_Monthly_Value_Increase": 0.0
     },
     "SPARE": {
@@ -49,7 +49,7 @@
         "Average_Monthly_Value_Increase": 0.0
     },
     "AR": {
-        "Current Price": 10.50187700447297,
+        "Current Price": 10.48387655980851,
         "Current Balance": 0.05,
         "Average_Hourly_Increase": 0.0,
         "Average_Hourly_Value_Increase": 0.0,
