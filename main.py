@@ -179,6 +179,8 @@ def main():
     execute()
     with open("output.json", "w") as outfile:
         json.dump(storage, outfile, indent=4)
+    with open("README.md", "w") as outfile:
+        json.dump(storage, outfile, indent=4)
     data = analysis()
     return data
 
@@ -187,3 +189,4 @@ def index():
     output = main()
     return output
 
+main()
