@@ -182,7 +182,7 @@ def main():
 
     data = analysis()
     with open ('README.MD', 'w') as f:
-        f.write('yaml```\n')
+        f.write('```yaml\n')
         f.close()
     with open("README.MD", "a") as outfile:
         json.dump(data, outfile, indent=4)
