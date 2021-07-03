@@ -44,8 +44,9 @@ storage = {
 }
 
 api_call_list = []
-def farmr_api_call():
 
+
+def farmr_api_call():
     x = requests.get('https://farmr.net/read.php?user=95534481070362624').text
     blocks = x.split(';;')
     for block in blocks:
@@ -53,11 +54,9 @@ def farmr_api_call():
             json_dict = json.loads(block)
             api_call_list.append(json_dict[0])
             crypto_name = json_dict[0]['crypto'].upper()
-            storage[crypto_name]['Current Balance'] = round(json_dict[0]['balance'],5)
+            storage[crypto_name]['Current Balance'] = round(json_dict[0]['balance'], 5)
         except:
             pass
-
-
 
 
 def make_dfs():
@@ -131,7 +130,6 @@ def get_flax_data():
 
 
 def get_chia_data():
-
     driver = webdriver.Chrome('./chromedriver', options=options)
     driver.get('https://chia-og.foxypool.io/my-farmer')
     driver.minimize_window()
@@ -159,11 +157,15 @@ def get_chia_data():
 
     update_csv('XCH_data.csv', symbol)
 
+
 def get_spare_data():
     update_csv('Spare_data.csv', 'SPARE')
 
+
 def get_chaingreen_data():
     update_csv('CGN_data.csv', 'CGN')
+
+
 def execute():
     farmr_api_call()
     make_dfs()
@@ -175,27 +177,62 @@ def execute():
     get_spare_data()
 
 
+def num_items(d):
+    if isinstance(d, list):
+        for i in d:
+            for ii in num_items(i):
+                yield ii
+    elif isinstance(d, dict):
+        for k, v in d.items():
+            for ii in num_items(v):
+                yield ii
+    else:
+        yield 1
+
+
 def main():
     execute()
     with open("output.json", "w") as outfile:
         json.dump(storage, outfile, indent=4)
 
     data = analysis()
-    with open ('README.md', 'w') as f:
+    with open('README.md', 'w') as f:
         f.write('```yaml\n')
         f.close()
     with open("README.md", "a") as outfile:
         json.dump(data, outfile, indent=4)
-    with open('README.md', 'a+') as file:
-        file.write("\n```")
+
+    with open('D:\Programming\pythonProject\docs/index.html', 'w') as file:
+        file.write("<!DOCTYPE html>")
+        file.write("<html>")
+        file.write("""<header><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></header>""")
+        file.write('<body>')
+        file.write('<table class="table table-striped table-dark"">')
+        for item in data.keys():
+            # print(item)
+            file.write(
+                f'<tr><td rowspan={sum(num_items(data[item])) + 1} colspan=2 style="text-align:center" class="text-center align-middle">{item}</td>')
+            for i in data[item].keys():
+                # print(i)
+                # print(data[item][i])
+                file.write(f'<tr><td style="padding:10px">{i}</td><td style="padding:10px">{data[item][i]}</td></tr>')
+
+            file.write('</tr>')
+        file.write('</table>')
+        file.write('</body></html)')
+
         file.close()
 
     return data
+
 
 @app.route("/")
 def index():
     output = main()
     return output
 
-main()
 
+main()

@@ -31,7 +31,7 @@ def analysis():
         average_weekly_difference = round(z.mean(), 5)
         average_weekly_dollar_gainz = round(average_weekly_difference * data[token]['Current Price'], 2)
 
-        average_monthly_difference = round(p.mean(),3)
+        average_monthly_difference = round(p.mean(), 5)
         average_monthly_dollar_gainz = round(average_monthly_difference * data[token]['Current Price'], 2)
 
         data[token]['Average_Hourly_Increase'] = average_hourly_difference
