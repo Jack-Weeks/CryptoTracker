@@ -1,0 +1,9 @@
+PyVirtualDisplay==2.2
+yfinance==0.1.59
+requests==2.25.1
+selenium==3.141.0
+python_coinmarketcap==0.2
+Flask==2.0.1
+pandas==1.1.5
+beautifulsoup4==4.9.3
+coinmarketcapapi==0.5

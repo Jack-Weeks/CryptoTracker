@@ -7,8 +7,10 @@ import coinmarketcapapi
 import pandas as pd
 import json
 from analysis import analysis
+from flask import Flask
 from pyvirtualdisplay import Display
 
+app = Flask(__name__)
 
 options = webdriver.ChromeOptions()
 # options.add_argument('headless')
@@ -60,9 +62,9 @@ def farmr_api_call():
 
 def make_dfs():
     for token in storage.keys():
-        if not os.path.exists('Csvs/' + str(token) + '_data.csv'):
+        if not os.path.exists(str(token) + '_data.csv'):
             df = pd.DataFrame(columns=['Balance', 'Price'])
-            df.to_csv('Csvs/'+str(token) + '_data.csv', index=False)
+            df.to_csv(str(token) + '_data.csv', index=False)
 
 
 def get_prices():
@@ -99,7 +101,7 @@ def get_arweave_data():
     symbol = x.split()[1]
     storage[symbol]['Current Balance'] = balance
 
-    update_csv('Csvs/AR_data.csv', symbol)
+    update_csv('AR_data.csv', symbol)
 
 
 def get_flax_data():
@@ -125,7 +127,7 @@ def get_flax_data():
 
     storage[symbol]['Current Balance'] = flax_balance + pool_balance
 
-    update_csv('Csvs/XFX_data.csv', symbol)
+    update_csv('XFX_data.csv', symbol)
 
 
 def get_chia_data():
@@ -155,13 +157,13 @@ def get_chia_data():
 
     storage[symbol]['Current Balance'] = chia_balance + pool_balance
 
-    update_csv('Csvs/XCH_data.csv', symbol)
+    update_csv('XCH_data.csv', symbol)
 
 def get_spare_data():
-    update_csv('Csvs/Spare_data.csv', 'SPARE')
+    update_csv('Spare_data.csv', 'SPARE')
 
 def get_chaingreen_data():
-    update_csv('Csvs/CGN_data.csv', 'CGN')
+    update_csv('CGN_data.csv', 'CGN')
 def execute():
     farmr_api_call()
     make_dfs()
@@ -171,11 +173,17 @@ def execute():
     get_chia_data()
     get_chaingreen_data()
     get_spare_data()
-    return storage
 
 
-if __name__ == "__main__":
+def main():
     execute()
     with open("output.json", "w") as outfile:
         json.dump(storage, outfile, indent=4)
-    analysis()
+    data = analysis()
+    return data
+
+@app.route("/")
+def index():
+    output = main()
+    return output
+

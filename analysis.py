@@ -8,7 +8,7 @@ def analysis():
     for token in data.keys():
         USD_GBP = yf.download('GBPUSD=X', period='1d', interval='1h')
         exchange = USD_GBP['Close'][-1]
-        df = pd.read_csv('Csvs/'+ token + '_data.csv')
+        df = pd.read_csv(token + '_data.csv')
         df['Date'] = pd.to_datetime(df['Date'])
         df['% Change in Balance'] = (df.Balance.pct_change(periods=12)) * 100
         df['Balance Diff'] = df.Balance.diff()
@@ -46,14 +46,14 @@ def analysis():
         data[token]['Average_Monthly_Increase'] = average_monthly_difference
         data[token]['Average_Monthly_Value_Increase'] = average_monthly_dollar_gainz
 
-        df.to_excel('Excels/'+ token + '_analysis.xls', index=False)
+        df.to_excel(token + '_analysis.xls', index=False)
 
 
 
 
     with open("output.json", "w") as outfile:
         json.dump(data, outfile, indent=4)
-
+    return data
 
 
 
