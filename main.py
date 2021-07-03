@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import coinmarketcapapi
 import pandas as pd
 import json
+from analysis import analysis
 from pyvirtualdisplay import Display
 
 
@@ -177,3 +178,4 @@ if __name__ == "__main__":
     execute()
     with open("output.json", "w") as outfile:
         json.dump(storage, outfile, indent=4)
+    analysis()
