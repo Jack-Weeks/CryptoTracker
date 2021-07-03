@@ -181,12 +181,12 @@ def main():
         json.dump(storage, outfile, indent=4)
 
     data = analysis()
-    with open ('docs/index.MD', 'w') as f:
+    with open ('README.md', 'w') as f:
         f.write('```yaml\n')
         f.close()
-    with open("docs/index.MD", "a") as outfile:
+    with open("README.md", "a") as outfile:
         json.dump(data, outfile, indent=4)
-    with open('docs/index.MD', 'a+') as file:
+    with open('README.md', 'a+') as file:
         file.write("\n```")
         file.close()
 
