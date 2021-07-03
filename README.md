@@ -1,3 +1,6 @@
+```yaml
+
+
 {
     "XCH": {
         "Current Price": 298.8157924502645,
@@ -59,4 +62,5 @@
         "Average_Monthly_Increase": 0.0,
         "Average_Monthly_Value_Increase": 0.0
     }
-}
+
+```
