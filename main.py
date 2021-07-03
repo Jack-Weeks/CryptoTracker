@@ -181,7 +181,10 @@ def main():
         json.dump(storage, outfile, indent=4)
 
     data = analysis()
-    with open("output.json", "w") as outfile:
+    with open ('README.MD', 'w') as f:
+        f.write('yaml```\n')
+        f.close()
+    with open("README.MD", "a") as outfile:
         json.dump(data, outfile, indent=4)
     testing_my_patience = """<html>
     <head>
@@ -257,6 +260,11 @@ def main():
     with open("index.html", "w") as outfile:
         outfile.write(testing_my_patience)
         outfile.close()
+
+    with open('README.MD', 'a+') as file:
+        file.write("\n```")
+        file.close()
+
     return data
 
 @app.route("/")
