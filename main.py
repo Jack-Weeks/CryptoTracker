@@ -179,9 +179,10 @@ def main():
     execute()
     with open("output.json", "w") as outfile:
         json.dump(storage, outfile, indent=4)
-    with open("README.md", "w") as outfile:
-        json.dump(storage, outfile, indent=4)
+
     data = analysis()
+    with open("README.md", "w") as outfile:
+        json.dump(data, outfile, indent=4)
     return data
 
 @app.route("/")
