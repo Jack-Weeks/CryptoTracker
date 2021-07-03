@@ -1,6 +1,6 @@
 {
     "XCH": {
-        "Current Price": 299.1599659171429,
+        "Current Price": 299.03296327092716,
         "Current Balance": 0.166151507937,
         "Average_Hourly_Increase": 0.0,
         "Average_Hourly_Value_Increase": 0.0,
@@ -14,13 +14,13 @@
     "XFX": {
         "Current Price": 0,
         "Current Balance": 3.385552904469,
-        "Average_Hourly_Increase": 0.0009777605681073253,
+        "Average_Hourly_Increase": 0.0006515606201072309,
         "Average_Hourly_Value_Increase": 0.0,
-        "Average_Daily_Increase": 0.00069432657406668,
+        "Average_Daily_Increase": 0.0006509311631875125,
         "Average_Daily_Value_Increase": 0.0,
-        "Average_Weekly_Increase": 0.00069432657406668,
+        "Average_Weekly_Increase": 0.0006509311631875125,
         "Average_Weekly_Value_Increase": 0.0,
-        "Average_Monthly_Increase": 0.00069432657406668,
+        "Average_Monthly_Increase": 0.0006509311631875125,
         "Average_Monthly_Value_Increase": 0.0
     },
     "CGN": {
@@ -28,11 +28,11 @@
         "Current Balance": 5500.0,
         "Average_Hourly_Increase": 22.727272727272727,
         "Average_Hourly_Value_Increase": 0.0,
-        "Average_Daily_Increase": 41.666666666666664,
+        "Average_Daily_Increase": 38.46153846153846,
         "Average_Daily_Value_Increase": 0.0,
-        "Average_Weekly_Increase": 41.666666666666664,
+        "Average_Weekly_Increase": 38.46153846153846,
         "Average_Weekly_Value_Increase": 0.0,
-        "Average_Monthly_Increase": 41.666666666666664,
+        "Average_Monthly_Increase": 38.46153846153846,
         "Average_Monthly_Value_Increase": 0.0
     },
     "SPARE": {
@@ -48,7 +48,7 @@
         "Average_Monthly_Value_Increase": 0.0
     },
     "AR": {
-        "Current Price": 10.60167500061067,
+        "Current Price": 10.60280754921607,
         "Current Balance": 0.05,
         "Average_Hourly_Increase": 0.0,
         "Average_Hourly_Value_Increase": 0.0,

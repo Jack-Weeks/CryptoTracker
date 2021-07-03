@@ -254,7 +254,7 @@ def main():
         }
     </script>
     </html>"""
-    with open("README.MD", "w") as outfile:
+    with open("index.html", "w") as outfile:
         outfile.write(testing_my_patience)
         outfile.close()
     return data
