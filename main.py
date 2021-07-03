@@ -257,9 +257,9 @@ def main():
         }
     </script>
     </html>"""
-    with open("index.html", "w") as outfile:
-        outfile.write(testing_my_patience)
-        outfile.close()
+    # with open("index.html", "w") as outfile:
+    #     outfile.write(testing_my_patience)
+    #     outfile.close()
 
     with open('README.MD', 'a+') as file:
         file.write("\n```")
