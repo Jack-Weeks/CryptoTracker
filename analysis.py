@@ -22,16 +22,16 @@ def analysis():
         z = df.groupby(pd.Grouper(key = 'Date', freq='1W'))['Balance Diff'].mean()
         p = df.groupby(pd.Grouper(key = 'Date', freq='1M'))['Balance Diff'].mean()
 
-        average_hourly_difference = x.mean()
+        average_hourly_difference = round(x.mean(), 5)
         average_hourly_dollar_gainz = round(average_hourly_difference * data[token]['Current Price'], 2)
 
-        average_daily_difference = y.mean()
+        average_daily_difference = round(y.mean(), 5)
         average_daily_dollar_gainz = round(average_daily_difference * data[token]['Current Price'], 2)
 
-        average_weekly_difference = z.mean()
+        average_weekly_difference = round(z.mean(), 5)
         average_weekly_dollar_gainz = round(average_weekly_difference * data[token]['Current Price'], 2)
 
-        average_monthly_difference = p.mean()
+        average_monthly_difference = round(p.mean(),3)
         average_monthly_dollar_gainz = round(average_monthly_difference * data[token]['Current Price'], 2)
 
         data[token]['Average_Hourly_Increase'] = average_hourly_difference

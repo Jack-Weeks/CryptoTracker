@@ -73,7 +73,7 @@ def get_prices():
     for symbol in storage.keys():
         try:
             data = cmc.cryptocurrency_quotes_latest(symbol=symbol, convert='USD').data
-            storage[symbol]['Current Price'] = data[symbol]['quote']['USD']['price']
+            storage[symbol]['Current Price'] = round(data[symbol]['quote']['USD']['price'], 2)
         except:
             storage[symbol]['Current Price'] = 0
 
