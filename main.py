@@ -53,7 +53,7 @@ def farmr_api_call():
             json_dict = json.loads(block)
             api_call_list.append(json_dict[0])
             crypto_name = json_dict[0]['crypto'].upper()
-            storage[crypto_name]['Current Balance'] = json_dict[0]['balance']
+            storage[crypto_name]['Current Balance'] = round(json_dict[0]['balance'],5)
         except:
             pass
 
@@ -99,7 +99,7 @@ def get_arweave_data():
     x = soup.find('div', {'class': "ud6aj3-3 gHxoUx"}).findNext().findNext().text
     balance = float(x.split()[0])
     symbol = x.split()[1]
-    storage[symbol]['Current Balance'] = balance
+    storage[symbol]['Current Balance'] = round(balance, 5)
 
     update_csv('AR_data.csv', symbol)
 
@@ -125,7 +125,7 @@ def get_flax_data():
     symbol = flax_pool_balance.text.split()[1]
     driver.quit()
 
-    storage[symbol]['Current Balance'] = flax_balance + pool_balance
+    storage[symbol]['Current Balance'] = round(flax_balance + pool_balance, 5)
 
     update_csv('XFX_data.csv', symbol)
 
@@ -155,7 +155,7 @@ def get_chia_data():
     symbol = balance.split()[1]
     driver.quit()
 
-    storage[symbol]['Current Balance'] = chia_balance + pool_balance
+    storage[symbol]['Current Balance'] = round(chia_balance + pool_balance, 5)
 
     update_csv('XCH_data.csv', symbol)
 
@@ -186,81 +186,6 @@ def main():
         f.close()
     with open("docs/index.MD", "a") as outfile:
         json.dump(data, outfile, indent=4)
-    testing_my_patience = """<html>
-    <head>
-        <title>Convert JSON Data to HTML Table</title>
-        <style>
-            th, td, p, input {
-                font:14px Verdana;
-            }
-            table, th, td 
-            {
-                border: solid 1px #DDD;
-                border-collapse: collapse;
-                padding: 2px 3px;
-                text-align: center;
-            }
-            th {
-                font-weight:bold;
-            }
-        </style>
-    </head>
-    <body>
-        <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
-        <p id="showData"></p>
-    </body>
-    
-    <script>
-        function CreateTableFromJSON() {
-            var myBooks = ["""+str(data)+""""
-            ]
-    
-            // EXTRACT VALUE FOR HTML HEADER. 
-            // ('Book ID', 'Book Name', 'Category' and 'Price')
-            var col = [];
-            for (var i = 0; i < myBooks.length; i++) {
-                for (var key in myBooks[i]) {
-                    if (col.indexOf(key) === -1) {
-                        col.push(key);
-                    }
-                }
-            }
-    
-            // CREATE DYNAMIC TABLE.
-            var table = document.createElement("table");
-    
-            // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-    
-            var tr = table.insertRow(-1);                   // TABLE ROW.
-    
-            for (var i = 0; i < col.length; i++) {
-                var th = document.createElement("th");      // TABLE HEADER.
-                th.innerHTML = col[i];
-                tr.appendChild(th);
-            }
-    
-            // ADD JSON DATA TO THE TABLE AS ROWS.
-            for (var i = 0; i < myBooks.length; i++) {
-    
-                tr = table.insertRow(-1);
-    
-                for (var j = 0; j < col.length; j++) {
-                    var tabCell = tr.insertCell(-1);
-                    tabCell.innerHTML = myBooks[i][col[j]];
-                }
-            }
-    
-            // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-            var divContainer = document.getElementById("showData");
-            divContainer.innerHTML = "";
-            divContainer.appendChild(table);
-        }
-    </script>
-    </html>"""
-    # with open("index.html", "w") as outfile:
-    #     outfile.write(testing_my_patience)
-    #     outfile.close()
-
     with open('docs/index.MD', 'a+') as file:
         file.write("\n```")
         file.close()
