@@ -181,8 +181,82 @@ def main():
         json.dump(storage, outfile, indent=4)
 
     data = analysis()
-    with open("README.yaml", "w") as outfile:
+    with open("output.json", "w") as outfile:
         json.dump(data, outfile, indent=4)
+    testing_my_patience = """<html>
+    <head>
+        <title>Convert JSON Data to HTML Table</title>
+        <style>
+            th, td, p, input {
+                font:14px Verdana;
+            }
+            table, th, td 
+            {
+                border: solid 1px #DDD;
+                border-collapse: collapse;
+                padding: 2px 3px;
+                text-align: center;
+            }
+            th {
+                font-weight:bold;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
+        <p id="showData"></p>
+    </body>
+    
+    <script>
+        function CreateTableFromJSON() {
+            var myBooks = ["""+str(data)+""""
+            ]
+    
+            // EXTRACT VALUE FOR HTML HEADER. 
+            // ('Book ID', 'Book Name', 'Category' and 'Price')
+            var col = [];
+            for (var i = 0; i < myBooks.length; i++) {
+                for (var key in myBooks[i]) {
+                    if (col.indexOf(key) === -1) {
+                        col.push(key);
+                    }
+                }
+            }
+    
+            // CREATE DYNAMIC TABLE.
+            var table = document.createElement("table");
+    
+            // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+    
+            var tr = table.insertRow(-1);                   // TABLE ROW.
+    
+            for (var i = 0; i < col.length; i++) {
+                var th = document.createElement("th");      // TABLE HEADER.
+                th.innerHTML = col[i];
+                tr.appendChild(th);
+            }
+    
+            // ADD JSON DATA TO THE TABLE AS ROWS.
+            for (var i = 0; i < myBooks.length; i++) {
+    
+                tr = table.insertRow(-1);
+    
+                for (var j = 0; j < col.length; j++) {
+                    var tabCell = tr.insertCell(-1);
+                    tabCell.innerHTML = myBooks[i][col[j]];
+                }
+            }
+    
+            // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+            var divContainer = document.getElementById("showData");
+            divContainer.innerHTML = "";
+            divContainer.appendChild(table);
+        }
+    </script>
+    </html>"""
+    with open("README.MD", "w") as outfile:
+        outfile.write(testing_my_patience)
+        outfile.close()
     return data
 
 @app.route("/")
@@ -191,3 +265,4 @@ def index():
     return output
 
 main()
+
