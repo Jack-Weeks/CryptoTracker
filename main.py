@@ -92,6 +92,18 @@ def update_csv(input_csv, symbol, storage_dict=storage):
     output_df.to_csv(input_csv, index=False)
     # storage_dict[symbol]['Balance History'] = dict(zip(output_df['Date'], output_df['Balance']))
 
+def update_totals(input_csv = 'Totals_data.csv',symbol = 'Totals', storage_dict=storage):
+    df = pd.read_csv(input_csv, header=0, index_col=0)
+    if len(df.columns) < 1:
+        df = pd.read_csv(input_csv, header=0)
+    df_cols = list(df.columns)
+    today = pd.to_datetime('now', exact=False).strftime("%d/%m/%Y %I:%M:%S")
+    new_row = pd.DataFrame(data=[[storage_dict[symbol]['Total']]],
+                           columns=df_cols, index=[today])
+    output_df = pd.concat([df, new_row], ignore_index=False).reset_index()
+    output_df.columns = ['Date', 'Total']
+    output_df.to_csv(input_csv, index=False)
+
 
 def get_arweave_data():
     url = 'https://viewblock.io/arweave/address/RzfJuyW51BmAVet9imfhcKBFDMskJcSlNXdPHH9sWHE'
@@ -189,6 +201,7 @@ def execute():
     get_spare_data()
 
 
+
 def num_items(d):
     if isinstance(d, list):
         for i in d:
@@ -208,6 +221,7 @@ def main():
         json.dump(storage, outfile, indent=4)
 
     data = analysis()
+    update_totals(storage_dict=data)
     with open('README.md', 'w') as f:
         f.write('```yaml\n')
         f.close()
