@@ -40,7 +40,7 @@ def analysis():
 
             # data[token]['Average Hourly Increase'] = average_hourly_difference
             # data[token]['Average Hourly Value Increase'] = average_hourly_dollar_gainz
-            data[token]['Current Value'] = df.iloc[-1:]['Value_Dollars'].values[0]
+            data[token]['Current Value'] = round(df.iloc[-1:]['Value_Dollars'].values[0],2)
             data[token]['Average Daily Increase'] = average_daily_difference
             data[token]['Average Daily Value Increase'] = average_daily_dollar_gainz
 
@@ -57,7 +57,7 @@ def analysis():
                 df = pd.read_csv(token + '_data.csv')
                 df['Date'] = pd.to_datetime(df['Date'])
                 y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Total'].mean().to_frame()
-                todays_gain = y.iloc[-1:]['Total'].values[0]
+                todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 2)
             except:
                 print('ya dingus')
 
