@@ -7,10 +7,10 @@ import coinmarketcapapi
 import pandas as pd
 import json
 from analysis import analysis
-from flask import Flask, render_template, request
+
 from pyvirtualdisplay import Display
 
-app = Flask(__name__)
+
 
 options = webdriver.ChromeOptions()
 # options.add_argument('headless')
@@ -195,6 +195,8 @@ def get_spare_data():
 def get_chaingreen_data():
     update_csv('CGN_data.csv', 'CGN')
 
+def get_sit_data():
+    update_csv('SIT_data.csv', 'SIT')
 
 def execute():
     farmr_api_call()
@@ -235,7 +237,7 @@ def main():
         json.dump(data, outfile, indent=4)
 
 
-    with open("D:/Programming/pythonProject/index.html", 'w') as file:
+    with open("D:/Programming/pythonProject/docs/index.html", 'w') as file:
         file.write("""
         <!DOCTYPE html>
         <html>
@@ -289,5 +291,5 @@ def main():
 #
 #
 
-
+main()
 
