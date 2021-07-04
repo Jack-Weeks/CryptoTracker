@@ -282,7 +282,7 @@ def main():
 
     return data
 
-main()
+
 @app.route("/")
 def index():
     return render_template('index.html')
