@@ -235,7 +235,7 @@ def main():
         json.dump(data, outfile, indent=4)
 
 
-    with open("D:/Programming/pythonProject/templates/index.html", 'w') as file:
+    with open("D:/Programming/pythonProject/index.html", 'w') as file:
         file.write("""
         <!DOCTYPE html>
         <html>
@@ -283,11 +283,11 @@ def main():
     return data
 
 
-@app.route("/")
-def index():
-    return render_template('index.html')
-
-
+# @app.route("/")
+# def index():
+#     return render_template('index.html')
+#
+#
 
 
 
