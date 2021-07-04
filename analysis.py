@@ -3,6 +3,8 @@ def analysis():
     import json
     import yfinance as yf
 
+    todays_gain = 0
+
     with open('output.json', "r") as file:
         data = json.load(file)
     for token in data.keys():

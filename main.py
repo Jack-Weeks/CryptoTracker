@@ -106,7 +106,7 @@ def update_totals(input_csv = 'Totals_data.csv',symbol = 'Totals', storage_dict=
     new_row = pd.DataFrame(data=[[storage_dict[symbol]['Total']]],
                            columns=df_cols, index=[today])
     output_df = pd.concat([df, new_row], ignore_index=False).reset_index()
-    output_df.columns = ['Date', 'Total']
+    output_df.columns = ['Date', 'Balance']
     output_df.to_csv(input_csv, index=False)
 
 
