@@ -154,4 +154,4 @@ for (let i=0;i<tokens.length;i++){
 };
 
 
-make_chart('graphing/data/Totals_data.csv','canvas-total', true)
+make_chart('graphing/data/Totals_analysis.csv','canvas-total', true)
