@@ -1,17 +1,23 @@
 import pandas as pd
+import json
 
-df = pd.read_csv('AR_data.csv')
-df['Date'] = pd.to_datetime(df['Date'])
-grouped_day = df.groupby(pd.Grouper(key = 'Date', freq='1D'))['Balance'].mean()
-grouped_day = grouped_day.dropna()
+with open('output.json', "r") as file:
+    data = json.load(file)
 
-
-grouped_hour = df.groupby(pd.Grouper(key = 'Date', freq='1H'))['Balance'].mean().to_frame()
-grouped_hour.columns = ['Balance Diff']
-grouped_hour = grouped_hour.dropna()
-grouped_hour['24 Hr Diff'] = grouped_hour['Balance Diff'].diff(periods = 4)
-
-df = pd.read_csv('Totals' + '_data.csv')
-df['Date'] = pd.to_datetime(df['Date'])
-y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Total'].mean().to_frame()
-todays_gain = y.iloc[-1:]['Total'].values[0]
+    df = pd.read_csv('AR' + '_data.csv')
+    df['Date'] = pd.to_datetime(df['Date'])
+    df['Value $ '] = df['Balance'] * data['AR']['Current Price']
+    data['AR']['Current Value'] = df.iloc[-1:]['Value $ '].values[0]
+# grouped_day = df.groupby(pd.Grouper(key = 'Date', freq='1D'))['Balance'].mean()
+# grouped_day = grouped_day.dropna()
+#
+#
+# grouped_hour = df.groupby(pd.Grouper(key = 'Date', freq='1H'))['Balance'].mean().to_frame()
+# grouped_hour.columns = ['Balance Diff']
+# grouped_hour = grouped_hour.dropna()
+# grouped_hour['24 Hr Diff'] = grouped_hour['Balance Diff'].diff(periods = 4)
+#
+# df = pd.read_csv('Totals' + '_data.csv')
+# df['Date'] = pd.to_datetime(df['Date'])
+# y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Total'].mean().to_frame()
+# todays_gain = y.iloc[-1:]['Total'].values[0]
