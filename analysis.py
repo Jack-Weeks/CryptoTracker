@@ -10,12 +10,13 @@ def analysis():
             USD_GBP = yf.download('GBPUSD=X', period='1d', interval='1h')
             exchange = USD_GBP['Close'][-1]
             df = pd.read_csv(token + '_data.csv')
+            df['plotting_date'] = pd.to_datetime(df['Date'], format='%d/%m').dt.date
             df['Date'] = pd.to_datetime(df['Date'])
-            df['% Change in Balance'] = (df.Balance.pct_change(periods=12)) * 100
-            df['Balance Diff'] = df.Balance.diff()
-            df['Value $ '] = df['Balance'] * data[token]['Current Price']
-            df['Value £ '] = df['Value $ '] / exchange
-            df['Change in Value'] = df['Balance Diff'] * df['Price']
+            df['% Chang_in_Balance'] = (df.Balance.pct_change(periods=12)) * 100
+            df['Balance_Diff'] = df.Balance.diff()
+            df['Value_Dollars'] = df['Balance'] * data[token]['Current_Price']
+            df['Value_Pounds'] = df['Value_Dollars'] / exchange
+            df['Change_in_Value'] = df['Balance_Diff'] * df['Price']
 
             x = df.groupby(pd.Grouper(key = 'Date', freq='1h'))['Balance Diff'].mean()
             y = df.groupby(pd.Grouper(key = 'Date', freq='1D'))['Balance Diff'].mean()
@@ -36,7 +37,7 @@ def analysis():
 
             # data[token]['Average Hourly Increase'] = average_hourly_difference
             # data[token]['Average Hourly Value Increase'] = average_hourly_dollar_gainz
-            data[token]['Current Value'] = df.iloc[-1:]['Value $ '].values[0]
+            data[token]['Current Value'] = df.iloc[-1:]['Value_$'].values[0]
             data[token]['Average Daily Increase'] = average_daily_difference
             data[token]['Average Daily Value Increase'] = average_daily_dollar_gainz
 
@@ -45,7 +46,7 @@ def analysis():
             #
             # data[token]['Average_Monthly_Increase'] = average_monthly_difference
             # data[token]['Average_Monthly_Value_Increase'] = average_monthly_dollar_gainz
-
+            df.to_csv(token + '_analysis.csv', index=False)
             df.to_excel(token + '_analysis.xls', index=False)
         except:
             try:
