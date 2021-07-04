@@ -7,6 +7,7 @@ import coinmarketcapapi
 import pandas as pd
 import json
 from analysis import analysis
+from CryptoDash.create import make_html
 
 from pyvirtualdisplay import Display
 
@@ -239,53 +240,7 @@ def main():
         f.close()
     with open("README.md", "a") as outfile:
         json.dump(data, outfile, indent=4)
-
-
-    with open("D:/Programming/pythonProject/docs/index.html", 'w') as file:
-        file.write("""
-        <!DOCTYPE html>
-        <html>
-        <header><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        </header>
-        <body style="background-color:black">
-        <div class="container" style="padding-top: 10%">
-        <div class="container text-center">
-        """)
-        for item in data.keys():
-            file.write(f"""
-            <div class="card text-white bg-dark box-shadow " style="margin-bottom:30px">
-                  <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">{item}</h4>
-                  </div>
-                  <div class="card-body">
-                      <div class="row row-cols-auto row-cols-md-auto d-flex justify-content-center mx-1 my-1">
-            """)
-            for i in data[item].keys():
-                file.write(f"""
-                <div class="col d-flex justify-content-center mx-auto my-4">
-                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
-                              <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">{i}</h4>
-                              </div>
-                              <div class="card-body" style="font-size:30px">
-                                  {data[item][i]}
-                              </div>
-                </div>
-                </div>
-                """)
-            file.write("</div></div></div>")
-        file.write("""
-        </div>
-        </div>
-        </body>
-        </html>
-        """)
-
-        file.close()
-
+    make_html(data, 'docs/index.html')
     return data
 
 
