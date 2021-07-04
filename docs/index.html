@@ -1,4 +1,301 @@
-<!DOCTYPE html><html><header><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></header><body class="container" style="padding: 5%"><table class="table table-striped table-bordered table-dark col-lg-4" style="width: 80%; left: 10%;right: 10%"><tr><td rowspan=5 colspan=2 style="text-align:center" class="text-center align-middle">XCH</td><tr><td style="padding:10px">Current Price</td><td style="padding:10px;text-align: right">298.1</td></tr><tr><td style="padding:10px">Current Balance</td><td style="padding:10px;text-align: right">0.16687</td></tr><tr><td style="padding:10px">Average Hourly Increase</td><td style="padding:10px;text-align: right">5e-05</td></tr><tr><td style="padding:10px">Average Hourly Value Increase</td><td style="padding:10px;text-align: right">0.01</td></tr></tr><tr><td rowspan=5 colspan=2 style="text-align:center" class="text-center align-middle">XFX</td><tr><td style="padding:10px">Current Price</td><td style="padding:10px;text-align: right">0</td></tr><tr><td style="padding:10px">Current Balance</td><td style="padding:10px;text-align: right">3.44111</td></tr><tr><td style="padding:10px">Average Hourly Increase</td><td style="padding:10px;text-align: right">0.00246</td></tr><tr><td style="padding:10px">Average Hourly Value Increase</td><td style="padding:10px;text-align: right">0.0</td></tr></tr><tr><td rowspan=5 colspan=2 style="text-align:center" class="text-center align-middle">CGN</td><tr><td style="padding:10px">Current Price</td><td style="padding:10px;text-align: right">0</td></tr><tr><td style="padding:10px">Current Balance</td><td style="padding:10px;text-align: right">5500.0</td></tr><tr><td style="padding:10px">Average Hourly Increase</td><td style="padding:10px;text-align: right">9.09091</td></tr><tr><td style="padding:10px">Average Hourly Value Increase</td><td style="padding:10px;text-align: right">0.0</td></tr></tr><tr><td rowspan=5 colspan=2 style="text-align:center" class="text-center align-middle">SPARE</td><tr><td style="padding:10px">Current Price</td><td style="padding:10px;text-align: right">0</td></tr><tr><td style="padding:10px">Current Balance</td><td style="padding:10px;text-align: right">24.0</td></tr><tr><td style="padding:10px">Average Hourly Increase</td><td style="padding:10px;text-align: right">0.0</td></tr><tr><td style="padding:10px">Average Hourly Value Increase</td><td style="padding:10px;text-align: right">0.0</td></tr></tr><tr><td rowspan=6 colspan=2 style="text-align:center" class="text-center align-middle">AR</td><tr><td style="padding:10px">Current Price</td><td style="padding:10px;text-align: right">10.42</td></tr><tr><td style="padding:10px">Current Balance</td><td style="padding:10px;text-align: right">0.05103</td></tr><tr><td style="padding:10px">Hashrate</td><td style="padding:10px;text-align: right">0.00</td></tr><tr><td style="padding:10px">Average Hourly Increase</td><td style="padding:10px;text-align: right">2e-05</td></tr><tr><td style="padding:10px">Average Hourly Value Increase</td><td style="padding:10px;text-align: right">0.0</td></tr></tr><tr><td rowspan=2 colspan=2 style="text-align:center" class="text-center align-middle">Totals</td><tr><td style="padding:10px">Total</td><td style="padding:10px;text-align: right">50.28</td></tr></tr></table></body></html)
+
+        <!DOCTYPE html>
+        <html>
+        <header><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </header>
+        <body style="background-color:black">
+        <div class="container" style="padding-top: 10%">
+        <div class="container text-center">
+        
+            <div class="card text-white bg-dark box-shadow " style="margin-bottom:30px">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">XCH</h4>
+                  </div>
+                  <div class="card-body">
+                      <div class="row row-cols-auto row-cols-md-auto d-flex justify-content-center mx-1 my-1">
+            
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Current Price</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  297.23
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Current Balance</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0.16687
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Average Hourly Increase</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  4e-05
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Average Hourly Value Increase</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0.01
+                              </div>
+                </div>
+                </div>
+                </div></div></div>
+            <div class="card text-white bg-dark box-shadow " style="margin-bottom:30px">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">XFX</h4>
+                  </div>
+                  <div class="card-body">
+                      <div class="row row-cols-auto row-cols-md-auto d-flex justify-content-center mx-1 my-1">
+            
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Current Price</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Current Balance</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  3.44248
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Average Hourly Increase</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0.00212
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Average Hourly Value Increase</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0.0
+                              </div>
+                </div>
+                </div>
+                </div></div></div>
+            <div class="card text-white bg-dark box-shadow " style="margin-bottom:30px">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">CGN</h4>
+                  </div>
+                  <div class="card-body">
+                      <div class="row row-cols-auto row-cols-md-auto d-flex justify-content-center mx-1 my-1">
+            
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Current Price</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Current Balance</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  5500.0
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Average Hourly Increase</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  9.09091
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Average Hourly Value Increase</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0.0
+                              </div>
+                </div>
+                </div>
+                </div></div></div>
+            <div class="card text-white bg-dark box-shadow " style="margin-bottom:30px">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">SPARE</h4>
+                  </div>
+                  <div class="card-body">
+                      <div class="row row-cols-auto row-cols-md-auto d-flex justify-content-center mx-1 my-1">
+            
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Current Price</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Current Balance</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  24.0
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Average Hourly Increase</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0.0
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Average Hourly Value Increase</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0.0
+                              </div>
+                </div>
+                </div>
+                </div></div></div>
+            <div class="card text-white bg-dark box-shadow " style="margin-bottom:30px">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">AR</h4>
+                  </div>
+                  <div class="card-body">
+                      <div class="row row-cols-auto row-cols-md-auto d-flex justify-content-center mx-1 my-1">
+            
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Current Price</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  10.42
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Current Balance</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0.05103
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Hashrate</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0.00
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Average Hourly Increase</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  2e-05
+                              </div>
+                </div>
+                </div>
+                
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Average Hourly Value Increase</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  0.0
+                              </div>
+                </div>
+                </div>
+                </div></div></div>
+            <div class="card text-white bg-dark box-shadow " style="margin-bottom:30px">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Totals</h4>
+                  </div>
+                  <div class="card-body">
+                      <div class="row row-cols-auto row-cols-md-auto d-flex justify-content-center mx-1 my-1">
+            
+                <div class="col d-flex justify-content-center mx-auto my-4">
+                <div class="card text-white bg-primary box-shadow" style="width:200px;height:200px">
+                              <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Total</h4>
+                              </div>
+                              <div class="card-body" style="font-size:30px">
+                                  50.13
+                              </div>
+                </div>
+                </div>
+                </div></div></div>
+        </div>
+        </div>
+        </body>
+        </html>
+        

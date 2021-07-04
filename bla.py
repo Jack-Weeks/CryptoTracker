@@ -228,7 +228,6 @@ def main():
     with open("README.md", "a") as outfile:
         json.dump(data, outfile, indent=4)
 
-
     with open('D:\Programming\pythonProject\docs/index.html', 'w') as file:
         file.write("""
         <!DOCTYPE html>
