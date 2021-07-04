@@ -57,6 +57,7 @@ def analysis():
                 df = pd.read_csv(token + '_data.csv')
                 df['Date'] = pd.to_datetime(df['Date'])
                 y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Total'].mean().to_frame()
+                df['Date'] = df['Date'].dt.strftime('%d/%m')
                 todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 4)
             except:
                 print('ya dingus')

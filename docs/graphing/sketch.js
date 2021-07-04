@@ -59,7 +59,7 @@ function make_chart(filename, id, showLabels) {
       // get the year and mean temp for each listing
       // note: the 'keys' here correspond to the headers
       // in our file and need to be typed exactly
-      let year = loadedData[i].plotting_date;
+      let year = loadedData[i].Date;
       let meanTemp = loadedData[i].Balance;
       console.log(meanTemp);
 
@@ -150,8 +150,8 @@ function make_chart(filename, id, showLabels) {
 let tokens = ['AR', 'XCH', 'SIT', 'CGN', 'XFX', 'SPARE'];
 
 for (let i=0;i<tokens.length;i++){
-  make_chart('graphing/data/' + tokens[i] + '_analysis.csv','canvas-' + tokens[i], false);
-};
+  make_chart('../' + tokens[i] + '_analysis.csv','canvas-' + tokens[i], false);
+}
 
 
-make_chart('graphing/data/Totals_data.csv','canvas-total', true)
+make_chart('../' + 'Totals_analysis.csv','canvas-total', true)

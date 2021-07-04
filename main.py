@@ -62,6 +62,8 @@ def farmr_api_call():
             json_dict = json.loads(block)
             api_call_list.append(json_dict[0])
             crypto_name = json_dict[0]['crypto'].upper()
+            if crypto_name == 'SIT':
+                storage[crypto_name]['Current Balance'] = round(json_dict[0]['walletBalance'], 5)
             storage[crypto_name]['Current Balance'] = round(json_dict[0]['balance'], 5)
         except:
             pass
@@ -109,6 +111,8 @@ def update_totals(input_csv = 'Totals_data.csv',symbol = 'Totals', storage_dict=
     output_df = pd.concat([df, new_row], ignore_index=False).reset_index()
     output_df.columns = ['Date', 'Balance']
     output_df.to_csv(input_csv, index=False)
+    output_df['Date'] = output_df['Date'].dt.strftime('%d/%m')
+    output_df.to_csv('Totals_analysis.csv')
 
 
 def get_arweave_data():
