@@ -1,14 +1,14 @@
 {
     "XCH": {
-        "Current Price": 298.82,
+        "Current Price": 296.27,
         "Current Balance": 0.17314,
-        "Average Daily Increase": 0.00013,
+        "Average Daily Increase": 0.00012,
         "Average Daily Value Increase": 0.04
     },
     "XFX": {
         "Current Price": 0,
-        "Current Balance": 3.66017,
-        "Average Daily Increase": 0.00511,
+        "Current Balance": 3.66385,
+        "Average Daily Increase": 0.00501,
         "Average Daily Value Increase": 0.0
     },
     "CGN": {
@@ -24,13 +24,13 @@
         "Average Daily Value Increase": 0.0
     },
     "AR": {
-        "Current Price": 11.12,
+        "Current Price": 11.07,
         "Current Balance": 0.05345,
-        "Hashrate": "0.00",
+        "Hashrate": "80.11",
         "Average Daily Increase": 6e-05,
         "Average Daily Value Increase": 0.0
     },
     "Totals": {
-        "Total": 52.33
+        "Total": 51.89
     }
 }
