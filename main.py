@@ -101,15 +101,17 @@ def get_arweave_data():
     x = soup.find('div', {'class': "ud6aj3-3 gHxoUx"}).findNext().findNext().text
     balance = float(x.split()[0])
     symbol = x.split()[1]
-    storage[symbol]['Current Balance'] = round(balance, 5)
+
 
     driver = webdriver.Chrome('./chromedriver', options=options)
     driver.get('https://ar.virdpool.com/#/address/RzfJuyW51BmAVet9imfhcKBFDMskJcSlNXdPHH9sWHE')
-    # driver.minimize_window()
+    driver.minimize_window()
     time.sleep(1)
     hashrate = driver.find_element_by_xpath('//*[@id="mount_point"]/div/div[2]/table[2]/tbody/tr[2]/td/span').text
+    pending_balance = driver.find_element_by_xpath('//*[@id="mount_point"]/div/div[2]/table[4]/tbody/tr[2]/td/span').text
     storage[symbol]['Hashrate'] = hashrate
 
+    storage[symbol]['Current Balance'] = round(balance + float(pending_balance), 5)
     update_csv('AR_data.csv', symbol)
 
 
