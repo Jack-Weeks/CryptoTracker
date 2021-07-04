@@ -41,6 +41,11 @@ storage = {
         'Current Price': float(),
         'Current Balance': float(),
     },
+    'SIT' : {
+        'Current Price' : float(),
+        'Current Balance': float(),
+
+    },
     'Totals': {
 }
 }

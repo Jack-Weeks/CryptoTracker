@@ -14,7 +14,7 @@ def analysis():
             df['% Change in Balance'] = (df.Balance.pct_change(periods=12)) * 100
             df['Balance Diff'] = df.Balance.diff()
             df['Value $ '] = df['Balance'] * data[token]['Current Price']
-            df['Value £ '] = df['Value $ '] * exchange
+            df['Value £ '] = df['Value $ '] / exchange
             df['Change in Value'] = df['Balance Diff'] * df['Price']
 
 
