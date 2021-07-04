@@ -1,5 +1,5 @@
 def make_html(data, path):
-    with open('index.html', 'w') as openfile:
+    with open(path, 'w') as openfile:
         openfile.write("""
             <!doctype html>
     <html lang="en">
