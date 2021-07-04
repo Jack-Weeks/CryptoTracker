@@ -1,15 +1,15 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 295.84,
+        "Current Price": 295.13,
         "Current Balance": 0.17314,
-        "Average Daily Increase": 0.00012,
-        "Average Daily Value Increase": 0.04
+        "Average Daily Increase": 0.00011,
+        "Average Daily Value Increase": 0.03
     },
     "XFX": {
         "Current Price": 0,
-        "Current Balance": 3.66385,
-        "Average Daily Increase": 0.00471,
+        "Current Balance": 3.67743,
+        "Average Daily Increase": 0.00479,
         "Average Daily Value Increase": 0.0
     },
     "CGN": {
@@ -25,13 +25,13 @@
         "Average Daily Value Increase": 0.0
     },
     "AR": {
-        "Current Price": 11.0,
+        "Current Price": 10.87,
         "Current Balance": 0.05345,
-        "Hashrate": "71.01",
+        "Hashrate": "88.74",
         "Average Daily Increase": 6e-05,
         "Average Daily Value Increase": 0.0
     },
     "Totals": {
-        "Total": 51.81
+        "Total": 51.68
     }
 }
