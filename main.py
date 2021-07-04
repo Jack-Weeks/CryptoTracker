@@ -10,7 +10,7 @@ from analysis import analysis
 from CryptoDash.create import make_html
 
 from pyvirtualdisplay import Display
-
+plotting_path = 'docs/graphing/data/'
 
 
 options = webdriver.ChromeOptions()
@@ -72,9 +72,9 @@ def farmr_api_call():
 
 def make_dfs():
     for token in storage.keys():
-        if not os.path.exists(str(token) + '_data.csv'):
+        if not os.path.exists(plotting_path + str(token) + '_data.csv'):
             df = pd.DataFrame(columns=['Balance', 'Price'])
-            df.to_csv(str(token) + '_data.csv', index=False)
+            df.to_csv(plotting_path+ str(token) + '_data.csv', index=False)
 
 
 def get_prices():
@@ -101,7 +101,7 @@ def update_csv(input_csv, symbol, storage_dict=storage):
     output_df.to_csv(input_csv, index=False)
     # storage_dict[symbol]['Balance History'] = dict(zip(output_df['Date'], output_df['Balance']))
 
-def update_totals(input_csv = 'Totals_data.csv',symbol = 'Totals', storage_dict=storage):
+def update_totals(input_csv = plotting_path + 'Totals_data.csv',symbol = 'Totals', storage_dict=storage):
     df = pd.read_csv(input_csv, header=0, index_col=0)
     if len(df.columns) < 1:
         df = pd.read_csv(input_csv, header=0)
@@ -113,7 +113,7 @@ def update_totals(input_csv = 'Totals_data.csv',symbol = 'Totals', storage_dict=
     output_df.columns = ['Date', 'Balance']
     output_df.to_csv(input_csv, index=False)
     output_df['Date'] = pd.to_datetime(output_df['Date']).dt.strftime('%d/%m')
-    output_df.to_csv('Totals_analysis.csv', index=False)
+    output_df.to_csv('docs/graphing/data/Total_analysis.csv', index=False)
 
 
 def get_arweave_data():
@@ -136,7 +136,7 @@ def get_arweave_data():
     driver.close()
 
     storage[symbol]['Current Balance'] = round(balance + float(pending_balance), 5)
-    update_csv('AR_data.csv', symbol)
+    update_csv(plotting_path + 'AR_data.csv', symbol)
 
 
 def get_flax_data():
@@ -164,7 +164,7 @@ def get_flax_data():
     storage[symbol]['Wallet Balance'] = round(flax_balance, 5)
     storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
 
-    update_csv('XFX_data.csv', symbol)
+    update_csv(plotting_path+ 'XFX_data.csv', symbol)
 
 
 def get_chia_data():
@@ -195,18 +195,18 @@ def get_chia_data():
     storage[symbol]['Wallet Balance'] = round(chia_balance, 5)
     storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
 
-    update_csv('XCH_data.csv', symbol)
+    update_csv(plotting_path + 'XCH_data.csv', symbol)
 
 
 def get_spare_data():
-    update_csv('Spare_data.csv', 'SPARE')
+    update_csv(plotting_path + 'Spare_data.csv', 'SPARE')
 
 
 def get_chaingreen_data():
-    update_csv('CGN_data.csv', 'CGN')
+    update_csv(plotting_path + 'CGN_data.csv', 'CGN')
 
 def get_sit_data():
-    update_csv('SIT_data.csv', 'SIT')
+    update_csv(plotting_path+ 'SIT_data.csv', 'SIT')
 
 def execute():
     farmr_api_call()

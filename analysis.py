@@ -4,14 +4,14 @@ def analysis():
     import yfinance as yf
 
     todays_gain = 0
-
+    plotting_path = 'docs/graphing/data/'
     with open('output.json', "r") as file:
         data = json.load(file)
     for token in data.keys():
         try:
             USD_GBP = yf.download('GBPUSD=X', period='1d', interval='1h')
             exchange = USD_GBP['Close'][-1]
-            df = pd.read_csv(token + '_data.csv')
+            df = pd.read_csv(plotting_path + token + '_data.csv')
             df['Date'] = pd.to_datetime(df['Date'])
             df['% Change_in_Balance'] = (df.Balance.pct_change(periods=12)) * 100
             df['Balance_Diff'] = df.Balance.diff()
@@ -50,11 +50,11 @@ def analysis():
             # data[token]['Average_Monthly_Increase'] = average_monthly_difference
             # data[token]['Average_Monthly_Value_Increase'] = average_monthly_dollar_gainz
             df['Date'] = df['Date'].dt.strftime('%d/%m')
-            df.to_csv(token + '_analysis.csv', index=False)
+            df.to_csv(plotting_path + token + '_analysis.csv', index=False)
             df.to_excel(token + '_analysis.xls', index=False)
         except:
             try:
-                df = pd.read_csv(token + '_data.csv')
+                df = pd.read_csv(plotting_path + token + '_data.csv')
                 df['Date'] = pd.to_datetime(df['Date'])
                 y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Total'].mean().to_frame()
                 df['Date'] = df['Date'].dt.strftime('%d/%m')

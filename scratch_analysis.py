@@ -16,7 +16,7 @@ import datetime as dt
 #     grouped_day['Date'] = df['Date'].dt.strftime('%d/%m')
 #     # grouped_day.to_csv('AR_Daily_Balance.csv', columns=['plotting_date', 'Balance'], index = False)
 
-df = pd.read_csv('Totals_data.csv')
+df = pd.read_csv('docs/graphing/data/Totals_data.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 y = df.groupby(pd.Grouper(key='Date', freq='10min')).mean()
 f = y.Balance.diff()
