@@ -89,7 +89,7 @@ def update_csv(input_csv, symbol, storage_dict=storage):
     if len(df.columns) < 2:
         df = pd.read_csv(input_csv, header=0)
     df_cols = list(df.columns)
-    today = pd.to_datetime('now', exact=False).strftime("%d/%m/%Y %I:%M:%S")
+    today = pd.to_datetime('now', exact=False)
     new_row = pd.DataFrame(data=[[storage_dict[symbol]['Current Balance'], storage_dict[symbol]['Current Price']]],
                            columns=df_cols, index=[today])
     output_df = pd.concat([df, new_row], ignore_index=False).reset_index()
@@ -102,7 +102,7 @@ def update_totals(input_csv = 'Totals_data.csv',symbol = 'Totals', storage_dict=
     if len(df.columns) < 1:
         df = pd.read_csv(input_csv, header=0)
     df_cols = list(df.columns)
-    today = pd.to_datetime('now', exact=False).strftime("%d/%m/%Y %I:%M:%S")
+    today = pd.to_datetime('now', exact=False)
     new_row = pd.DataFrame(data=[[storage_dict[symbol]['Total']]],
                            columns=df_cols, index=[today])
     output_df = pd.concat([df, new_row], ignore_index=False).reset_index()

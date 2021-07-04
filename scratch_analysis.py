@@ -8,13 +8,12 @@ with open('output.json', "r") as file:
 
     df = pd.read_csv('AR' + '_data.csv')
     df['Date'] = pd.to_datetime(df['Date'])
-    # df['plotting_date'] = pd.to_datetime(df['Date']).dt.date
-    # df['plotting_date'] = df['Date'].dt.strftime('%d/%m')
+    df['plotting_date'] = pd.to_datetime(df['Date']).dt.date
     df['Value $ '] = df['Balance'] * data['AR']['Current Price']
     data['AR']['Current Value'] = df.iloc[-1:]['Value $ '].values[0]
-    grouped_day = df.groupby(pd.Grouper(key='Date',freq='1d'))['Balance'].mean().to_frame().dropna()
+    grouped_day = df.groupby(pd.Grouper(key='Date', freq='1d'))['Balance'].mean().to_frame().dropna()
     grouped_day= grouped_day.reset_index()
-    grouped_day['plotting_date'] = df['Date'].dt.strftime('%d/%m')
+    grouped_day['plotting_date'] = df['Date'].dt.date
     grouped_day.to_csv('AR_Daily_Balance.csv', columns=['plotting_date', 'Balance'], index = False)
 
 
