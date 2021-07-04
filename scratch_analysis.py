@@ -10,3 +10,8 @@ grouped_hour = df.groupby(pd.Grouper(key = 'Date', freq='1H'))['Balance'].mean()
 grouped_hour.columns = ['Balance Diff']
 grouped_hour = grouped_hour.dropna()
 grouped_hour['24 Hr Diff'] = grouped_hour['Balance Diff'].diff(periods = 4)
+
+df = pd.read_csv('Totals' + '_data.csv')
+df['Date'] = pd.to_datetime(df['Date'])
+y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Total'].mean().to_frame()
+todays_gain = y.iloc[-1:]['Total'].values[0]
