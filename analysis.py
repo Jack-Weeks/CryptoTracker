@@ -37,7 +37,7 @@ def analysis():
 
             # data[token]['Average Hourly Increase'] = average_hourly_difference
             # data[token]['Average Hourly Value Increase'] = average_hourly_dollar_gainz
-
+            data[token]['Current Value'] = 
             data[token]['Average Daily Increase'] = average_daily_difference
             data[token]['Average Daily Value Increase'] = average_daily_dollar_gainz
 
