@@ -113,7 +113,7 @@ def update_totals(input_csv = 'Totals_data.csv',symbol = 'Totals', storage_dict=
     output_df.columns = ['Date', 'Balance']
     output_df.to_csv(input_csv, index=False)
     output_df['Date'] = output_df['Date'].dt.strftime('%d/%m')
-    output_df.to_csv('Totals_analysis.csv')
+    output_df.to_csv('Totals_analysis.csv', index=False)
 
 
 def get_arweave_data():
@@ -217,6 +217,7 @@ def execute():
     get_chia_data()
     get_chaingreen_data()
     get_spare_data()
+    get_sit_data()
 
 
 
