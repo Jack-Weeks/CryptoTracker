@@ -168,7 +168,7 @@ def get_chia_data():
         '8cae91ac66fd08959589339242980a88336bbb201c75a38cda84e32f1e4e1db06cbb52e2c7c57242528acab832ace197')
     login_button = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/button')
     login_button.click()
-    time.sleep(0.5)
+    time.sleep(1.5)
     chia_pool_balance = driver.find_element_by_xpath(
         '/html/body/app-root/div/app-my-farmer/div/div/div/div[1]/div[3]/div[1]/div/div[2]/span')
     pool_balance = float(chia_pool_balance.text.split()[0])
