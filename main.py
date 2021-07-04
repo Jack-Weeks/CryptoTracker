@@ -127,6 +127,7 @@ def get_arweave_data():
     hashrate = driver.find_element_by_xpath('//*[@id="mount_point"]/div/div[2]/table[2]/tbody/tr[2]/td/span').text
     pending_balance = driver.find_element_by_xpath('//*[@id="mount_point"]/div/div[2]/table[4]/tbody/tr[2]/td/span').text
     storage[symbol]['Hashrate'] = hashrate
+    driver.close()
 
     storage[symbol]['Current Balance'] = round(balance + float(pending_balance), 5)
     update_csv('AR_data.csv', symbol)
