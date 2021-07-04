@@ -57,7 +57,7 @@ def analysis():
                 df = pd.read_csv(token + '_data.csv')
                 df['Date'] = pd.to_datetime(df['Date'])
                 y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Total'].mean().to_frame()
-                todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 2)
+                todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 4)
             except:
                 print('ya dingus')
 
@@ -76,7 +76,8 @@ def analysis():
         except:
             pass
     data['Totals'] = {'Total': round(total, 2),
-                      "Today's Gain $": round(todays_gain, 2)}
+                      "Today's Gain $": todays_gain}
+    print(total, todays_gain)
     with open("output.json", "w") as outfile:
         json.dump(data, outfile, indent=4)
     return data

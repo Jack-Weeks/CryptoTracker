@@ -155,6 +155,8 @@ def get_flax_data():
     driver.quit()
 
     storage[symbol]['Current Balance'] = round(flax_balance + pool_balance, 5)
+    storage[symbol]['Wallet Balance'] = round(flax_balance, 5)
+    storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
 
     update_csv('XFX_data.csv', symbol)
 
@@ -184,6 +186,8 @@ def get_chia_data():
     driver.quit()
 
     storage[symbol]['Current Balance'] = round(chia_balance + pool_balance, 5)
+    storage[symbol]['Wallet Balance'] = round(chia_balance, 5)
+    storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
 
     update_csv('XCH_data.csv', symbol)
 
