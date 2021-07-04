@@ -64,7 +64,8 @@ def farmr_api_call():
             crypto_name = json_dict[0]['crypto'].upper()
             if crypto_name == 'SIT':
                 storage[crypto_name]['Current Balance'] = round(json_dict[0]['walletBalance'], 5)
-            storage[crypto_name]['Current Balance'] = round(json_dict[0]['balance'], 5)
+            else:
+                storage[crypto_name]['Current Balance'] = round(json_dict[0]['balance'], 5)
         except:
             pass
 
