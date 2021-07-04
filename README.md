@@ -1,15 +1,15 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 301.23,
-        "Current Balance": 0.17133,
-        "Average Hourly Increase": 0.00036,
-        "Average Hourly Value Increase": 0.11
+        "Current Price": 300.12,
+        "Current Balance": 0.17176,
+        "Average Hourly Increase": 0.0003,
+        "Average Hourly Value Increase": 0.09
     },
     "XFX": {
         "Current Price": 0,
-        "Current Balance": 3.60681,
-        "Average Hourly Increase": 0.00983,
+        "Current Balance": 3.61807,
+        "Average Hourly Increase": 0.01026,
         "Average Hourly Value Increase": 0.0
     },
     "CGN": {
@@ -25,13 +25,13 @@
         "Average Hourly Value Increase": -0.0
     },
     "AR": {
-        "Current Price": 11.27,
+        "Current Price": 11.12,
         "Current Balance": 0.05345,
         "Hashrate": "0.00",
         "Average Hourly Increase": 0.00013,
         "Average Hourly Value Increase": 0.0
     },
     "Totals": {
-        "Total": 52.21
+        "Total": 52.14
     }
 }
