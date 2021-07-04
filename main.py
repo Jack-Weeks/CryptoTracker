@@ -7,7 +7,7 @@ import coinmarketcapapi
 import pandas as pd
 import json
 from analysis import analysis
-from flask import Flask
+from flask import Flask, render_template, request
 from pyvirtualdisplay import Display
 
 app = Flask(__name__)
@@ -235,7 +235,7 @@ def main():
         json.dump(data, outfile, indent=4)
 
 
-    with open('D:\Programming\pythonProject\docs/index.html', 'w') as file:
+    with open("D:/Programming/pythonProject/templates/index.html", 'w') as file:
         file.write("""
         <!DOCTYPE html>
         <html>
@@ -282,11 +282,12 @@ def main():
 
     return data
 
-
+main()
 @app.route("/")
 def index():
-    output = main()
-    return output
+    return render_template('index.html')
 
 
-main()
+
+
+
