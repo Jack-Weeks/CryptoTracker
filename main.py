@@ -112,7 +112,7 @@ def update_totals(input_csv = 'Totals_data.csv',symbol = 'Totals', storage_dict=
     output_df = pd.concat([df, new_row], ignore_index=False).reset_index()
     output_df.columns = ['Date', 'Balance']
     output_df.to_csv(input_csv, index=False)
-    output_df['Date'] = output_df['Date'].dt.strftime('%d/%m')
+    output_df['Date'] = pd.to_datetime(output_df['Date']).dt.strftime('%d/%m')
     output_df.to_csv('Totals_analysis.csv', index=False)
 
 
