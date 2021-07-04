@@ -1,5 +1,7 @@
 import pandas as pd
 import json
+import datetime as dt
+
 
 with open('output.json', "r") as file:
     data = json.load(file)
@@ -10,10 +12,10 @@ with open('output.json', "r") as file:
     # df['plotting_date'] = df['Date'].dt.strftime('%d/%m')
     df['Value $ '] = df['Balance'] * data['AR']['Current Price']
     data['AR']['Current Value'] = df.iloc[-1:]['Value $ '].values[0]
-    grouped_day = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame().dropna()
+    grouped_day = df.groupby(pd.Grouper(key='Date',freq='1d'))['Balance'].mean().to_frame().dropna()
     grouped_day= grouped_day.reset_index()
     grouped_day['plotting_date'] = df['Date'].dt.strftime('%d/%m')
-    grouped_day['plotting_date','Balance'] .to_csv('AR_Daily_Balance.csv')
+    grouped_day.to_csv('AR_Daily_Balance.csv', columns=['plotting_date', 'Balance'], index = False)
 
 
 # grouped_day = df.groupby(pd.Grouper(key = 'Date', freq='1D'))['Balance'].mean()
