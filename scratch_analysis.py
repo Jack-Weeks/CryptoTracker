@@ -57,7 +57,8 @@ y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame()
 df['Date'] = df['Date'].dt.strftime('%d/%m')
 
 todays_gain_pct = (y['Balance'].pct_change().values[-1]) * 100
-todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 4)
+todays_gain = y.iloc[-2:]['Balance'].diff()
+
 new_df = y['Balance'].diff().round(2)
 new_df = new_df.reset_index()
 new_df['Date'].dt.strftime('%d/%m')
