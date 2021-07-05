@@ -55,73 +55,78 @@ df = pd.read_csv('docs/graphing/data/Totals_data.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame()
 df['Date'] = df['Date'].dt.strftime('%d/%m')
+
 todays_gain_pct = (y['Balance'].pct_change().values[-1]) * 100
 todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 4)
+new_df = y['Balance'].diff().round(2)
+new_df = new_df.reset_index()
+new_df['Date'].dt.strftime('%d/%m')
+new_df.to_csv('daily_gains.csv',index = False)
 
-import coinmarketcapapi
-storage = {
-    "XCH": {
-        "Current Price": 0,
-        "Current Balance": 0.18825,
-        "Wallet Balance": 0.14048,
-        "Collateral Balance": 0.04776,
-        "Current Value": 0.0,
-        "Average Daily Increase": 0.00019,
-        "Average Daily Value Increase": 0.0,
-        "Daily % Change": "5.12%"
-    },
-    "XFX": {
-        "Current Price": 0,
-        "Current Balance": 4.32541,
-        "Wallet Balance": 2.75,
-        "Collateral Balance": 1.57541,
-        "Current Value": 0.0,
-        "Average Daily Increase": 0.00726,
-        "Average Daily Value Increase": 0.0,
-        "Daily % Change": "7.52%"
-    },
-    "CGN": {
-        "Current Price": 0,
-        "Current Balance": 6000.0,
-        "Current Value": 0.0,
-        "Average Daily Increase": 8.06452,
-        "Average Daily Value Increase": 0.0,
-        "Daily % Change": "-17.28%"
-    },
-    "SPARE": {
-        "Current Price": 0,
-        "Current Balance": 28.0,
-        "Current Value": 0.0,
-        "Average Daily Increase": 0.06452,
-        "Average Daily Value Increase": 0.0,
-        "Daily % Change": "-16.85%"
-    },
-    "AR": {
-        "Current Price": 0,
-        "Current Balance": 0.06678,
-        "Hashrate": "0.00",
-        "Current Value": 0.0,
-        "Average Daily Increase": 0.00016,
-        "Average Daily Value Increase": 0.0,
-        "Daily % Change": "7.17%"
-    },
-    "SIT": {
-        "Current Price": 0,
-        "Current Balance": 4.0,
-        "Current Value": 0.0,
-        "Average Daily Increase": 0.02941,
-        "Average Daily Value Increase": 0.0,
-        "Daily % Change": "35.29%"
-    },
-    "Totals": {
-        "Total": 0.0,
-        "Today's Gain $": 1.324,
-        "Today's % Gain": 3.0
-    }
-}
-cmc_api_key = 'a98e9495-0d8f-438b-8691-cb08d162cd59'
-cmc = coinmarketcapapi.CoinMarketCapAPI(cmc_api_key)
-data = cmc.cryptocurrency_quotes_latest(symbol='XCH', convert='USD').data
-storage['XCH']['Current Price'] = round(data['XCH']['quote']['USD']['price'], 2)
-change = str(round(data['XCH']['quote']['USD']['percent_change_24h'], 2)) + '%'
-storage['XCH']['24hr Price Change'] = change
+# import coinmarketcapapi
+# storage = {
+#     "XCH": {
+#         "Current Price": 0,
+#         "Current Balance": 0.18825,
+#         "Wallet Balance": 0.14048,
+#         "Collateral Balance": 0.04776,
+#         "Current Value": 0.0,
+#         "Average Daily Increase": 0.00019,
+#         "Average Daily Value Increase": 0.0,
+#         "Daily % Change": "5.12%"
+#     },
+#     "XFX": {
+#         "Current Price": 0,
+#         "Current Balance": 4.32541,
+#         "Wallet Balance": 2.75,
+#         "Collateral Balance": 1.57541,
+#         "Current Value": 0.0,
+#         "Average Daily Increase": 0.00726,
+#         "Average Daily Value Increase": 0.0,
+#         "Daily % Change": "7.52%"
+#     },
+#     "CGN": {
+#         "Current Price": 0,
+#         "Current Balance": 6000.0,
+#         "Current Value": 0.0,
+#         "Average Daily Increase": 8.06452,
+#         "Average Daily Value Increase": 0.0,
+#         "Daily % Change": "-17.28%"
+#     },
+#     "SPARE": {
+#         "Current Price": 0,
+#         "Current Balance": 28.0,
+#         "Current Value": 0.0,
+#         "Average Daily Increase": 0.06452,
+#         "Average Daily Value Increase": 0.0,
+#         "Daily % Change": "-16.85%"
+#     },
+#     "AR": {
+#         "Current Price": 0,
+#         "Current Balance": 0.06678,
+#         "Hashrate": "0.00",
+#         "Current Value": 0.0,
+#         "Average Daily Increase": 0.00016,
+#         "Average Daily Value Increase": 0.0,
+#         "Daily % Change": "7.17%"
+#     },
+#     "SIT": {
+#         "Current Price": 0,
+#         "Current Balance": 4.0,
+#         "Current Value": 0.0,
+#         "Average Daily Increase": 0.02941,
+#         "Average Daily Value Increase": 0.0,
+#         "Daily % Change": "35.29%"
+#     },
+#     "Totals": {
+#         "Total": 0.0,
+#         "Today's Gain $": 1.324,
+#         "Today's % Gain": 3.0
+#     }
+# }
+# cmc_api_key = 'a98e9495-0d8f-438b-8691-cb08d162cd59'
+# cmc = coinmarketcapapi.CoinMarketCapAPI(cmc_api_key)
+# data = cmc.cryptocurrency_quotes_latest(symbol='XCH', convert='USD').data
+# storage['XCH']['Current Price'] = round(data['XCH']['quote']['USD']['price'], 2)
+# change = str(round(data['XCH']['quote']['USD']['percent_change_24h'], 2)) + '%'
+# storage['XCH']['24hr Price Change'] = change

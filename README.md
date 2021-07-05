@@ -1,15 +1,15 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 287.35,
+        "Current Price": 287.96,
         "Current Balance": 0.18825,
-        "24hr Price Change %": "-3.04%",
+        "24hr Price Change %": "-2.77%",
         "Wallet Balance": 0.14048,
         "Collateral Balance": 0.04776,
-        "Current Value": 54.09,
-        "Average Daily Increase": 0.00016,
-        "Average Daily Value Increase": 0.05,
-        "Daily % Change": "5.32%"
+        "Current Value": 54.21,
+        "Average Daily Increase": 0.00015,
+        "Average Daily Value Increase": 0.04,
+        "Daily % Change": "5.41%"
     },
     "XFX": {
         "Current Price": 0.0,
@@ -17,9 +17,9 @@
         "Wallet Balance": 2.75,
         "Collateral Balance": 1.58033,
         "Current Value": 0.0,
-        "Average Daily Increase": 0.00657,
+        "Average Daily Increase": 0.00619,
         "Average Daily Value Increase": 0.0,
-        "Daily % Change": "8.22%"
+        "Daily % Change": "8.57%"
     },
     "CGN": {
         "Current Price": 0.0,
@@ -27,7 +27,7 @@
         "Current Value": 0.0,
         "Average Daily Increase": 8.06452,
         "Average Daily Value Increase": 0.0,
-        "Daily % Change": "-14.02%"
+        "Daily % Change": "-12.43%"
     },
     "SPARE": {
         "Current Price": 0.0,
@@ -35,29 +35,29 @@
         "Current Value": 0.0,
         "Average Daily Increase": 0.06452,
         "Average Daily Value Increase": 0.0,
-        "Daily % Change": "-13.57%"
+        "Daily % Change": "-11.97%"
     },
     "AR": {
-        "Current Price": 10.71,
+        "Current Price": 10.68,
         "Current Balance": 0.06678,
-        "24hr Price Change %": "-3.59%",
-        "Hashrate": "121.65",
-        "Current Value": 0.72,
-        "Average Daily Increase": 0.00015,
+        "24hr Price Change %": "-3.46%",
+        "Hashrate": "24.53",
+        "Current Value": 0.71,
+        "Average Daily Increase": 0.00014,
         "Average Daily Value Increase": 0.0,
-        "Daily % Change": "8.27%"
+        "Daily % Change": "8.84%"
     },
     "SIT": {
         "Current Price": 0.0,
         "Current Balance": 4.0,
         "Current Value": 0.0,
-        "Average Daily Increase": 0.02564,
+        "Average Daily Increase": 0.02381,
         "Average Daily Value Increase": 0.0,
-        "Daily % Change": "43.59%"
+        "Daily % Change": "47.62%"
     },
     "Totals": {
-        "Total": 54.81,
-        "Today's Gain $": 1.377,
+        "Total": 54.92,
+        "Today's Gain $": 1.429,
         "Today's % Gain": 3.0
     }
 }

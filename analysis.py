@@ -64,6 +64,11 @@ def analysis():
                 df['Date'] = df['Date'].dt.strftime('%d/%m')
                 todays_gain_pct = round(y['Balance'].pct_change().values[-1], 2)*100
                 todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 3)
+                new_df = y['Balance'].diff().round(2)
+                new_df = new_df.reset_index()
+                new_df['Date'].dt.strftime('%d/%m')
+                new_df.to_csv(plotting_path + 'daily_gains.csv', index=False)
+
             except:
                 print('ya dingus')
 
