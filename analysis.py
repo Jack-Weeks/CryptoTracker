@@ -64,6 +64,7 @@ def analysis():
 
 
 
+    df = pd.read_csv('docs/graphing/data/Totals_data.csv')
 
 
 

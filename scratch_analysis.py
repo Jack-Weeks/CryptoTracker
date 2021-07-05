@@ -36,11 +36,11 @@ import matplotlib.pyplot as plt
 # y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Total'].mean().to_frame()
 # todays_gain = y.iloc[-1:]['Total'].values[0]
 
-df = pd.read_csv('docs/graphing/data/XCH_data.csv')
+df = pd.read_csv('docs/graphing/data/AR_data.csv')
 df['Date'] = pd.to_datetime(df['Date'])
-grouped = df.groupby(pd.Grouper(key='Date', freq='1H'))['Balance'].mean().to_frame()
-grouped = grouped.reset_index()
-# grouped['Date'] = grouped['Date'].dt.strftime('%d/%m')
-grouped['%'] = grouped['Balance'].pct_change(periods=1)
-plt.plot(grouped['Date'], grouped['%'] * 100)
-plt.show()
+grouped = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame()
+# grouped = grouped.reset_index()
+# # grouped['Date'] = grouped['Date'].dt.strftime('%d/%m')
+# grouped['%'] = grouped['Balance'].pct_change(periods=1)
+# plt.plot(grouped['Date'], grouped['%'] * 100)
+# plt.show()
