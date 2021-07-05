@@ -123,5 +123,5 @@ cmc_api_key = 'a98e9495-0d8f-438b-8691-cb08d162cd59'
 cmc = coinmarketcapapi.CoinMarketCapAPI(cmc_api_key)
 data = cmc.cryptocurrency_quotes_latest(symbol='XCH', convert='USD').data
 storage['XCH']['Current Price'] = round(data['XCH']['quote']['USD']['price'], 2)
-change = str(round(data['XCH']['quote']['USD']['percent_change_24h'], 2) + '%')
+change = str(round(data['XCH']['quote']['USD']['percent_change_24h'], 2)) + '%'
 storage['XCH']['24hr Price Change'] = change

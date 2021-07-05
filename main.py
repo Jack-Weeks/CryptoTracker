@@ -10,8 +10,8 @@ from analysis import analysis
 from CryptoDash.create import make_html
 
 from pyvirtualdisplay import Display
-plotting_path = 'docs/graphing/data/'
 
+plotting_path = 'docs/graphing/data/'
 
 options = webdriver.ChromeOptions()
 # options.add_argument('headless')
@@ -42,13 +42,13 @@ storage = {
         'Current Price': float(),
         'Current Balance': float(),
     },
-    'SIT' : {
-        'Current Price' : float(),
+    'SIT': {
+        'Current Price': float(),
         'Current Balance': float(),
 
     },
     'Totals': {
-}
+    }
 }
 
 api_call_list = []
@@ -74,7 +74,7 @@ def make_dfs():
     for token in storage.keys():
         if not os.path.exists(plotting_path + str(token) + '_data.csv'):
             df = pd.DataFrame(columns=['Balance', 'Price'])
-            df.to_csv(plotting_path+ str(token) + '_data.csv', index=False)
+            df.to_csv(plotting_path + str(token) + '_data.csv', index=False)
 
 
 def get_prices():
@@ -84,10 +84,10 @@ def get_prices():
         try:
             data = cmc.cryptocurrency_quotes_latest(symbol=symbol, convert='USD').data
             storage[symbol]['Current Price'] = round(data[symbol]['quote']['USD']['price'], 2)
-            change = str(round(data[symbol]['quote']['USD']['percent_change_24h'], 2) + '%')
-            storage[symbol]['24hr Price Change'] = change
+            change = round(data[symbol]['quote']['USD']['percent_change_24h'], 2)
+            storage[symbol]['24hr Price Change'] = str(change) + '%'
         except:
-            storage[symbol]['Current Price'] = 0
+            pass
 
 
 def update_csv(input_csv, symbol, storage_dict=storage):
@@ -103,7 +103,8 @@ def update_csv(input_csv, symbol, storage_dict=storage):
     output_df.to_csv(input_csv, index=False)
     # storage_dict[symbol]['Balance History'] = dict(zip(output_df['Date'], output_df['Balance']))
 
-def update_totals(input_csv = plotting_path + 'Totals_data.csv',symbol = 'Totals', storage_dict=storage):
+
+def update_totals(input_csv=plotting_path + 'Totals_data.csv', symbol='Totals', storage_dict=storage):
     df = pd.read_csv(input_csv, header=0, index_col=0)
     if len(df.columns) < 1:
         df = pd.read_csv(input_csv, header=0)
@@ -114,7 +115,6 @@ def update_totals(input_csv = plotting_path + 'Totals_data.csv',symbol = 'Totals
     output_df = pd.concat([df, new_row], ignore_index=False).reset_index()
     output_df.columns = ['Date', 'Balance']
     output_df.to_csv(input_csv, index=False)
-
 
     output_df['Date'] = pd.to_datetime(output_df['Date']).dt.strftime('%d/%m')
     output_df.to_csv('docs/graphing/data/Total_analysis.csv', index=False)
@@ -129,13 +129,13 @@ def get_arweave_data():
     balance = float(x.split()[0])
     symbol = x.split()[1]
 
-
     driver = webdriver.Chrome('./chromedriver', options=options)
     driver.get('https://ar.virdpool.com/#/address/RzfJuyW51BmAVet9imfhcKBFDMskJcSlNXdPHH9sWHE')
     driver.minimize_window()
     time.sleep(1.5)
     hashrate = driver.find_element_by_xpath('//*[@id="mount_point"]/div/div[2]/table[2]/tbody/tr[2]/td/span').text
-    pending_balance = driver.find_element_by_xpath('//*[@id="mount_point"]/div/div[2]/table[4]/tbody/tr[2]/td/span').text
+    pending_balance = driver.find_element_by_xpath(
+        '//*[@id="mount_point"]/div/div[2]/table[4]/tbody/tr[2]/td/span').text
     storage[symbol]['Hashrate'] = hashrate
     driver.close()
 
@@ -168,7 +168,7 @@ def get_flax_data():
     storage[symbol]['Wallet Balance'] = round(flax_balance, 5)
     storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
 
-    update_csv(plotting_path+ 'XFX_data.csv', symbol)
+    update_csv(plotting_path + 'XFX_data.csv', symbol)
 
 
 def get_chia_data():
@@ -209,8 +209,10 @@ def get_spare_data():
 def get_chaingreen_data():
     update_csv(plotting_path + 'CGN_data.csv', 'CGN')
 
+
 def get_sit_data():
-    update_csv(plotting_path+ 'SIT_data.csv', 'SIT')
+    update_csv(plotting_path + 'SIT_data.csv', 'SIT')
+
 
 def execute():
     farmr_api_call()
@@ -222,7 +224,6 @@ def execute():
     get_chaingreen_data()
     get_spare_data()
     get_sit_data()
-
 
 
 def num_items(d):
@@ -261,4 +262,3 @@ def main():
 #
 
 main()
-
