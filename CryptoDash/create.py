@@ -231,4 +231,3 @@ data = {
         "Today's Gain $": 0
     }
 }
-make_html(data, '../docs/index.html')
