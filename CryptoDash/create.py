@@ -63,10 +63,45 @@ def make_html(data, path):
 
             """)
 
+        openfile.write("""
+                      <div class="row">
+                  <div class="col-12">
+                      <div class="card">
+                          <div class="card-body">
+                              <div class="row">
+                                  <div class="col">
+                                      <div class="row">
+        """)
         for item in data.keys():
             if item != 'Totals':
                 openfile.write(f"""
-                    <div class="card" style="padding: 5%;background-color: #1a1a28">
+                                            <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                                                              <div class="card" style="background-color: #1a1a28">
+                                                      <div class="card-header" style="margin-top: 2%;">
+                                                          <h6 class="card-subtitle" style="font-size: 22px">{item}</h6>
+                                                      </div>
+                                                      <div class="card-body" style="text-align: right">
+                                                          <h4 class="card-title" style="font-size:24px"><strong>{data[item]['Current Balance']}</strong></h4>
+                                                          <h6 class="card-subtitle mb-2 text-muted" style="font-size: 16px">${data[item]['Current Value']}</h6>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                """)
+        openfile.write("""
+                                              </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+        """)
+
+
+        for item in data.keys():
+            if item != 'Totals':
+                openfile.write(f"""
+                    <div class="card" style="padding: 3%;background-color: #1a1a28">
                               <div class="row">
                       <div class="col-12">
 
@@ -142,4 +177,58 @@ def make_html(data, path):
     </html>
             """)
 
-
+import json
+data = {
+    "XCH": {
+        "Current Price": 290.62,
+        "Current Balance": 0.17727,
+        "Wallet Balance": 0.14048,
+        "Collateral Balance": 0.03679,
+        "Current Value": 51.52,
+        "Average Daily Increase": 0.00014,
+        "Average Daily Value Increase": 0.04
+    },
+    "XFX": {
+        "Current Price": 0,
+        "Current Balance": 3.83739,
+        "Wallet Balance": 2.5,
+        "Collateral Balance": 1.33739,
+        "Current Value": 0.0,
+        "Average Daily Increase": 0.0017,
+        "Average Daily Value Increase": 0.0
+    },
+    "CGN": {
+        "Current Price": 0,
+        "Current Balance": 6000.0,
+        "Current Value": 0.0,
+        "Average Daily Increase": 8.06452,
+        "Average Daily Value Increase": 0.0
+    },
+    "SPARE": {
+        "Current Price": 0,
+        "Current Balance": 28.0,
+        "Current Value": 0.0,
+        "Average Daily Increase": 0.06452,
+        "Average Daily Value Increase": 0.0
+    },
+    "AR": {
+        "Current Price": 10.85,
+        "Current Balance": 0.05765,
+        "Hashrate": "178.39",
+        "Current Value": 0.63,
+        "Average Daily Increase": 7e-05,
+        "Average Daily Value Increase": 0.0
+    },
+    "SIT": {
+        "Current Price": 0,
+        "Current Balance": 2.0,
+        "Current Value": 0.0,
+        "Average Daily Increase": 0.0,
+        "Average Daily Value Increase": 0.0
+    },
+    "Totals": {
+        "Total": 52.14,
+        "Today's Gain $": 0
+    }
+}
+make_html(data, '../docs/index.html')
