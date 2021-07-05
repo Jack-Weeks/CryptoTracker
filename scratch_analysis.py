@@ -45,3 +45,8 @@ diff = (grouped['Balance'].pct_change().values[-1] * 100)
 # grouped['%'] = grouped['Balance'].pct_change(periods=1)
 # plt.plot(grouped['Date'], grouped['%'] * 100)
 # plt.show()
+
+
+import json
+with open('output.json') as jsonFile:
+    jsonObject = json.load(jsonFile)
