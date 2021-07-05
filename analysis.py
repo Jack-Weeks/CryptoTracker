@@ -62,7 +62,7 @@ def analysis():
                 df['Date'] = pd.to_datetime(df['Date'])
                 y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame()
                 df['Date'] = df['Date'].dt.strftime('%d/%m')
-                todays_gain_pct = (y['Balance'].pct_change().values[-1])*100
+                todays_gain_pct = round(y['Balance'].pct_change().values[-1], 2)*100
                 todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 4)
             except:
                 print('ya dingus')
