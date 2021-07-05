@@ -1,21 +1,21 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 290.91,
-        "Current Balance": 0.18761,
+        "Current Price": 290.92,
+        "Current Balance": 0.18793,
         "Wallet Balance": 0.14048,
-        "Collateral Balance": 0.04713,
-        "Current Value": 54.58,
-        "Average Daily Increase": 0.00032,
+        "Collateral Balance": 0.04744,
+        "Current Value": 54.67,
+        "Average Daily Increase": 0.00031,
         "Average Daily Value Increase": 0.09
     },
     "XFX": {
         "Current Price": 0,
-        "Current Balance": 4.04565,
-        "Wallet Balance": 2.5,
-        "Collateral Balance": 1.54565,
+        "Current Balance": 4.29909,
+        "Wallet Balance": 2.75,
+        "Collateral Balance": 1.54909,
         "Current Value": 0.0,
-        "Average Daily Increase": 0.00561,
+        "Average Daily Increase": 0.01091,
         "Average Daily Value Increase": 0.0
     },
     "CGN": {
@@ -33,22 +33,22 @@
         "Average Daily Value Increase": 0.0
     },
     "AR": {
-        "Current Price": 10.65,
-        "Current Balance": 0.05765,
+        "Current Price": 10.7,
+        "Current Balance": 0.06257,
         "Hashrate": "0.00",
-        "Current Value": 0.61,
-        "Average Daily Increase": 7e-05,
+        "Current Value": 0.67,
+        "Average Daily Increase": 0.00014,
         "Average Daily Value Increase": 0.0
     },
     "SIT": {
         "Current Price": 0,
         "Current Balance": 4.0,
         "Current Value": 0.0,
-        "Average Daily Increase": 0.05556,
+        "Average Daily Increase": 0.05263,
         "Average Daily Value Increase": 0.0
     },
     "Totals": {
-        "Total": 55.19,
+        "Total": 55.34,
         "Today's Gain $": 0
     }
 }

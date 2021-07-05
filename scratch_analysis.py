@@ -38,7 +38,9 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('docs/graphing/data/XCH_data.csv')
 df['Date'] = pd.to_datetime(df['Date'])
-grouped = df.groupby(pd.Grouper(key='Date', freq='12H'))['Balance'].mean().to_frame()
+grouped = df.groupby(pd.Grouper(key='Date', freq='1H'))['Balance'].mean().to_frame()
 grouped = grouped.reset_index()
-plt.plot(grouped)
+# grouped['Date'] = grouped['Date'].dt.strftime('%d/%m')
+grouped['%'] = grouped['Balance'].pct_change(periods=1)
+plt.plot(grouped['Date'], grouped['%'] * 100)
 plt.show()
