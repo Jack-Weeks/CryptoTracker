@@ -7,9 +7,9 @@
         "Wallet Balance": 0.14048,
         "Collateral Balance": 0.04776,
         "Current Value": 54.42,
-        "Average Daily Increase": 0.00015,
+        "Average Daily Increase": 0.00014,
         "Average Daily Value Increase": 0.04,
-        "Daily % Change": "5.47%"
+        "Daily % Change": "5.5%"
     },
     "XFX": {
         "Current Price": 0.0,
@@ -17,9 +17,9 @@
         "Wallet Balance": 2.75,
         "Collateral Balance": 1.581,
         "Current Value": 0.0,
-        "Average Daily Increase": 0.00597,
+        "Average Daily Increase": 0.00587,
         "Average Daily Value Increase": 0.0,
-        "Daily % Change": "8.78%"
+        "Daily % Change": "8.88%"
     },
     "CGN": {
         "Current Price": 0.0,
@@ -27,7 +27,7 @@
         "Current Value": 0.0,
         "Average Daily Increase": 8.06452,
         "Average Daily Value Increase": 0.0,
-        "Daily % Change": "-11.5%"
+        "Daily % Change": "-11.06%"
     },
     "SPARE": {
         "Current Price": 0.0,
@@ -35,7 +35,7 @@
         "Current Value": 0.0,
         "Average Daily Increase": 0.06452,
         "Average Daily Value Increase": 0.0,
-        "Daily % Change": "-11.03%"
+        "Daily % Change": "-10.59%"
     },
     "AR": {
         "Current Price": 10.76,
@@ -45,19 +45,19 @@
         "Current Value": 0.72,
         "Average Daily Increase": 0.00014,
         "Average Daily Value Increase": 0.0,
-        "Daily % Change": "9.19%"
+        "Daily % Change": "9.35%"
     },
     "SIT": {
         "Current Price": 0.0,
         "Current Balance": 4.0,
         "Current Value": 0.0,
-        "Average Daily Increase": 0.02273,
+        "Average Daily Increase": 0.02222,
         "Average Daily Value Increase": 0.0,
-        "Daily % Change": "50.0%"
+        "Daily % Change": "51.11%"
     },
     "Totals": {
         "Total": 55.14,
-        "Today's Gain $": 1.461,
+        "Today's Gain $": 1.481,
         "Today's % Gain": 3.0
     }
 }
