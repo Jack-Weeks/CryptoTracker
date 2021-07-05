@@ -1,20 +1,20 @@
 {
     "XCH": {
-        "Current Price": 288.84,
-        "Current Balance": 0.17727,
+        "Current Price": 288.94,
+        "Current Balance": 0.17777,
         "Wallet Balance": 0.14048,
-        "Collateral Balance": 0.03679,
-        "Current Value": 51.2,
-        "Average Daily Increase": 0.0001,
-        "Average Daily Value Increase": 0.03
+        "Collateral Balance": 0.03729,
+        "Current Value": 51.36,
+        "Average Daily Increase": 0.00014,
+        "Average Daily Value Increase": 0.04
     },
     "XFX": {
         "Current Price": 0,
-        "Current Balance": 3.84222,
+        "Current Balance": 3.84342,
         "Wallet Balance": 2.5,
-        "Collateral Balance": 1.34222,
+        "Collateral Balance": 1.34342,
         "Current Value": 0.0,
-        "Average Daily Increase": 0.0022,
+        "Average Daily Increase": 0.002,
         "Average Daily Value Increase": 0.0
     },
     "CGN": {
@@ -32,9 +32,9 @@
         "Average Daily Value Increase": 0.0
     },
     "AR": {
-        "Current Price": 10.95,
+        "Current Price": 10.96,
         "Current Balance": 0.05765,
-        "Hashrate": "157.70",
+        "Hashrate": "171.92",
         "Current Value": 0.63,
         "Average Daily Increase": 7e-05,
         "Average Daily Value Increase": 0.0
@@ -47,7 +47,7 @@
         "Average Daily Value Increase": 0.0
     },
     "Totals": {
-        "Total": 51.83,
+        "Total": 52.0,
         "Today's Gain $": 0
     }
 }
