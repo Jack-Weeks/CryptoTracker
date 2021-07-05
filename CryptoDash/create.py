@@ -89,7 +89,7 @@ def make_html(data, path):
                     <div class="row">
                       <div class="col-sm-6 text-left">
                         <h6 class="card-subtitle text-muted" style="padding:2%">Daily gains</h6>
-                        <h2 class="card-title" style="font-size:32px"><strong>${5}<span style='color:#358F5D;font-size:22px'> ${1.23}</span></strong></h2>
+                        <h2 class="card-title" style="font-size:32px"><strong>${data['Totals']["Today's Gain $"]}</strong></h2>
                       </div>
                     </div>
                   </div>
@@ -233,7 +233,7 @@ def make_html(data, path):
       </body>
     </html>
             """)
-# import json
-# with open ('../output.json','r') as outy:
-#
-#     make_html(json.load(outy), '../docs/index.html')
+import json
+with open ('../output.json','r') as outy:
+
+    make_html(json.load(outy), '../docs/index.html')
