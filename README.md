@@ -6,10 +6,10 @@
         "24hr Price Change %": "-2.53%",
         "Wallet Balance": 0.14048,
         "Collateral Balance": 0.04776,
-        "Current Value": 54.34,
+        "Current Value": 54.43,
         "Average Daily Increase": 0.00014,
         "Average Daily Value Increase": 0.04,
-        "Daily % Change": "5.53%"
+        "Daily % Change": "5.55%"
     },
     "XFX": {
         "Current Price": 0.0,
@@ -57,7 +57,7 @@
     },
     "Totals": {
         "Total": 55.06,
-        "Today's Gain $": 1.5,
+        "Today's Gain $": 1.517,
         "Today's % Gain": 3.0
     }
 }
