@@ -62,7 +62,7 @@ def make_html(data, path):
         <div class="content">
           <div class="container-fluid">
               <div class="row">
-              <div class="col-12">
+              <div class="col col-lg-6">
                 <div class="card card-chart">
                   <div class="card-header ">
                     <div class="row">
@@ -81,9 +81,9 @@ def make_html(data, path):
                   </div>
                 </div>
               </div>
-            </div>
-                          <div class="row">
-              <div class="col-12">
+            
+            
+              <div class="col col-lg-6">
                 <div class="card card-chart">
                   <div class="card-header ">
                     <div class="row">
