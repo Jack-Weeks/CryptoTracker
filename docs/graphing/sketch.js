@@ -153,5 +153,5 @@ for (let i=0;i<tokens.length;i++){
   make_chart('graphing/data/' + tokens[i] + '_analysis.csv','canvas-' + tokens[i], false);
 };
 
-
+make_chart('graphing/data/daily_gains.csv','canvas-daily', false)
 make_chart('graphing/data/Total_analysis.csv','canvas-total', false)
