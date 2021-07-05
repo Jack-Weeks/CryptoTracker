@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import datetime as dt
+import matplotlib.pyplot as plt
 
 
 # with open('output.json', "r") as file:
@@ -16,11 +17,11 @@ import datetime as dt
 #     grouped_day['Date'] = df['Date'].dt.strftime('%d/%m')
 #     # grouped_day.to_csv('AR_Daily_Balance.csv', columns=['plotting_date', 'Balance'], index = False)
 
-df = pd.read_csv('docs/graphing/data/Totals_data.csv')
-df['Date'] = pd.to_datetime(df['Date'])
-y = df.groupby(pd.Grouper(key='Date', freq='10min')).mean()
-f = y.Balance.diff()
-todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 2)
+# df = pd.read_csv('docs/graphing/data/Totals_data.csv')
+# df['Date'] = pd.to_datetime(df['Date'])
+# y = df.groupby(pd.Grouper(key='Date', freq='10min')).mean()
+# f = y.Balance.diff()
+# todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 2)
 # grouped_day = df.groupby(pd.Grouper(key = 'Date', freq='1D'))['Balance'].mean()
 # grouped_day = grouped_day.dropna()
 #
@@ -34,3 +35,13 @@ todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 2)
 # df['Date'] = pd.to_datetime(df['Date'])
 # y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Total'].mean().to_frame()
 # todays_gain = y.iloc[-1:]['Total'].values[0]
+
+df = pd.read_csv('docs/graphing/data/AR_data.csv')
+df['Date'] = pd.to_datetime(df['Date'])
+grouped = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame()
+diff = (grouped['Balance'].pct_change().values[-1] * 100)
+# grouped = grouped.reset_index()
+# # grouped['Date'] = grouped['Date'].dt.strftime('%d/%m')
+# grouped['%'] = grouped['Balance'].pct_change(periods=1)
+# plt.plot(grouped['Date'], grouped['%'] * 100)
+# plt.show()

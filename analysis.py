@@ -23,12 +23,14 @@ def analysis():
             y = df.groupby(pd.Grouper(key = 'Date', freq='1D'))['Balance_Diff'].mean()
             z = df.groupby(pd.Grouper(key = 'Date', freq='1W'))['Balance_Diff'].mean()
             p = df.groupby(pd.Grouper(key = 'Date', freq='1M'))['Balance_Diff'].mean()
+            grouped_daily = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame()
 
 
 
             average_hourly_difference = round(x.mean(), 5)
             average_hourly_dollar_gainz = round(average_hourly_difference * data[token]['Current Price'], 2)
 
+            diff = (grouped_daily['Balance'].pct_change().values[-1] * 100)
             average_daily_difference = round(y.mean(), 5)
             average_daily_dollar_gainz = round(average_daily_difference * data[token]['Current Price'], 2)
 
@@ -40,9 +42,10 @@ def analysis():
 
             # data[token]['Average Hourly Increase'] = average_hourly_difference
             # data[token]['Average Hourly Value Increase'] = average_hourly_dollar_gainz
-            data[token]['Current Value'] = round(df.iloc[-1:]['Value_Dollars'].values[0],2)
+            data[token]['Current Value'] = round(df.iloc[-1:]['Value_Dollars'].values[0], 2)
             data[token]['Average Daily Increase'] = average_daily_difference
             data[token]['Average Daily Value Increase'] = average_daily_dollar_gainz
+            data[token]['Daily % Change'] = str(round(diff, 2)) + '%'
 
             # data[token]['Average_Weekly_Increase'] = average_weekly_difference
             # data[token]['Average_Weekly_Value_Increase'] = average_weekly_dollar_gainz
@@ -64,6 +67,7 @@ def analysis():
 
 
 
+    df = pd.read_csv('docs/graphing/data/Totals_data.csv')
 
 
 
