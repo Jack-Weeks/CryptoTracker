@@ -1,42 +1,42 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 288.94,
-        "Current Balance": 0.18106,
+        "Current Price": 288.64,
+        "Current Balance": 0.18328,
         "Wallet Balance": 0.14048,
-        "Collateral Balance": 0.04057,
-        "Current Value": 52.32,
-        "Average Daily Increase": 0.00037,
-        "Average Daily Value Increase": 0.11
+        "Collateral Balance": 0.0428,
+        "Current Value": 52.9,
+        "Average Daily Increase": 0.00042,
+        "Average Daily Value Increase": 0.12
     },
     "XFX": {
         "Current Price": 0,
-        "Current Balance": 3.91105,
+        "Current Balance": 3.93929,
         "Wallet Balance": 2.5,
-        "Collateral Balance": 1.41105,
+        "Collateral Balance": 1.43929,
         "Current Value": 0.0,
-        "Average Daily Increase": 0.00562,
+        "Average Daily Increase": 0.00607,
         "Average Daily Value Increase": 0.0
     },
     "CGN": {
         "Current Price": 0,
         "Current Balance": 0.0,
         "Current Value": 0.0,
-        "Average Daily Increase": -491.93548,
+        "Average Daily Increase": -366.93548,
         "Average Daily Value Increase": -0.0
     },
     "SPARE": {
         "Current Price": 0,
         "Current Balance": 0.0,
         "Current Value": 0.0,
-        "Average Daily Increase": -2.26882,
+        "Average Daily Increase": -1.68548,
         "Average Daily Value Increase": -0.0
     },
     "AR": {
-        "Current Price": 10.9,
+        "Current Price": 10.7,
         "Current Balance": 0.05765,
         "Hashrate": "0.00",
-        "Current Value": 0.63,
+        "Current Value": 0.62,
         "Average Daily Increase": 7e-05,
         "Average Daily Value Increase": 0.0
     },
@@ -44,11 +44,11 @@
         "Current Price": 0,
         "Current Balance": 0.0,
         "Current Value": 0.0,
-        "Average Daily Increase": -0.16667,
+        "Average Daily Increase": -0.125,
         "Average Daily Value Increase": -0.0
     },
     "Totals": {
-        "Total": 52.94,
+        "Total": 53.52,
         "Today's Gain $": 0
     }
 }
