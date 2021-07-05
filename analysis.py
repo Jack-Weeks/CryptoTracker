@@ -4,6 +4,7 @@ def analysis():
     import yfinance as yf
 
     todays_gain = 0
+    todays_gain_pct = 0
     plotting_path = 'docs/graphing/data/'
     with open('output.json', "r") as file:
         data = json.load(file)
@@ -61,6 +62,7 @@ def analysis():
                 df['Date'] = pd.to_datetime(df['Date'])
                 y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Total'].mean().to_frame()
                 df['Date'] = df['Date'].dt.strftime('%d/%m')
+                todays_gain_pct = (y['Total'].pct_change().values[-1])*100
                 todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 4)
             except:
                 print('ya dingus')
@@ -81,7 +83,8 @@ def analysis():
         except:
             pass
     data['Totals'] = {'Total': round(total, 2),
-                      "Today's Gain $": todays_gain}
+                      "Today's Gain $": todays_gain,
+                      "Today's % Gain": todays_gain_pct}
     print(total, todays_gain)
     with open("output.json", "w") as outfile:
         json.dump(data, outfile, indent=4)

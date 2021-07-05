@@ -84,6 +84,7 @@ def get_prices():
         try:
             data = cmc.cryptocurrency_quotes_latest(symbol=symbol, convert='USD').data
             storage[symbol]['Current Price'] = round(data[symbol]['quote']['USD']['price'], 2)
+            storage[symbol]['24hr Price Change %'] = data[symbol]['quote']['USD']['percent_change_24h']
         except:
             storage[symbol]['Current Price'] = 0
 
