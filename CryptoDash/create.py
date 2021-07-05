@@ -232,7 +232,7 @@ def make_html(data, path):
       <script src="graphing/sketch.js"></script>
       </body>
     </html>
-            """)
+#             """)
 import json
 with open ('../output.json','r') as outy:
 
