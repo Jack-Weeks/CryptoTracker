@@ -39,6 +39,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('docs/graphing/data/AR_data.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 grouped = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame()
+diff = (grouped['Balance'].pct_change().values[-1] * 100)
 # grouped = grouped.reset_index()
 # # grouped['Date'] = grouped['Date'].dt.strftime('%d/%m')
 # grouped['%'] = grouped['Balance'].pct_change(periods=1)
