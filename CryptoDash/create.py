@@ -1,3 +1,14 @@
+def get_color(value):
+    value2 = float(value[:-2])
+    if value2 > 0:
+        return '#358F5D'
+    elif value2 == 0:
+        return "#4E4E50"
+    else:
+        return '#B93535'
+    
+
+
 def make_html(data, path):
     with open(path, 'w') as openfile:
         openfile.write("""
@@ -66,7 +77,7 @@ def make_html(data, path):
         openfile.write("""
                       <div class="row">
                   <div class="col-12">
-                      <div class="card">
+                      <div class="card" style="background-color: #1a1a28">
                           <div class="card-body">
                               <div class="row">
                                   <div class="col">
@@ -76,12 +87,12 @@ def make_html(data, path):
             if item != 'Totals':
                 openfile.write(f"""
                                             <div class="col-xl-2 col-lg-3 col-md-4 col-6">
-                                                              <div class="card" style="background-color: #1a1a28">
+                                                              <div class="card">
                                                       <div class="card-header" style="margin-top: 2%;">
                                                           <h6 class="card-subtitle" style="font-size: 22px">{item}</h6>
                                                       </div>
                                                       <div class="card-body" style="text-align: right">
-                                                          <h4 class="card-title" style="font-size:24px"><strong>{data[item]['Current Balance']}</strong></h4>
+                                                          <h4 class="card-title" style="font-size:24px"><strong>{data[item]['Current Balance']} <span style="color:{get_color(data[item]['Daily % Change'])};font-size:18px;font-weight:600">{data[item]['Daily % Change']}</span></strong></h4>
                                                           <h6 class="card-subtitle mb-2 text-muted" style="font-size: 16px">${data[item]['Current Value']}</h6>
                                                       </div>
                                                   </div>
@@ -110,7 +121,7 @@ def make_html(data, path):
                       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                   <div class="card">
                                       <div class="card-body">
-                                        <h4 class="card-title" style="font-size:24px"><strong>{data[item]['Current Balance']} {item}</strong></h4>
+                                        <h4 class="card-title" style="font-size:24px"><strong>{data[item]['Current Balance']} {item} <span style="color:{get_color(data[item]['Daily % Change'])};font-size:18px">{data[item]['Daily % Change']}</span></strong></h4>
                                         <h6 class="card-subtitle mb-2 text-muted">Total</h6>
                                           <div class="chart-area">
                                               <canvas id="canvas-{item}">
@@ -123,7 +134,7 @@ def make_html(data, path):
                         <div class="row">
                     """)
                 for i in data[item].keys():
-                    if i != 'Current Balance':
+                    if i != 'Current Balance' and i != 'Daily % Change':
                         openfile.write(f"""
                                   <div class="col-6 col-xl-6">
                                       <div class="card">
@@ -176,4 +187,7 @@ def make_html(data, path):
       </body>
     </html>
             """)
+import json
+with open ('../output.json','r') as outy:
 
+    make_html(json.load(outy), '../docs/index.html')
