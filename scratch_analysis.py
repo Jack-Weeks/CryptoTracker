@@ -50,3 +50,10 @@ diff = (grouped['Balance'].pct_change().values[-1] * 100)
 import json
 with open('output.json') as jsonFile:
     jsonObject = json.load(jsonFile)
+
+df = pd.read_csv('docs/graphing/data/Totals_data.csv')
+df['Date'] = pd.to_datetime(df['Date'])
+y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame()
+df['Date'] = df['Date'].dt.strftime('%d/%m')
+todays_gain_pct = (y['Balance'].pct_change().values[-1]) * 100
+todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 4)
