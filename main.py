@@ -158,14 +158,16 @@ def get_flax_data():
     login_button = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/button')
     login_button.click()
     time.sleep(2)
+    pending_balance = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/div[1]/div[1]/div[1]/div/div[2]/span').text
     EC = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/div[1]/div[1]/div[3]/div/div[2]').text
     flax_pool_balance = driver.find_element_by_xpath(
         '/html/body/app-root/div/app-my-farmer/div/div/div/div[1]/div[3]/div[1]/div/div[2]/span')
     pool_balance = float(flax_pool_balance.text.split()[0])
+    pending_balance = float(pending_balance.split()[0])
     symbol = flax_pool_balance.text.split()[1]
     driver.quit()
 
-    storage[symbol]['Current Balance'] = round(flax_balance + pool_balance, 5)
+    storage[symbol]['Current Balance'] = round(flax_balance + pool_balance + pending_balance, 5)
     storage[symbol]['Wallet Balance'] = round(flax_balance, 5)
     storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
     storage[symbol]['EC'] = EC
@@ -184,9 +186,11 @@ def get_chia_data():
     login_button.click()
     time.sleep(1.5)
     EC = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/div[1]/div[1]/div[3]/div/div[2]').text
+    pending_balance = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/div[1]/div[1]/div[1]/div/div[2]/span').text
     chia_pool_balance = driver.find_element_by_xpath(
         '/html/body/app-root/div/app-my-farmer/div/div/div/div[1]/div[3]/div[1]/div/div[2]/span')
     pool_balance = float(chia_pool_balance.text.split()[0])
+    pending_balance = float(pending_balance.split()[0])
     symbol = chia_pool_balance.text.split()[1]
 
     driver.get(
@@ -198,7 +202,7 @@ def get_chia_data():
     symbol = balance.split()[1]
     driver.quit()
 
-    storage[symbol]['Current Balance'] = round(chia_balance + pool_balance, 5)
+    storage[symbol]['Current Balance'] = round(chia_balance + pool_balance + pending_balance, 5)
     storage[symbol]['Wallet Balance'] = round(chia_balance, 5)
     storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
     storage[symbol]['EC'] = EC
