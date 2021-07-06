@@ -169,6 +169,7 @@ def get_flax_data():
     storage[symbol]['Wallet Balance'] = round(flax_balance, 5)
     storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
     storage[symbol]['EC'] = EC
+    storage[symbol]['Pending Balance'] = pending_balance
 
     update_csv(plotting_path + 'XFX_data.csv', symbol)
 
@@ -204,6 +205,7 @@ def get_chia_data():
     storage[symbol]['Wallet Balance'] = round(chia_balance, 5)
     storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
     storage[symbol]['EC'] = EC
+    storage[symbol]['Pending Balance'] = pending_balance
 
     update_csv(plotting_path + 'XCH_data.csv', symbol)
 
