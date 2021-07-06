@@ -94,7 +94,7 @@ def update_csv(input_csv, symbol, storage_dict=storage):
         df = pd.read_csv(input_csv, header=0)
     df_cols = list(df.columns)
     today = pd.to_datetime('now', exact=False)
-    new_row = pd.DataFrame(data=[[float(storage_dict[symbol]['Current Balance'][:-len(symbol)].strip()), storage_dict[symbol]['Current Price']]],
+    new_row = pd.DataFrame(data=[[float(storage_dict[symbol]['Current Balance'].split()[0]), storage_dict[symbol]['Current Price']]],
                            columns=df_cols, index=[today])
     output_df = pd.concat([df, new_row], ignore_index=False).reset_index()
     output_df.columns = ['Date', 'Balance', 'Price']
