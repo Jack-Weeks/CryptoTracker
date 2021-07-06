@@ -80,14 +80,24 @@ function make_chart(filename, id, showLabels) {
           data: data,    // the data we loaded!
           borderColor: "#7832f9",
           pointBorderColor: "#FFF",
-          pointBackgroundColor: "#b332f9",
+          pointBackgroundColor: "#e08919",
           pointBorderWidth: 2,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 1,
           pointRadius: 0,
-          fill: true,
+          fillColor: "rgba(224,137,25)",
+          backgroundColor: "rgba(224,137,25,0.1)",
+          fill:true,
+          // fill: {
+          //
+          //   target:'origin',
+          //   above:"rgba(255, 23, 3,0.2)",
+          //
+          //   // opacity: 1,
+          //
+          // },
           borderWidth: 2,
-          borderColor: '#d048b6'
+          borderColor: '#e08919'
         }]
       },
       options: {
