@@ -20,10 +20,10 @@ def analysis():
             df['Value_Pounds'] = df['Value_Dollars'] / exchange
             df['Change_in_Value'] = df['Balance_Diff'] * df['Price']
 
-            x = df.groupby(pd.Grouper(key = 'Date', freq='1h'))['Balance_Diff'].mean()
-            y = df.groupby(pd.Grouper(key = 'Date', freq='1D'))['Balance_Diff'].mean()
-            z = df.groupby(pd.Grouper(key = 'Date', freq='1W'))['Balance_Diff'].mean()
-            p = df.groupby(pd.Grouper(key = 'Date', freq='1M'))['Balance_Diff'].mean()
+            x = df.groupby(pd.Grouper(key = 'Date', freq='1h'))['Balance_Diff'].sum()
+            y = df.groupby(pd.Grouper(key = 'Date', freq='1D'))['Balance_Diff'].sum()
+            z = df.groupby(pd.Grouper(key = 'Date', freq='1W'))['Balance_Diff'].sum()
+            p = df.groupby(pd.Grouper(key = 'Date', freq='1M'))['Balance_Diff'].sum()
             grouped_daily = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame()
 
 

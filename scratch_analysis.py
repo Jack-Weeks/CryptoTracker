@@ -151,4 +151,5 @@ new_df.to_csv('daily_gains.csv',index = False)
 
 df = pd.read_csv('docs/graphing/data/XCH_data.csv')
 df['Date'] = pd.to_datetime(df['Date'])
-grouped = df.groupby(pd.Grouper(key='Date', freq='d'))['Balance'].diff()
+df['Balance_Diff'] = df['Balance'].diff()
+grouped = df.groupby(pd.Grouper(key='Date', freq='d'))['Balance_Diff'].sum()
