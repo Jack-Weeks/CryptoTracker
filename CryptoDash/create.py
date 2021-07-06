@@ -79,9 +79,8 @@ def make_html(data, path):
                     </div>
                   </div>
                   <div class="card-body" style="width:100%;margin: 0px;padding: 0px">
-                    <div class="chart-area" style="width:100%">
+                    <div class="chart-area" style="width:100%;height:8rem">
                       <canvas id="canvas-total">
-
                       </canvas>
                     </div>
                   </div>
@@ -99,10 +98,9 @@ def make_html(data, path):
                       </div>
                     </div>
                   </div>
-                  <div class="card-body" style="width:100%;margin: 0px;padding: 0px">
-                    <div class="chart-area">
+                  <div class="card-body" style="width:100%;margin: 0px;padding: 0px;">
+                    <div class="chart-area" style="width:100%;height: 8rem">
                       <canvas id="canvas-daily">
-
                       </canvas>
                     </div>
                   </div>
