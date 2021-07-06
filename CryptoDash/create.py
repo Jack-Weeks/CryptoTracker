@@ -5,7 +5,7 @@ def get_color(value):
         print(str(value))
         if str(value)[0] == '-':
             return '#B93535'
-        elif value == 0:
+        elif value == 0.00:
             return "#4E4E50"
         else:
             return '#358F5D'
@@ -14,7 +14,7 @@ def get_color(value):
         value2 = float(value[:-2])
         if value2 > 0:
             return '#358F5D'
-        elif value2 == 0:
+        elif value2 == 0.00:
             return "#4E4E50"
         else:
             return '#B93535'

@@ -9,8 +9,6 @@ import json
 from analysis import analysis
 from CryptoDash.create import make_html
 
-from pyvirtualdisplay import Display
-
 plotting_path = 'docs/graphing/data/'
 
 options = webdriver.ChromeOptions()
