@@ -61,9 +61,9 @@ def farmr_api_call():
             api_call_list.append(json_dict[0])
             crypto_name = json_dict[0]['crypto'].upper()
             if crypto_name == 'SIT':
-                storage[crypto_name]['Current Balance'] = round(json_dict[0]['walletBalance'], 5)
+                storage[crypto_name]['Current Balance'] = str(round(json_dict[0]['walletBalance'], 5)) + ' ' + crypto_name
             else:
-                storage[crypto_name]['Current Balance'] = round(json_dict[0]['balance'], 5)
+                storage[crypto_name]['Current Balance'] = str(round(json_dict[0]['balance'], 5)) + ' ' + crypto_name
         except:
             pass
 
@@ -94,7 +94,7 @@ def update_csv(input_csv, symbol, storage_dict=storage):
         df = pd.read_csv(input_csv, header=0)
     df_cols = list(df.columns)
     today = pd.to_datetime('now', exact=False)
-    new_row = pd.DataFrame(data=[[storage_dict[symbol]['Current Balance'], storage_dict[symbol]['Current Price']]],
+    new_row = pd.DataFrame(data=[[float(storage_dict[symbol]['Current Balance'][:-len(symbol)].strip()), storage_dict[symbol]['Current Price']]],
                            columns=df_cols, index=[today])
     output_df = pd.concat([df, new_row], ignore_index=False).reset_index()
     output_df.columns = ['Date', 'Balance', 'Price']
@@ -137,7 +137,7 @@ def get_arweave_data():
     storage[symbol]['Hashrate'] = hashrate
     driver.close()
 
-    storage[symbol]['Current Balance'] = round(balance + float(pending_balance), 5)
+    storage[symbol]['Current Balance'] = str(round(balance + float(pending_balance), 5)) + ' AR'
     update_csv(plotting_path + 'AR_data.csv', symbol)
 
 
@@ -165,9 +165,9 @@ def get_flax_data():
     symbol = flax_pool_balance.text.split()[1]
     driver.quit()
 
-    storage[symbol]['Current Balance'] = round(flax_balance + pool_balance + pending_balance, 5)
-    storage[symbol]['Wallet Balance'] = round(flax_balance, 5)
-    storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
+    storage[symbol]['Current Balance'] = str(round(flax_balance + pool_balance + pending_balance, 5)) +' XFX'
+    storage[symbol]['Wallet Balance'] = str(round(flax_balance, 5)) + ' XFX'
+    storage[symbol]['Collateral Balance'] = str(round(pool_balance, 5)) + ' XFX'
     storage[symbol]['EC'] = EC[:9]
 
     update_csv(plotting_path + 'XFX_data.csv', symbol)
@@ -200,9 +200,9 @@ def get_chia_data():
     symbol = balance.split()[1]
     driver.quit()
 
-    storage[symbol]['Current Balance'] = round(chia_balance + pool_balance + pending_balance, 5)
-    storage[symbol]['Wallet Balance'] = round(chia_balance, 5)
-    storage[symbol]['Collateral Balance'] = round(pool_balance, 5)
+    storage[symbol]['Current Balance'] = str(round(chia_balance + pool_balance + pending_balance, 5)) + ' XCH'
+    storage[symbol]['Wallet Balance'] = str(round(chia_balance, 5)) + ' XCH'
+    storage[symbol]['Collateral Balance'] = str(round(pool_balance, 5)) + ' XCH'
     storage[symbol]['EC'] = EC[:9]
 
     update_csv(plotting_path + 'XCH_data.csv', symbol)
