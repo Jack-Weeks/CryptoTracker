@@ -13,12 +13,12 @@ def get_color(value):
         elif value == 0.00:
             return "#4E4E50"
         else:
-            return '#358F5D'
+            return '#17B45C'
     else:
 
         value2 = float(value[:-2])
         if value2 > 0:
-            return '#358F5D'
+            return '#17B45C'
         elif value2 == 0.00:
             return "#4E4E50"
         else:
@@ -156,7 +156,7 @@ def make_html(data, path):
 
                           <h4 class="title" style="font-size:30px">{item}</h4>
                       </div>
-                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                                   <div class="card" style="background-color: {small_tile_col};">
                                                                 <div class="card-header">
                                         <h4 class="card-title" style="font-size:24px"><strong>{data[item]['Current Balance']} <span style="color:{get_color(data[item]['Daily % Change'])};font-size:18px">{data[item]['Daily % Change']}</span><span class="card-subtitle mb-2 text-muted" style="font-size:18px;text-align:right"> / {data[item]['Current Value']}</span></strong></h4>
@@ -170,13 +170,13 @@ def make_html(data, path):
                                       </div>
                                   </div>
                       </div>
-                      <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                      <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-8">
                         <div class="row">
                     """)
                 for i in data[item].keys():
                     if (item == 'XCH' or item == 'AR') and (i == 'Current Price'):
                         openfile.write(f"""
-                                  <div class="col-6 col-xl-6">
+                                  <div class="col-6 col-xl-4">
                                       <div class="card" style="height:8rem;background-color: {small_tile_col};">
                                           <div class="card-body">
                                             <h4 class="card-title" style="font-size:24px"><strong>{data[item][i]} <span style="color:{get_color(data[item]['24hr Price Change %'])};font-size:18px">{data[item]['24hr Price Change %']}</span></strong></h4>
@@ -188,7 +188,7 @@ def make_html(data, path):
                             """)
                     elif i == 'Average Daily Increase':
                         openfile.write(f"""
-                                  <div class="col-6 col-xl-6">
+                                  <div class="col-6 col-xl-4">
                                       <div class="card" style="height:8rem;background-color: {small_tile_col};">
                                           <div class="card-body">
                                             <h4 class="card-title" style="font-size:24px"><strong>{data[item][i]}<span class="card-subtitle mb-2 text-muted" style="font-size:18px;text-align:right"> / {data[item]['Average Daily Value Increase']}</span></strong></h4>
@@ -202,7 +202,7 @@ def make_html(data, path):
 
                     elif i != 'Current Balance' and i != 'Daily % Change' and i != '24hr Price Change %' and i != 'Current Value' and i != 'Average Daily Value Increase':
                         openfile.write(f"""
-                                  <div class="col-6 col-xl-6">
+                                  <div class="col-6 col-xl-4">
                                       <div class="card" style="height:8rem;background-color: {small_tile_col};">
                                           <div class="card-body">
                                             <h4 class="card-title" style="font-size:24px"><strong>{data[item][i]}</strong></h4>
