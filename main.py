@@ -8,6 +8,7 @@ import pandas as pd
 import json
 from analysis import analysis
 from CryptoDash.create import make_html
+from data_cleanup import data_cleanup
 
 plotting_path = 'docs/graphing/data/'
 
@@ -252,7 +253,7 @@ def main():
     execute()
     with open("output.json", "w") as outfile:
         json.dump(storage, outfile, indent=4)
-
+    data_cleanup()
     data = analysis()
     update_totals(storage_dict=data)
     with open('README.md', 'w') as f:
