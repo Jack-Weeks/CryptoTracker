@@ -44,7 +44,7 @@ def analysis():
             # data[token]['Average Hourly Increase'] = average_hourly_difference
             # data[token]['Average Hourly Value Increase'] = average_hourly_dollar_gainz
             data[token]['Current Value'] = '$' + str(round(df.iloc[-1:]['Value_Dollars'].values[0], 2))
-            data[token]['Average Daily Increase'] = average_daily_difference
+            data[token]['Average Daily Increase'] = average_daily_difference + ' ' + token
             data[token]['Average Daily Value Increase'] = '$' + str(average_daily_dollar_gainz)
             data[token]['Daily % Change'] = str(round(diff, 2)) + '%'
 
