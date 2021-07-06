@@ -248,6 +248,6 @@ def make_html(data, path):
       </body>
     </html>
              """)
-# import json
-# with open('../output.json','r') as outy:
-#     make_html(json.load(outy),'../docs/index.html')
+import json
+with open('../output.json','r') as outy:
+    make_html(json.load(outy),'../docs/index.html')
