@@ -83,7 +83,7 @@ def analysis():
     for i in data.keys():
         try:
             price = data[i]['Current Price']
-            quantity = data[i]['Current Balance']
+            quantity = float(data[i]['Current Balance'])
             total += price * quantity
         except:
             pass
