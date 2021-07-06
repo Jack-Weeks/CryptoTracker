@@ -1,3 +1,4 @@
+from datetime import datetime
 def get_color(value):
     print(value, type(value))
     if type(value) == float:
@@ -22,12 +23,12 @@ def get_color(value):
 
 def make_html(data, path):
     with open(path, 'w') as openfile:
-        openfile.write("""
+        openfile.write(f"""
             <!doctype html>
     <html lang="en">
       <head>
-        <title>Hello, world!</title>
-        <!-- Required meta tags -->
+        <title>{datetime.now().strftime("%d/%m/%Y %H:%M")}</title>"""
+        """<!-- Required meta tags -->
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -53,8 +54,8 @@ def make_html(data, path):
       box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);}
         </style>
       </head>
-      <body>
-      """ +
+      <body>"""
+       +
                        f"""
     <div class="container-fluid" style="background-color:">
       <div class="container" style="margin-top: 5%">

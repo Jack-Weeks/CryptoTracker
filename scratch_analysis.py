@@ -2,6 +2,8 @@ import pandas as pd
 import json
 import datetime as dt
 import matplotlib.pyplot as plt
+from selenium import webdriver
+import time
 
 
 # with open('output.json', "r") as file:
@@ -131,3 +133,17 @@ new_df.to_csv('daily_gains.csv',index = False)
 # storage['XCH']['Current Price'] = round(data['XCH']['quote']['USD']['price'], 2)
 # change = str(round(data['XCH']['quote']['USD']['percent_change_24h'], 2)) + '%'
 # storage['XCH']['24hr Price Change'] = change
+options = webdriver.ChromeOptions()
+# options.add_argument('headless')
+# options.add_argument("--window-size=1920,1080")
+options.add_argument('--ignore-certificate-errors')
+driver = webdriver.Chrome('./chromedriver', options=options)
+driver.get('https://chia-og.foxypool.io/my-farmer')
+driver.minimize_window()
+pool_key_input = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/input')
+pool_key_input.send_keys(
+    '8cae91ac66fd08959589339242980a88336bbb201c75a38cda84e32f1e4e1db06cbb52e2c7c57242528acab832ace197')
+login_button = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/button')
+login_button.click()
+time.sleep(1.5)
+EC = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/div[1]/div[1]/div[3]/div/div[2]')
