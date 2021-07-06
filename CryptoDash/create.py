@@ -66,7 +66,7 @@ def make_html(data, path):
       <div class="container-fluid" style="margin-top: 5%">
 
         <div class="content">
-          
+          <div class="container-fluid">
               <div class="row">
               <div class="col col-lg-6">
                 <div class="card card-chart" style="background-color: {small_tile_col};">
@@ -215,7 +215,7 @@ def make_html(data, path):
             openfile.write("""
                 </div>
                                   </div>
-                  
+                  </div>
               </div>
                 """)
         openfile.write("""
@@ -248,6 +248,6 @@ def make_html(data, path):
       </body>
     </html>
              """)
-import json
-with open('../output.json','r') as outy:
-    make_html(json.load(outy),'../docs/index.html')
+# import json
+# with open('../output.json','r') as outy:
+#     make_html(json.load(outy),'../docs/index.html')
