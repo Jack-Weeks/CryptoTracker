@@ -237,35 +237,13 @@ def execute():
     farmr_api_call()
     make_dfs()
     get_prices()
-    try:
-        get_arweave_data()
-    except:
-        pass
-    try:
-        get_flax_data()
-    except:
-        pass
-
-    try:
-        get_chia_data()
-    except:
-        pass
-    try:
-        get_chaingreen_data()
-    except:
-        pass
-    try:
-        get_spare_data()
-    except:
-        pass
-    try:
-        get_sit_data()
-    except:
-        pass
-    try:
-        get_xgj_data()
-    except:
-        pass
+    get_arweave_data()
+    get_flax_data()
+    get_chia_data()
+    get_chaingreen_data()
+    get_spare_data()
+    get_sit_data()
+    get_xgj_data()
 
 
 def num_items(d):
@@ -293,11 +271,8 @@ def main():
         f.close()
     with open("README.md", "a") as outfile:
         json.dump(data, outfile, indent=4)
-    try:
-        with open('output.json', 'r') as outy:
-            make_html(json.load(outy), 'docs/index.html')
-    except:
-        pass
+    with open('output.json', 'r') as outy:
+        make_html(json.load(outy), 'docs/index.html')
     return data
 
 

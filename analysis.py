@@ -2,7 +2,7 @@ def analysis():
     import pandas as pd
     import json
     import yfinance as yf
-
+    import math
     todays_gain = 0
     todays_gain_pct = 0
     plotting_path = 'docs/graphing/data/'
@@ -32,6 +32,8 @@ def analysis():
             average_hourly_dollar_gainz = round(average_hourly_difference * data[token]['Current Price'], 2)
 
             diff = (grouped_daily['Balance'].pct_change().values[-1] * 100)
+            if math.isnan(diff):
+                diff = 0.00
             average_daily_difference = round(y.mean(), 5)
             average_daily_dollar_gainz = round(average_daily_difference * data[token]['Current Price'], 2)
 
