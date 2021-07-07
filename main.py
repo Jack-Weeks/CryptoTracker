@@ -46,6 +46,11 @@ storage = {
         'Current Balance': float(),
 
     },
+    'XGJ': {
+        'Current Price': float(),
+        'Current Balance':float(),
+    },
+
     'Totals': {
     }
 }
@@ -61,12 +66,14 @@ def farmr_api_call():
             json_dict = json.loads(block)
             api_call_list.append(json_dict[0])
             crypto_name = json_dict[0]['crypto'].upper()
+            crypto_balance = 0
+
             if crypto_name == 'SIT':
                 storage[crypto_name]['Current Balance'] = str(round(json_dict[0]['walletBalance'], 5)) + ' ' + crypto_name
             else:
                 storage[crypto_name]['Current Balance'] = str(round(json_dict[0]['balance'], 5)) + ' ' + crypto_name
         except:
-            pass
+            storage[crypto_name]['Current Balance'] = '0 '+ crypto_name
 
 
 def make_dfs():
@@ -223,17 +230,42 @@ def get_chaingreen_data():
 def get_sit_data():
     update_csv(plotting_path + 'SIT_data.csv', 'SIT')
 
+def get_xgj_data():
+    update_csv(plotting_path + 'XGJ_data.csv', 'XGJ')
 
 def execute():
     farmr_api_call()
     make_dfs()
     get_prices()
-    get_arweave_data()
-    get_flax_data()
-    get_chia_data()
-    get_chaingreen_data()
-    get_spare_data()
-    get_sit_data()
+    try:
+        get_arweave_data()
+    except:
+        pass
+    try:
+        get_flax_data()
+    except:
+        pass
+
+    try:
+        get_chia_data()
+    except:
+        pass
+    try:
+        get_chaingreen_data()
+    except:
+        pass
+    try:
+        get_spare_data()
+    except:
+        pass
+    try:
+        get_sit_data()
+    except:
+        pass
+    try:
+        get_xgj_data()
+    except:
+        pass
 
 
 def num_items(d):
@@ -261,8 +293,11 @@ def main():
         f.close()
     with open("README.md", "a") as outfile:
         json.dump(data, outfile, indent=4)
-    with open('output.json', 'r') as outy:
-        make_html(json.load(outy), 'docs/index.html')
+    try:
+        with open('output.json', 'r') as outy:
+            make_html(json.load(outy), 'docs/index.html')
+    except:
+        pass
     return data
 
 
