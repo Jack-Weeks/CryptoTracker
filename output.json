@@ -1,26 +1,26 @@
 {
     "XCH": {
-        "Current Price": 280.6,
+        "Current Price": 280.77,
         "Current Balance": "0.21499 XCH",
-        "24hr Price Change %": "0.71%",
+        "24hr Price Change %": "0.73%",
         "Wallet Balance": "0.14048 XCH",
         "Collateral Balance": "0.0745 XCH",
-        "Estimated Capacity": "57.66 TiB",
+        "Estimated Capacity": "57.24 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$60.33",
+        "Current Value": "$60.36",
         "Average Daily Increase": "0.00982 XCH",
         "Average Daily Value Increase": "$2.76",
         "Daily % Change": "7.22%"
     },
     "XFX": {
         "Current Price": 4.0,
-        "Current Balance": "4.94359 XFX",
+        "Current Balance": "4.94543 XFX",
         "Wallet Balance": "3.0552 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "62.55 TiB",
-        "Pending Balance": "0.13784 XFX",
-        "Current Value": "$19.77",
-        "Average Daily Increase": "0.29012 XFX",
+        "Estimated Capacity": "62.20 TiB",
+        "Pending Balance": "0.13968 XFX",
+        "Current Value": "$19.78",
+        "Average Daily Increase": "0.29035 XFX",
         "Average Daily Value Increase": "$1.16",
         "Daily % Change": "6.8%"
     },
@@ -41,11 +41,11 @@
         "Daily % Change": "9.92%"
     },
     "AR": {
-        "Current Price": 12.45,
+        "Current Price": 12.25,
         "Current Balance": "0.08482 AR",
-        "24hr Price Change %": "12.72%",
-        "Hashrate": "225.35",
-        "Current Value": "$1.06",
+        "24hr Price Change %": "10.93%",
+        "Hashrate": "228.15",
+        "Current Value": "$1.04",
         "Average Daily Increase": "0.00784 AR",
         "Average Daily Value Increase": "$0.1",
         "Daily % Change": "13.98%"
@@ -67,8 +67,8 @@
         "Daily % Change": "0.0%"
     },
     "Totals": {
-        "Total": 145.06,
-        "Today's Gain $": 3.489,
-        "Today's % Gain": 6.0
+        "Total": 145.08,
+        "Today's Gain $": 5.37,
+        "Today's % Gain": 9.0
     }
 }
