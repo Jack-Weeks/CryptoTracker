@@ -273,4 +273,4 @@ def main():
 #
 
 main()
-quit()
+exit()
