@@ -61,19 +61,17 @@ api_call_list = []
 def farmr_api_call():
     x = requests.get('https://farmr.net/read.php?user=95534481070362624').text
     blocks = x.split(';;')
-    for block in blocks:
-        try:
-            json_dict = json.loads(block)
-            api_call_list.append(json_dict[0])
-            crypto_name = json_dict[0]['crypto'].upper()
-            crypto_balance = 0
+    for block in blocks[:-1]:
 
-            if crypto_name == 'SIT':
-                storage[crypto_name]['Current Balance'] = str(round(json_dict[0]['walletBalance'], 5)) + ' ' + crypto_name
-            else:
-                storage[crypto_name]['Current Balance'] = str(round(json_dict[0]['balance'], 5)) + ' ' + crypto_name
-        except:
-            storage[crypto_name]['Current Balance'] = '0 '+ crypto_name
+        json_dict = json.loads(block)
+        api_call_list.append(json_dict[0])
+        crypto_name = json_dict[0]['crypto'].upper()
+        crypto_balance = 0
+
+        if crypto_name == 'SIT':
+            storage[crypto_name]['Current Balance'] = str(round(json_dict[0]['walletBalance'], 5)) + ' ' + crypto_name
+        else:
+            storage[crypto_name]['Current Balance'] = str(round(json_dict[0]['balance'], 5)) + ' ' + crypto_name
 
 
 def make_dfs():
@@ -283,4 +281,3 @@ def main():
 #
 
 main()
-exit()
