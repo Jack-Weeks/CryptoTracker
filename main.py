@@ -54,7 +54,8 @@ storage = {
     'Totals': {
     }
 }
-
+with open('D:\Programming\pythonProject1\Altcoin.json', 'r') as altcoin:
+    alt_prices = json.load(altcoin)
 api_call_list = []
 
 
@@ -66,7 +67,10 @@ def farmr_api_call():
         json_dict = json.loads(block)
         api_call_list.append(json_dict[0])
         crypto_name = json_dict[0]['crypto'].upper()
-        crypto_balance = 0
+        try:
+            storage[crypto_name]['Current Price'] = alt_prices[crypto_name]
+        except:
+            pass
 
         if crypto_name == 'SIT':
             storage[crypto_name]['Current Balance'] = str(round(json_dict[0]['walletBalance'], 5)) + ' ' + crypto_name
@@ -218,7 +222,7 @@ def get_chia_data():
 
 
 def get_spare_data():
-    update_csv(plotting_path + 'Spare_data.csv', 'SPARE')
+    update_csv(plotting_path + 'SPARE_data.csv', 'SPARE')
 
 
 def get_chaingreen_data():
@@ -232,6 +236,7 @@ def get_xgj_data():
     update_csv(plotting_path + 'XGJ_data.csv', 'XGJ')
 
 def execute():
+
     farmr_api_call()
     make_dfs()
     get_prices()
