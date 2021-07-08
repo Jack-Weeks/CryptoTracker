@@ -1,28 +1,28 @@
 {
     "XCH": {
-        "Current Price": 282.66,
+        "Current Price": 281.65,
         "Current Balance": "0.22602 XCH",
-        "24hr Price Change %": "0.2%",
+        "24hr Price Change %": "0.05%",
         "Wallet Balance": "0.14048 XCH",
         "Collateral Balance": "0.08553 XCH",
-        "Estimated Capacity": "58.89 TiB",
+        "Estimated Capacity": "57.40 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$63.89",
-        "Daily Increase": "0.01125 XCH",
-        "Average Daily Value Increase": "$3.179925000000003",
-        "Daily % Change": "5.24%"
+        "Current Value": "$63.66",
+        "Daily Increase": "0.01103 XCH",
+        "Average Daily Value Increase": "$3.1065995000000033",
+        "Daily % Change": "5.13%"
     },
     "XFX": {
         "Current Price": 4.0,
-        "Current Balance": "5.15242 XFX",
+        "Current Balance": "5.16139 XFX",
         "Wallet Balance": "3.32789 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "65.47 TiB",
-        "Pending Balance": "0.07398 XFX",
-        "Current Value": "$20.61",
-        "Daily Increase": "0.23806 XFX",
-        "Average Daily Value Increase": "$0.9522599999999919",
-        "Daily % Change": "4.84%"
+        "Estimated Capacity": "65.68 TiB",
+        "Pending Balance": "0.08295 XFX",
+        "Current Value": "$20.65",
+        "Daily Increase": "0.23107 XFX",
+        "Average Daily Value Increase": "$0.9242999999999988",
+        "Daily % Change": "4.69%"
     },
     "CGN": {
         "Current Price": 0.0045,
@@ -41,10 +41,10 @@
         "Daily % Change": "0.0%"
     },
     "AR": {
-        "Current Price": 11.21,
+        "Current Price": 11.17,
         "Current Balance": "0.08482 AR",
-        "24hr Price Change %": "-8.53%",
-        "Hashrate": "311.50",
+        "24hr Price Change %": "-10.34%",
+        "Hashrate": "291.67",
         "Current Value": "$0.95",
         "Daily Increase": "0.0 AR",
         "Average Daily Value Increase": "$0.0",
@@ -54,9 +54,9 @@
         "Current Price": 0.0,
         "Current Balance": "8.0 SIT",
         "Current Value": "$0.0",
-        "Daily Increase": "1.0 SIT",
+        "Daily Increase": "0.0 SIT",
         "Average Daily Value Increase": "$0.0",
-        "Daily % Change": "14.29%"
+        "Daily % Change": "0.0%"
     },
     "XGJ": {
         "Current Price": 0.3,
@@ -67,8 +67,8 @@
         "Daily % Change": "100%"
     },
     "Totals": {
-        "Total": 152.2,
-        "Today's Gain $": 82.745,
+        "Total": 152.0,
+        "Today's Gain $": 82.84,
         "Today's % Gain": 123.0
     }
 }
