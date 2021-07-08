@@ -1,29 +1,29 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 283.19,
-        "Current Balance": "0.22466 XCH",
-        "24hr Price Change %": "1.01%",
+        "Current Price": 283.27,
+        "Current Balance": "0.22555 XCH",
+        "24hr Price Change %": "0.35%",
         "Wallet Balance": "0.14048 XCH",
-        "Collateral Balance": "0.08418 XCH",
-        "Estimated Capacity": "56.73 TiB",
+        "Collateral Balance": "0.08506 XCH",
+        "Estimated Capacity": "56.94 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$63.62",
-        "Average Daily Increase": "0.00979 XCH",
-        "Average Daily Value Increase": "$2.77",
-        "Daily % Change": "4.88%"
+        "Current Value": "$63.89",
+        "Average Daily Increase": "0.00997 XCH",
+        "Average Daily Value Increase": "$2.82",
+        "Daily % Change": "5.07%"
     },
     "XFX": {
         "Current Price": 4.0,
-        "Current Balance": "5.10172 XFX",
+        "Current Balance": "5.11695 XFX",
         "Wallet Balance": "3.32789 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "65.71 TiB",
-        "Pending Balance": "0.02328 XFX",
-        "Current Value": "$20.41",
-        "Average Daily Increase": "0.26372 XFX",
-        "Average Daily Value Increase": "$1.05",
-        "Daily % Change": "4.75%"
+        "Estimated Capacity": "64.14 TiB",
+        "Pending Balance": "0.03851 XFX",
+        "Current Value": "$20.47",
+        "Average Daily Increase": "0.26677 XFX",
+        "Average Daily Value Increase": "$1.07",
+        "Daily % Change": "4.9%"
     },
     "CGN": {
         "Current Price": 0.0045,
@@ -31,7 +31,7 @@
         "Current Value": "$33.75",
         "Average Daily Increase": "400.0 CGN",
         "Average Daily Value Increase": "$1.8",
-        "Daily % Change": "12.26%"
+        "Daily % Change": "12.43%"
     },
     "SPARE": {
         "Current Price": 0.9,
@@ -42,11 +42,11 @@
         "Daily % Change": "0.0%"
     },
     "AR": {
-        "Current Price": 10.75,
+        "Current Price": 10.98,
         "Current Balance": "0.08482 AR",
-        "24hr Price Change %": "-8.24%",
-        "Hashrate": "330.04",
-        "Current Value": "$0.91",
+        "24hr Price Change %": "-6.94%",
+        "Hashrate": "294.94",
+        "Current Value": "$0.93",
         "Average Daily Increase": "0.00627 AR",
         "Average Daily Value Increase": "$0.07",
         "Daily % Change": "5.14%"
@@ -68,8 +68,8 @@
         "Daily % Change": "100%"
     },
     "Totals": {
-        "Total": 151.69,
-        "Today's Gain $": 81.955,
-        "Today's % Gain": 121.0
+        "Total": 152.04,
+        "Today's Gain $": 82.099,
+        "Today's % Gain": 122.0
     }
 }
