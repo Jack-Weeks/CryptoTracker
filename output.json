@@ -1,15 +1,15 @@
 {
     "XCH": {
-        "Current Price": 284.45,
+        "Current Price": 284.55,
         "Current Balance": "0.22555 XCH",
-        "24hr Price Change %": "0.29%",
+        "24hr Price Change %": "0.36%",
         "Wallet Balance": "0.14048 XCH",
         "Collateral Balance": "0.08506 XCH",
-        "Estimated Capacity": "59.92 TiB",
+        "Estimated Capacity": "59.46 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$64.16",
-        "Daily Increase": "0.011880000000000002 XCH",
-        "Average Daily Value Increase": "$3.3792660000000003",
+        "Current Value": "$64.18",
+        "Daily Increase": "0.01188 XCH",
+        "Average Daily Value Increase": "$3.3804540000000007",
         "Daily % Change": "5.56%"
     },
     "XFX": {
@@ -17,10 +17,10 @@
         "Current Balance": "5.13638 XFX",
         "Wallet Balance": "3.32789 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "65.37 TiB",
+        "Estimated Capacity": "64.81 TiB",
         "Pending Balance": "0.05794 XFX",
         "Current Value": "$20.55",
-        "Daily Increase": "0.22834999999999983 XFX",
+        "Daily Increase": "0.22835 XFX",
         "Average Daily Value Increase": "$0.9133999999999993",
         "Daily % Change": "4.65%"
     },
@@ -41,10 +41,10 @@
         "Daily % Change": "0.0%"
     },
     "AR": {
-        "Current Price": 11.16,
+        "Current Price": 11.19,
         "Current Balance": "0.08482 AR",
-        "24hr Price Change %": "-7.38%",
-        "Hashrate": "168.27",
+        "24hr Price Change %": "-7.73%",
+        "Hashrate": "177.17",
         "Current Value": "$0.95",
         "Daily Increase": "0.0 AR",
         "Average Daily Value Increase": "$0.0",
@@ -67,8 +67,8 @@
         "Daily % Change": "100%"
     },
     "Totals": {
-        "Total": 152.4,
-        "Today's Gain $": 82.629,
-        "Today's % Gain": 122.0
+        "Total": 152.42,
+        "Today's Gain $": 82.69,
+        "Today's % Gain": 123.0
     }
 }
