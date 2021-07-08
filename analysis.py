@@ -34,6 +34,8 @@ def analysis():
             diff = (grouped_daily['Balance'].pct_change().values[-1] * 100)
             if math.isnan(diff):
                 diff = 0.00
+            if math.isinf(diff):
+                diff = 100
             average_daily_difference = round(y.mean(), 5)
             average_daily_dollar_gainz = round(average_daily_difference * data[token]['Current Price'], 2)
 
