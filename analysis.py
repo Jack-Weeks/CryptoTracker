@@ -29,13 +29,13 @@ def analysis():
 
 
             average_hourly_difference = round(x.mean(), 5)
-            average_hourly_dollar_gainz = round(average_hourly_difference * data[token]['Current Price'], 2)
-
-            grouped_hourly = [df.groupby(pd.Grouper(key= 'Date', freq='30min'))]
-
             diff = (grouped_daily['Balance'].pct_change().values[-1] * 100)
-            hourly_diff = grouped_hourly.diff(periods=48).values[-1]
-            hourly_diff_pct= (grouped_hourly.pct_change(periods=48).values[-1])*100
+            hourly_diff = df.iloc[-49:]['Balance'].diff(periods=48).values[-1]
+            hourly_diff_pct = (df.iloc[-49:]['Balance'].pct_change(periods=48).values[-1]) * 100
+            if math.isinf(hourly_diff_pct):
+                hourly_diff_pct = 100
+            if math.isnan(hourly_diff):
+                hourly_diff = 0
             if math.isnan(diff):
                 diff = 0.00
             if math.isinf(diff):
@@ -53,7 +53,7 @@ def analysis():
             # data[token]['Average Hourly Value Increase'] = average_hourly_dollar_gainz
             data[token]['Current Value'] = '$' + str(round(df.iloc[-1:]['Value_Dollars'].values[0], 2))
             data[token]['Daily Increase'] = str(hourly_diff) + ' ' + token
-            data[token]['Average Daily Value Increase'] = '$' + str(hourly_diff * data['token']['Current Price'])
+            data[token]['Average Daily Value Increase'] = '$' + str(hourly_diff * data[token]['Current Price'])
             data[token]['Daily % Change'] = str(round(hourly_diff_pct, 2)) + '%'
 
             # data[token]['Average_Weekly_Increase'] = average_weekly_difference
