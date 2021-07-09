@@ -1,29 +1,29 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 276.08,
+        "Current Price": 275.96,
         "Current Balance": "0.24221 XCH",
-        "24hr Price Change %": "-2.96%",
+        "24hr Price Change %": "-2.83%",
         "Wallet Balance": "0.14048 XCH",
         "Collateral Balance": "0.10173 XCH",
-        "Estimated Capacity": "66.08 TiB",
+        "Estimated Capacity": "66.12 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$66.87",
+        "Current Value": "$66.84",
         "Daily Increase": "0.01666 XCH",
         "Daily Value Increase": "$4.6",
         "Daily % Change": "7.39%"
     },
     "XFX": {
         "Current Price": 4.0,
-        "Current Balance": "5.37369 XFX",
+        "Current Balance": "5.3762 XFX",
         "Wallet Balance": "3.55521 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "55.58 TiB",
-        "Pending Balance": "0.06793 XFX",
-        "Current Value": "$21.49",
-        "Daily Increase": "0.23689 XFX",
-        "Daily Value Increase": "$0.95",
-        "Daily % Change": "4.61%"
+        "Estimated Capacity": "55.89 TiB",
+        "Pending Balance": "0.07045 XFX",
+        "Current Value": "$21.5",
+        "Daily Increase": "0.2336 XFX",
+        "Daily Value Increase": "$0.93",
+        "Daily % Change": "4.54%"
     },
     "CGN": {
         "Current Price": 0.005,
@@ -42,10 +42,10 @@
         "Daily % Change": "11.11%"
     },
     "AR": {
-        "Current Price": 10.94,
+        "Current Price": 10.95,
         "Current Balance": "0.08482 AR",
-        "24hr Price Change %": "-2.23%",
-        "Hashrate": "386.80",
+        "24hr Price Change %": "-2.33%",
+        "Hashrate": "338.12",
         "Current Value": "$0.93",
         "Daily Increase": "0.0 AR",
         "Daily Value Increase": "$0.0",
@@ -68,7 +68,7 @@
         "Daily % Change": "100.0%"
     },
     "Totals": {
-        "Total": 157.79,
+        "Total": 157.77,
         "Today's Gain $": 5.37,
         "Today's % Gain": 4.0
     }
