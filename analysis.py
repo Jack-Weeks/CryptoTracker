@@ -68,10 +68,10 @@ def analysis():
             try:
                 df = pd.read_csv(plotting_path + token + '_data.csv')
                 df['Date'] = pd.to_datetime(df['Date'])
-                y = df.groupby(pd.Grouper(key='Date', freq='1D'))['Balance'].mean().to_frame()
+                y = df.groupby(pd.Grouper(key='Date', freq='30min'))['Balance'].mean().to_frame()
                 df['Date'] = df['Date'].dt.strftime('%d/%m')
-                todays_gain_pct = round(y['Balance'].pct_change().values[-1], 2)*100
-                todays_gain = round(y.iloc[-2:]['Balance'].diff().values[1], 3)
+                todays_gain_pct = round(y['Balance'].pct_change(periods = 48).values[-1], 2)*100
+                todays_gain = round(y.iloc[-49:]['Balance'].diff(periods=48).values[-1], 3)
                 new_df = y['Balance'].diff().round(2)
                 new_df = new_df.reset_index()
                 new_df['Date'].dt.strftime('%d/%m')
