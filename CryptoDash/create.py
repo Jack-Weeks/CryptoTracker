@@ -184,12 +184,12 @@ def make_html(data, path):
                                   </div>
 
                             """)
-                    elif i == 'Average Daily Increase':
+                    elif i == 'Daily Increase':
                         openfile.write(f"""
                                   <div class="col-6 col-xl-4">
                                       <div class="card" style="height:8rem;background-color: {small_tile_col};">
                                           <div class="card-body">
-                                            <h4 class="card-title" style="font-size:24px"><strong>{data[item][i]}<span class="card-subtitle mb-2 text-muted" style="font-size:18px;text-align:right"> / {data[item]['Average Daily Value Increase']}</span></strong></h4>
+                                            <h4 class="card-title" style="font-size:24px"><strong>{data[item][i]}<span class="card-subtitle mb-2 text-muted" style="font-size:18px;text-align:right"> / {data[item]['Daily Value Increase']}</span></strong></h4>
                                             <h6 class="card-subtitle mb-2 text-muted">{i}</h6>
                                           </div>
                                     </div>
