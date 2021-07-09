@@ -54,7 +54,7 @@ storage = {
     'Totals': {
     }
 }
-with open('D:\Programming\pythonProject1\Altcoin.json', 'r') as altcoin:
+with open('D:\Programming\pythonProject\Altcoin.json', 'r') as altcoin:
     alt_prices = json.load(altcoin)
 api_call_list = []
 
