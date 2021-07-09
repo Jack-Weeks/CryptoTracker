@@ -198,7 +198,7 @@ def make_html(data, path):
                             """)
 
 
-                    elif i != 'Current Balance' and i != 'Daily % Change' and i != '24hr Price Change %' and i != 'Current Value' and i != 'Average Daily Value Increase':
+                    elif i != 'Current Balance' and i != 'Daily % Change' and i != '24hr Price Change %' and i != 'Current Value' and i != 'Daily Value Increase':
                         openfile.write(f"""
                                   <div class="col-6 col-xl-4">
                                       <div class="card" style="height:8rem;background-color: {small_tile_col};">
