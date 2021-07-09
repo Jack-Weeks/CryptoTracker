@@ -14,15 +14,15 @@
     },
     "XFX": {
         "Current Price": 4.0,
-        "Current Balance": "5.37285 XFX",
+        "Current Balance": "5.37369 XFX",
         "Wallet Balance": "3.55521 XFX",
         "Collateral Balance": "1.75055 XFX",
         "Estimated Capacity": "55.58 TiB",
-        "Pending Balance": "0.0671 XFX",
+        "Pending Balance": "0.06793 XFX",
         "Current Value": "$21.49",
-        "Daily Increase": "0.23647 XFX",
+        "Daily Increase": "0.23689 XFX",
         "Daily Value Increase": "$0.95",
-        "Daily % Change": "4.6%"
+        "Daily % Change": "4.61%"
     },
     "CGN": {
         "Current Price": 0.005,
@@ -44,7 +44,7 @@
         "Current Price": 10.94,
         "Current Balance": "0.08482 AR",
         "24hr Price Change %": "-2.23%",
-        "Hashrate": "388.33",
+        "Hashrate": "386.80",
         "Current Value": "$0.93",
         "Daily Increase": "0.0 AR",
         "Daily Value Increase": "$0.0",
@@ -68,7 +68,7 @@
     },
     "Totals": {
         "Total": 157.79,
-        "Today's Gain $": 5.184,
-        "Today's % Gain": 3.0
+        "Today's Gain $": 5.37,
+        "Today's % Gain": 4.0
     }
 }
