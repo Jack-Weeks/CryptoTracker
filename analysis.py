@@ -10,14 +10,14 @@ def analysis():
         data = json.load(file)
     for token in data.keys():
         try:
-            USD_GBP = yf.download('GBPUSD=X', period='1d', interval='1h')
-            exchange = USD_GBP['Close'][-1]
+            # USD_GBP = yf.download('GBPUSD=X', period='1d', interval='1h')
+            # exchange = USD_GBP['Close'][-1]
             df = pd.read_csv(plotting_path + token + '_data.csv')
             df['Date'] = pd.to_datetime(df['Date'])
             df['% Change_in_Balance'] = (df.Balance.pct_change(periods=12)) * 100
             df['Balance_Diff'] = df.Balance.diff()
             df['Value_Dollars'] = df['Balance'] * data[token]['Current Price']
-            df['Value_Pounds'] = df['Value_Dollars'] / exchange
+            # df['Value_Pounds'] = df['Value_Dollars'] / exchange
             df['Change_in_Value'] = df['Balance_Diff'] * df['Price']
 
             x = df.groupby(pd.Grouper(key = 'Date', freq='1h'))['Balance_Diff'].sum()

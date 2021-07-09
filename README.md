@@ -1,29 +1,29 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 274.1,
-        "Current Balance": "0.23968 XCH",
-        "24hr Price Change %": "-2.61%",
+        "Current Price": 277.21,
+        "Current Balance": "0.24171 XCH",
+        "24hr Price Change %": "-2.53%",
         "Wallet Balance": "0.14048 XCH",
-        "Collateral Balance": "0.09919 XCH",
-        "Estimated Capacity": "67.56 TiB",
+        "Collateral Balance": "0.10123 XCH",
+        "Estimated Capacity": "67.38 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$65.7",
-        "Daily Increase": "0.01502 XCH",
-        "Average Daily Value Increase": "$4.116982000000017",
-        "Daily % Change": "6.69%"
+        "Current Value": "$67.0",
+        "Daily Increase": "0.01616 XCH",
+        "Average Daily Value Increase": "$4.479713600000002",
+        "Daily % Change": "7.16%"
     },
     "XFX": {
         "Current Price": 4.0,
-        "Current Balance": "5.32227 XFX",
+        "Current Balance": "5.35478 XFX",
         "Wallet Balance": "3.55521 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "55.93 TiB",
-        "Pending Balance": "0.01652 XFX",
-        "Current Value": "$21.29",
-        "Daily Increase": "0.22595 XFX",
-        "Average Daily Value Increase": "$0.9038000000000004",
-        "Daily % Change": "4.43%"
+        "Estimated Capacity": "55.43 TiB",
+        "Pending Balance": "0.04903 XFX",
+        "Current Value": "$21.42",
+        "Daily Increase": "0.2292 XFX",
+        "Average Daily Value Increase": "$0.9167900000000024",
+        "Daily % Change": "4.47%"
     },
     "CGN": {
         "Current Price": 0.005,
@@ -42,11 +42,11 @@
         "Daily % Change": "11.11%"
     },
     "AR": {
-        "Current Price": 10.86,
+        "Current Price": 11.06,
         "Current Balance": "0.08482 AR",
-        "24hr Price Change %": "1.12%",
-        "Hashrate": "370.93",
-        "Current Value": "$0.92",
+        "24hr Price Change %": "-0.54%",
+        "Hashrate": "402.23",
+        "Current Value": "$0.94",
         "Daily Increase": "0.0 AR",
         "Average Daily Value Increase": "$0.0",
         "Daily % Change": "0.0%"
@@ -68,8 +68,8 @@
         "Daily % Change": "100%"
     },
     "Totals": {
-        "Total": 156.41,
-        "Today's Gain $": 3.627,
-        "Today's % Gain": 2.0
+        "Total": 157.86,
+        "Today's Gain $": 3.777,
+        "Today's % Gain": 3.0
     }
 }
