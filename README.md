@@ -1,29 +1,29 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 273.79,
-        "Current Balance": "0.24271 XCH",
-        "24hr Price Change %": "-3.05%",
+        "Current Price": 268.91,
+        "Current Balance": "0.25334 XCH",
+        "24hr Price Change %": "-2.62%",
         "Wallet Balance": "0.14048 XCH",
-        "Collateral Balance": "0.10223 XCH",
-        "Estimated Capacity": "66.19 TiB",
+        "Collateral Balance": "0.11286 XCH",
+        "Estimated Capacity": "66.63 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$66.45",
-        "Daily Increase": "0.01669 XCH",
-        "Daily Value Increase": "$4.57",
-        "Daily % Change": "7.38%"
+        "Current Value": "$68.13",
+        "Daily Increase": "0.01298 XCH",
+        "Daily Value Increase": "$3.49",
+        "Daily % Change": "5.4%"
     },
     "XFX": {
-        "Current Price": 4.0,
-        "Current Balance": "5.39196 XFX",
-        "Wallet Balance": "3.55521 XFX",
+        "Current Price": 4.25,
+        "Current Balance": "5.57194 XFX",
+        "Wallet Balance": "3.78621 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "58.05 TiB",
-        "Pending Balance": "0.0862 XFX",
-        "Current Value": "$21.57",
-        "Daily Increase": "0.23326 XFX",
-        "Daily Value Increase": "$0.93",
-        "Daily % Change": "4.52%"
+        "Estimated Capacity": "61.98 TiB",
+        "Pending Balance": "0.03518 XFX",
+        "Current Value": "$23.68",
+        "Daily Increase": "0.23892 XFX",
+        "Daily Value Increase": "$1.02",
+        "Daily % Change": "4.48%"
     },
     "CGN": {
         "Current Price": 0.005,
@@ -37,27 +37,27 @@
         "Current Price": 0.75,
         "Current Balance": "40.0 SPARE",
         "Current Value": "$30.0",
-        "Daily Increase": "4.0 SPARE",
-        "Daily Value Increase": "$3.0",
-        "Daily % Change": "11.11%"
+        "Daily Increase": "0.0 SPARE",
+        "Daily Value Increase": "$0.0",
+        "Daily % Change": "0.0%"
     },
     "AR": {
-        "Current Price": 10.89,
+        "Current Price": 10.63,
         "Current Balance": "0.08482 AR",
-        "24hr Price Change %": "-2.05%",
-        "Hashrate": "309.78",
-        "Current Value": "$0.92",
+        "24hr Price Change %": "-2.29%",
+        "Hashrate": "500.34",
+        "Current Value": "$0.9",
         "Daily Increase": "0.0 AR",
         "Daily Value Increase": "$0.0",
         "Daily % Change": "0.0%"
     },
     "SIT": {
         "Current Price": 0.0,
-        "Current Balance": "12.0 SIT",
+        "Current Balance": "12.001 SIT",
         "Current Value": "$0.0",
-        "Daily Increase": "4.0 SIT",
+        "Daily Increase": "0.001 SIT",
         "Daily Value Increase": "$0.0",
-        "Daily % Change": "50.0%"
+        "Daily % Change": "0.01%"
     },
     "XGJ": {
         "Current Price": 0.25,
@@ -67,9 +67,18 @@
         "Daily Value Increase": "$0.5",
         "Daily % Change": "100.0%"
     },
+    "XFL": {
+        "Current Price": 11.49,
+        "Current Balance": "0.0 XFL",
+        "24hr Price Change %": "10.91%",
+        "Current Value": "$0.0",
+        "Daily Increase": "0 XFL",
+        "Daily Value Increase": "$0.0",
+        "Daily % Change": "0.0%"
+    },
     "Totals": {
-        "Total": 157.44,
-        "Today's Gain $": 5.45,
-        "Today's % Gain": 4.0
+        "Total": 161.21,
+        "Today's Gain $": 4.337,
+        "Today's % Gain": 3.0
     }
 }

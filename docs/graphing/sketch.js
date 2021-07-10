@@ -157,7 +157,7 @@ function make_chart(filename, id, showLabels) {
 }
 
 
-let tokens = ['AR', 'XCH', 'SIT', 'CGN', 'XFX', 'SPARE', 'XGJ'];
+let tokens = ['AR', 'XCH', 'SIT', 'CGN', 'XFX', 'SPARE', 'XGJ', 'XFL'];
 
 for (let i=0;i<tokens.length;i++){
   make_chart('graphing/data/' + tokens[i] + '_analysis.csv','canvas-' + tokens[i], false);

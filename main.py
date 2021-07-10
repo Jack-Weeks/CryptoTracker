@@ -50,6 +50,10 @@ storage = {
         'Current Price': float(),
         'Current Balance':float(),
     },
+    'XFL': {
+        'Current Price': float(),
+        'Current Balance': float()
+    },
 
     'Totals': {
     }
@@ -235,6 +239,8 @@ def get_sit_data():
 def get_xgj_data():
     update_csv(plotting_path + 'XGJ_data.csv', 'XGJ')
 
+def get_xfl_data():
+    update_csv(plotting_path + 'XFL_data.csv', 'XFL')
 def execute():
 
     farmr_api_call()
@@ -247,6 +253,7 @@ def execute():
     get_spare_data()
     get_sit_data()
     get_xgj_data()
+    get_xfl_data()
 
 
 def num_items(d):

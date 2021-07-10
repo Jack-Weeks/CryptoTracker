@@ -34,6 +34,8 @@ def analysis():
             hourly_diff_pct = (df.iloc[-49:]['Balance'].pct_change(periods=48).values[-1]) * 100
             if math.isinf(hourly_diff_pct):
                 hourly_diff_pct = 100
+            if math.isnan(hourly_diff_pct):
+                hourly_diff_pct = 0.00
             if math.isnan(hourly_diff):
                 hourly_diff = 0
             if math.isnan(diff):
