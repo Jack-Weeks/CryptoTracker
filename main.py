@@ -54,6 +54,10 @@ storage = {
         'Current Price': float(),
         'Current Balance': float()
     },
+    'HDD':{
+        'Current Price' : float(),
+        'Current Balance' : float()
+    },
 
     'Totals': {
     }
@@ -94,10 +98,11 @@ def get_prices():
     cmc = coinmarketcapapi.CoinMarketCapAPI(cmc_api_key)
     for symbol in storage.keys():
         try:
-            data = cmc.cryptocurrency_quotes_latest(symbol=symbol, convert='USD').data
-            storage[symbol]['Current Price'] = round(data[symbol]['quote']['USD']['price'], 2)
-            change = round(data[symbol]['quote']['USD']['percent_change_24h'], 2)
-            storage[symbol]['24hr Price Change %'] = str(change) + '%'
+            if symbol != 'HDD':
+                data = cmc.cryptocurrency_quotes_latest(symbol=symbol, convert='USD').data
+                storage[symbol]['Current Price'] = round(data[symbol]['quote']['USD']['price'], 2)
+                change = round(data[symbol]['quote']['USD']['percent_change_24h'], 2)
+                storage[symbol]['24hr Price Change %'] = str(change) + '%'
         except:
             pass
 
@@ -241,6 +246,9 @@ def get_xgj_data():
 
 def get_xfl_data():
     update_csv(plotting_path + 'XFL_data.csv', 'XFL')
+
+def get_hdd_data():
+    update_csv(plotting_path + 'HDD_data.csv', 'HDD')
 def execute():
 
     farmr_api_call()
@@ -254,7 +262,7 @@ def execute():
     get_sit_data()
     get_xgj_data()
     get_xfl_data()
-
+    get_hdd_data()
 
 def num_items(d):
     if isinstance(d, list):
