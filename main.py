@@ -98,7 +98,7 @@ def get_prices():
     cmc = coinmarketcapapi.CoinMarketCapAPI(cmc_api_key)
     for symbol in storage.keys():
         try:
-            if symbol != 'HDD':
+            if symbol != 'XFL':
                 data = cmc.cryptocurrency_quotes_latest(symbol=symbol, convert='USD').data
                 storage[symbol]['Current Price'] = round(data[symbol]['quote']['USD']['price'], 2)
                 change = round(data[symbol]['quote']['USD']['percent_change_24h'], 2)
