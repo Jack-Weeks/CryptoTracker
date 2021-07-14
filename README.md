@@ -1,24 +1,24 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 231.28,
-        "Current Balance": "0.3184 XCH",
-        "24hr Price Change %": "-1.11%",
+        "Current Price": 231.4,
+        "Current Balance": "0.31884 XCH",
+        "24hr Price Change %": "-1.14%",
         "Wallet Balance": "0.14048 XCH",
-        "Collateral Balance": "0.17792 XCH",
-        "Estimated Capacity": "61.95 TiB",
+        "Collateral Balance": "0.17836 XCH",
+        "Estimated Capacity": "61.68 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$73.64",
-        "Daily Increase": "0.01758 XCH",
-        "Daily Value Increase": "$4.06",
-        "Daily % Change": "5.84%"
+        "Current Value": "$73.75",
+        "Daily Increase": "0.01791 XCH",
+        "Daily Value Increase": "$4.14",
+        "Daily % Change": "5.95%"
     },
     "XFX": {
         "Current Price": 3.0,
         "Current Balance": "6.75951 XFX",
         "Wallet Balance": "4.95424 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "64.25 TiB",
+        "Estimated Capacity": "63.95 TiB",
         "Pending Balance": "0.05471 XFX",
         "Current Value": "$20.28",
         "Daily Increase": "0.22162 XFX",
@@ -42,10 +42,10 @@
         "Daily % Change": "0.0%"
     },
     "AR": {
-        "Current Price": 10.37,
+        "Current Price": 10.36,
         "Current Balance": "0.13225 AR",
-        "24hr Price Change %": "1.49%",
-        "Hashrate": "653.36",
+        "24hr Price Change %": "1.2%",
+        "Hashrate": "651.28",
         "Current Value": "$1.37",
         "Daily Increase": "0.0 AR",
         "Daily Value Increase": "$0.0",
@@ -76,16 +76,16 @@
         "Daily % Change": "15.19%"
     },
     "HDD": {
-        "Current Price": 0.0,
+        "Current Price": 0.5,
         "Current Balance": "8.0 HDD",
-        "Current Value": "$0.0",
+        "Current Value": "$4.0",
         "Daily Increase": "1.84615 HDD",
-        "Daily Value Increase": "$0.0",
+        "Daily Value Increase": "$0.92",
         "Daily % Change": "30.0%"
     },
     "Totals": {
-        "Total": 157.89,
-        "Today's Gain $": 6.083,
-        "Today's % Gain": 3.0
+        "Total": 162.03,
+        "Today's Gain $": -10.722,
+        "Today's % Gain": -6.0
     }
 }
