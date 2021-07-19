@@ -58,6 +58,14 @@ storage = {
         'Current Price' : float(),
         'Current Balance' : float()
     },
+    'AVO' : {
+        'Current Price' : float(),
+        'Current Balance': float(),
+    },
+    'XDG' : {
+        'Current Price' : float(),
+        'Current Balance' : float(),
+    },
 
     'Totals': {
     }
@@ -249,6 +257,12 @@ def get_xfl_data():
 
 def get_hdd_data():
     update_csv(plotting_path + 'HDD_data.csv', 'HDD')
+
+def get_AVO_data():
+    update_csv(plotting_path + 'AVO_data.csv', 'AVO')
+
+def get_XDG_data():
+    update_csv(plotting_path + 'XDG_data.csv', 'XDG')
 def execute():
 
     farmr_api_call()
@@ -263,7 +277,8 @@ def execute():
     get_xgj_data()
     get_xfl_data()
     get_hdd_data()
-
+    get_AVO_data()
+    get_XDG_data()
 def num_items(d):
     if isinstance(d, list):
         for i in d:
