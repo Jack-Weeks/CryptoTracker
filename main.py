@@ -157,7 +157,7 @@ def get_arweave_data():
     driver = webdriver.Chrome('./chromedriver', options=options)
     driver.get('https://ar.virdpool.com/#/address/RzfJuyW51BmAVet9imfhcKBFDMskJcSlNXdPHH9sWHE')
     driver.minimize_window()
-    time.sleep(1.5)
+    time.sleep(2)
     hashrate = driver.find_element_by_xpath('//*[@id="mount_point"]/div/div[2]/table[2]/tbody/tr[2]/td/span').text
     pending_balance = driver.find_element_by_xpath(
         '//*[@id="mount_point"]/div/div[2]/table[4]/tbody/tr[2]/td/span').text
