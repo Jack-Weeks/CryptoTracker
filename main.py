@@ -306,6 +306,7 @@ def main():
         json.dump(data, outfile, indent=4)
     with open('output.json', 'r') as outy:
         make_html(json.load(outy), 'docs/index.html')
+
     return data
 
 
@@ -314,6 +315,8 @@ def main():
 #     return render_template('index.html')
 #
 #
+while True:
 
-main()
+    main()
+    time.sleep(1400)
 quit()
