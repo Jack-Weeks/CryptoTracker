@@ -320,4 +320,3 @@ while True:
 
     main()
     time.sleep(1400)
-quit()
