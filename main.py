@@ -210,7 +210,7 @@ def get_chia_data():
         '8cae91ac66fd08959589339242980a88336bbb201c75a38cda84e32f1e4e1db06cbb52e2c7c57242528acab832ace197')
     login_button = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/button')
     login_button.click()
-    time.sleep(1.5)
+    time.sleep(10)
     EC = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/div[1]/div[1]/div[3]/div/div[2]').text
     pending_balance = driver.find_element_by_xpath('/html/body/app-root/div/app-my-farmer/div/div/div/div[1]/div[1]/div[1]/div/div[2]/span').text
     chia_pool_balance = driver.find_element_by_xpath(
@@ -221,10 +221,10 @@ def get_chia_data():
 
     driver.get(
         'https://www.chiaexplorer.com/blockchain/address/xch1zxnqwv585mua5u98dhhgadxft7u9lys78vuluwtmmy273r984t9qycrtp6')
-    time.sleep(3)
+    time.sleep(30)
     balance = driver.find_element_by_xpath(
         '//*[@id="root"]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div[3]/div[2]/span[1]').text
-    time.sleep(10)
+    time.sleep(60)
     chia_balance = float(balance.split()[0])
     symbol = balance.split()[1]
     driver.quit()
