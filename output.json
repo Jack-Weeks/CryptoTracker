@@ -1,28 +1,28 @@
 {
     "XCH": {
-        "Current Price": 190.56,
+        "Current Price": 190.09,
         "Current Balance": "0.46766 XCH",
-        "24hr Price Change %": "0.34%",
+        "24hr Price Change %": "0.06%",
         "Wallet Balance": "0.14048 XCH",
         "Collateral Balance": "0.32717 XCH",
-        "Estimated Capacity": "47.84 TiB",
+        "Estimated Capacity": "48.89 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$89.12",
+        "Current Value": "$88.9",
         "Daily Increase": "0.00258 XCH",
         "Daily Value Increase": "$0.49",
         "Daily % Change": "0.55%"
     },
     "XFX": {
         "Current Price": 1.1,
-        "Current Balance": "8.95778 XFX",
+        "Current Balance": "8.95892 XFX",
         "Wallet Balance": "7.18345 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "48.09 TiB",
-        "Pending Balance": "0.02379 XFX",
+        "Estimated Capacity": "49.41 TiB",
+        "Pending Balance": "0.02493 XFX",
         "Current Value": "$9.85",
-        "Daily Increase": "0.07165 XFX",
+        "Daily Increase": "0.07472 XFX",
         "Daily Value Increase": "$0.08",
-        "Daily % Change": "0.81%"
+        "Daily % Change": "0.84%"
     },
     "CGN": {
         "Current Price": 0.003,
@@ -41,11 +41,11 @@
         "Daily % Change": "0.36%"
     },
     "AR": {
-        "Current Price": 11.43,
+        "Current Price": 11.32,
         "Current Balance": "0.12604 AR",
-        "24hr Price Change %": "17.67%",
-        "Hashrate": "349.06",
-        "Current Value": "$1.44",
+        "24hr Price Change %": "16.59%",
+        "Hashrate": "359.61",
+        "Current Value": "$1.43",
         "Daily Increase": "0.01553 AR",
         "Daily Value Increase": "$0.18",
         "Daily % Change": "14.05%"
@@ -99,8 +99,8 @@
         "Daily % Change": "6.87%"
     },
     "Totals": {
-        "Total": 179.45,
-        "Today's Gain $": 24.542,
+        "Total": 179.22,
+        "Today's Gain $": 24.351,
         "Today's % Gain": 16.0
     }
 }
