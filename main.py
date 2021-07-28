@@ -224,7 +224,7 @@ def get_chia_data():
     time.sleep(3)
     balance = driver.find_element_by_xpath(
         '//*[@id="root"]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div[3]/div[2]/span[1]').text
-    time.sleep(3)
+    time.sleep(10)
     chia_balance = float(balance.split()[0])
     symbol = balance.split()[1]
     driver.quit()
