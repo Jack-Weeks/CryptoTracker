@@ -28,3 +28,8 @@ for card in cards:
     ### Update CSV
     ### Update Json
 
+### Run similar code for AR and SIT
+
+
+###Package Json and Update HTML
+
