@@ -1,32 +1,44 @@
 {
   "XCH": {
-    "Addy": 252.01
+    "Addy": "xch1zxnqwv585mua5u98dhhgadxft7u9lys78vuluwtmmy273r984t9qycrtp6"
   },
   "XFX": {
-    "Addy": 1.0
+    "Addy": "xfx1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpsppsn"
   },
   "CGN": {
-    "Addy": 0.0035
+    "Addy": "cgn1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqhv4ltn"
   },
   "SPARE": {
-    "Addy": 0.06
+    "Addy": "spare1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq5d8mr7"
   },
   "SIT": {
-    "Addy": 0.45
+    "Addy": "tsit1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpznr54"
   },
   "XGJ": {
-    "Addy": 0.01
+    "Addy": "xgj1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqtwvszp"
   },
   "XFL": {
-    "Addy": 0.18
+    "Addy": "xfl1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq6pfh2u"
   },
   "HDD": {
-    "Addy": 0.09
+    "Addy": "hdd1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqxh7a5l"
   },
   "AVO": {
-    "Addy": 0.01
+    "Addy": "avo1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqmwdx0l"
   },
   "XDG": {
-    "Addy": 0.06
+    "Addy": "xdg1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq78gzm8"
+  },
+  "XKA": {
+    "Addy": "xka1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpyak5r"
+  },
+  "WHEAT": {
+    "Addy": "wheat1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqlnvvlx"
+  },
+  "TAD": {
+    "Addy": "tad1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqlkz8a9"
+  },
+  "APPLE": {
+    "Addy": "apple1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq0ulyqr"
   }
 }
