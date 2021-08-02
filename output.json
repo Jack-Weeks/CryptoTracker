@@ -1,26 +1,26 @@
 {
     "XCH": {
-        "Current Price": 228.28,
-        "Current Balance": "0.54187 XCH",
-        "24hr Price Change %": "-7.38%",
+        "Current Price": 228.05,
+        "Current Balance": "0.54224 XCH",
+        "24hr Price Change %": "-7.01%",
         "Wallet Balance": "0.14048 XCH",
-        "Collateral Balance": "0.40139 XCH",
-        "Estimated Capacity": "60.35 TiB",
+        "Collateral Balance": "0.40176 XCH",
+        "Estimated Capacity": "62.36 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$123.61",
-        "Daily Increase": "0.01407 XCH",
-        "Daily Value Increase": "$3.21",
-        "Daily % Change": "2.67%"
+        "Current Value": "$123.66",
+        "Daily Increase": "0.01453 XCH",
+        "Daily Value Increase": "$3.31",
+        "Daily % Change": "2.75%"
     },
     "XFX": {
         "Current Price": 1.0,
-        "Current Balance": "10.33306 XFX",
+        "Current Balance": "10.33473 XFX",
         "Wallet Balance": "8.4906 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "70.46 TiB",
-        "Pending Balance": "0.09191 XFX",
+        "Estimated Capacity": "70.74 TiB",
+        "Pending Balance": "0.09358 XFX",
         "Current Value": "$10.33",
-        "Daily Increase": "0.20184 XFX",
+        "Daily Increase": "0.20191 XFX",
         "Daily Value Increase": "$0.2",
         "Daily % Change": "1.99%"
     },
@@ -43,7 +43,7 @@
     "AR": {
         "Current Price": 11.65,
         "Current Balance": "0.211 AR",
-        "24hr Price Change %": "-5.2%",
+        "24hr Price Change %": "-5.18%",
         "Hashrate": "0.00",
         "Current Value": "$2.46",
         "Daily Increase": "0.0 AR",
@@ -78,17 +78,17 @@
         "Current Price": 0.08,
         "Current Balance": "36.0 HDD",
         "Current Value": "$2.88",
-        "Daily Increase": "1.90909 HDD",
+        "Daily Increase": "1.81818 HDD",
         "Daily Value Increase": "$0.15",
-        "Daily % Change": "5.6%"
+        "Daily % Change": "5.32%"
     },
     "AVO": {
         "Current Price": 0.02,
         "Current Balance": "24.0 AVO",
         "Current Value": "$0.48",
-        "Daily Increase": "1.90909 AVO",
+        "Daily Increase": "1.81818 AVO",
         "Daily Value Increase": "$0.04",
-        "Daily % Change": "8.64%"
+        "Daily % Change": "8.2%"
     },
     "XDG": {
         "Current Price": 0.035,
@@ -99,8 +99,8 @@
         "Daily % Change": "0.0%"
     },
     "Totals": {
-        "Total": 207.1,
-        "Today's Gain $": -22.939,
+        "Total": 207.06,
+        "Today's Gain $": -22.899,
         "Today's % Gain": -10.0
     }
 }
