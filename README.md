@@ -1,29 +1,29 @@
 ```yaml
 {
     "XCH": {
-        "Current Price": 218.42,
+        "Current Price": 218.51,
         "Current Balance": "0.55051 XCH",
-        "24hr Price Change %": "-4.98%",
+        "24hr Price Change %": "-4.57%",
         "Wallet Balance": "0.14048 XCH",
         "Collateral Balance": "0.41003 XCH",
-        "Estimated Capacity": "72.63 TiB",
+        "Estimated Capacity": "73.23 TiB",
         "Pending Balance": "0.0 XCH",
-        "Current Value": "$120.24",
+        "Current Value": "$120.29",
         "Daily Increase": "0.01593 XCH",
         "Daily Value Increase": "$3.48",
         "Daily % Change": "2.98%"
     },
     "XFX": {
         "Current Price": 1.0,
-        "Current Balance": "10.43895 XFX",
+        "Current Balance": "10.442 XFX",
         "Wallet Balance": "8.4906 XFX",
         "Collateral Balance": "1.75055 XFX",
-        "Estimated Capacity": "64.03 TiB",
-        "Pending Balance": "0.1978 XFX",
+        "Estimated Capacity": "63.13 TiB",
+        "Pending Balance": "0.20085 XFX",
         "Current Value": "$10.44",
-        "Daily Increase": "0.20522 XFX",
+        "Daily Increase": "0.20674 XFX",
         "Daily Value Increase": "$0.21",
-        "Daily % Change": "2.01%"
+        "Daily % Change": "2.02%"
     },
     "CGN": {
         "Current Price": 0.0019,
@@ -42,11 +42,11 @@
         "Daily % Change": "0.0%"
     },
     "AR": {
-        "Current Price": 10.88,
+        "Current Price": 10.86,
         "Current Balance": "0.211 AR",
-        "24hr Price Change %": "-7.71%",
+        "24hr Price Change %": "-6.98%",
         "Hashrate": "0.00",
-        "Current Value": "$2.3",
+        "Current Value": "$2.29",
         "Daily Increase": "0.0 AR",
         "Daily Value Increase": "$0.0",
         "Daily % Change": "0.0%"
@@ -100,8 +100,8 @@
         "Daily % Change": "0.0%"
     },
     "Totals": {
-        "Total": 203.63,
-        "Today's Gain $": -2.4,
+        "Total": 203.68,
+        "Today's Gain $": -1.46,
         "Today's % Gain": -1.0
     }
 }
