@@ -1,44 +1,105 @@
 {
-  "XCH": {
-    "Addy": "xch1zxnqwv585mua5u98dhhgadxft7u9lys78vuluwtmmy273r984t9qycrtp6"
-  },
-  "XFX": {
-    "Addy": "xfx1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpsppsn"
-  },
-  "CGN": {
-    "Addy": "cgn1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqhv4ltn"
-  },
-  "SPARE": {
-    "Addy": "spare1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq5d8mr7"
-  },
-  "SIT": {
-    "Addy": "tsit1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpznr54"
-  },
-  "XGJ": {
-    "Addy": "xgj1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqtwvszp"
-  },
-  "XFL": {
-    "Addy": "xfl1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq6pfh2u"
-  },
-  "HDD": {
-    "Addy": "hdd1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqxh7a5l"
-  },
-  "AVO": {
-    "Addy": "avo1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqmwdx0l"
-  },
-  "XDG": {
-    "Addy": "xdg1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq78gzm8"
-  },
-  "XKA": {
-    "Addy": "xka1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpyak5r"
-  },
-  "WHEAT": {
-    "Addy": "wheat1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqlnvvlx"
-  },
-  "TAD": {
-    "Addy": "tad1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqlkz8a9"
-  },
-  "APPLE": {
-    "Addy": "apple1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq0ulyqr"
-  }
+    "Chia": {
+        "Addy": "xch1zxnqwv585mua5u98dhhgadxft7u9lys78vuluwtmmy273r984t9qycrtp6",
+        "Symbol": "XCH",
+        "Current Price": 231.63,
+        "Current Balance": 0.5929548078568748
+    },
+    "Flax": {
+        "Addy": "xfx1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpsppsn",
+        "Symbol": "XFX",
+        "Current Price": 0.46893,
+        "Current Balance": 20.03333197225611
+    },
+    "Chaingreen": {
+        "Addy": "cgn1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqhv4ltn",
+        "Symbol": "CGN",
+        "Current Price": 0.0012,
+        "Balance": 11000.0,
+        "Current Balance": 11000.0
+    },
+    "Spare": {
+        "Addy": "spare1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq5d8mr7",
+        "Symbol": "SPARE",
+        "Current Price": 0.04854,
+        "Balance": 76.0,
+        "Current Balance": 76.0
+    },
+    "SIT": {
+        "Addy": "tsit1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpznr54",
+        "Current Price": 0.5,
+        "Current Balance": 72.001
+    },
+    "Goji": {
+        "Addy": "xgj1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqtwvszp",
+        "Symbol": "XGJ",
+        "Current Price": 0.03439,
+        "Balance": 20.0,
+        "Current Balance": 20.0
+    },
+    "Flora": {
+        "Addy": "xfl1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq6pfh2u",
+        "Symbol": "XFL",
+        "Current Price": 0.10194,
+        "Balance": 52.0,
+        "Current Balance": 52.0
+    },
+    "Hddcoin": {
+        "Addy": "hdd1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqxh7a5l",
+        "Symbol": "HDD",
+        "Current Price": 0.04049,
+        "Balance": 39.0,
+        "Current Balance": 39.0
+    },
+    "Avocado": {
+        "Addy": "avo1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqmwdx0l",
+        "Symbol": "AVO",
+        "Current Price": 0.03025,
+        "Balance": 30.0,
+        "Current Balance": 30.0
+    },
+    "DogeChia": {
+        "Addy": "xdg1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq78gzm8",
+        "Symbol": "XDG",
+        "Current Price": 0.06514,
+        "Balance": 52.0,
+        "Current Balance": 52.0
+    },
+    "Kale": {
+        "Addy": "xka1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpyak5r",
+        "Symbol": "XKA",
+        "Current Price": 0.04093,
+        "Balance": 34.0,
+        "Current Balance": 34.0
+    },
+    "Wheat": {
+        "Addy": "wheat1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqlnvvlx",
+        "Symbol": "WHEAT"
+    },
+    "Tad": {
+        "Addy": "tad1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqlkz8a9",
+        "Symbol": "TAD",
+        "Current Price": 0.02318,
+        "Balance": 34.0,
+        "Current Balance": 34.0
+    },
+    "Apple": {
+        "Addy": "apple1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq0ulyqr",
+        "Symbol": "APPLE",
+        "Current Price": 0.10047,
+        "Balance": 20.0,
+        "Current Balance": 20.0
+    },
+    "MASS": {
+        "Addy": "ms1qq0zvnsm7vf43mkvh6p8nuhe7f9r2l923tmtr56enrj97tv8sg0lcqv90zht",
+        "Current Balance": 12.00532994,
+        "Current Price": 0.77
+    },
+    "Maize": {
+        "Addy": "xmz1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqaa97j3",
+        "Symbol": "MAIZE",
+        "Current Price": 0.05308,
+        "Balance": 4.0,
+        "Current Balance": 4.0
+    }
 }

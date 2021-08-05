@@ -10,6 +10,7 @@ from analysis import analysis
 from CryptoDash.create import make_html
 from data_cleanup import data_cleanup
 
+
 plotting_path = 'docs/graphing/data/'
 
 options = webdriver.ChromeOptions()
