@@ -28,7 +28,8 @@
     "SIT": {
         "Addy": "tsit1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpznr54",
         "Current Price": 0.5,
-        "Current Balance": 72.001
+        "Current Balance": 72.001,
+        "Symbol" : "SIT"
     },
     "Goji": {
         "Addy": "xgj1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqtwvszp",
@@ -93,7 +94,8 @@
     "MASS": {
         "Addy": "ms1qq0zvnsm7vf43mkvh6p8nuhe7f9r2l923tmtr56enrj97tv8sg0lcqv90zht",
         "Current Balance": 12.00532994,
-        "Current Price": 0.77
+        "Current Price": 0.77,
+        "Symbol" : "MASS"
     },
     "Maize": {
         "Addy": "xmz1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqaa97j3",
