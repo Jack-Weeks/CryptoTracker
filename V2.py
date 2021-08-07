@@ -32,7 +32,17 @@ def get_sit_data():
         token_dict['SIT']['Current Price'] = current_price
     if current_balance != 0:
         token_dict['SIT']['Current Balance'] = current_balance
-#
+
+def get_weave_data():
+    url = 'https://viewblock.io/arweave/address/RzfJuyW51BmAVet9imfhcKBFDMskJcSlNXdPHH9sWHE'
+    request = requests.get(url)
+    soup = BeautifulSoup(request.text, features="lxml")
+    x = soup.find('div', {'class': "ud6aj3-3 gHxoUx"}).findNext().findNext().text
+    balance = float(x.split()[0])
+    symbol = x.split()[1]
+
+    if balance != 0:
+        token_dict['Arweave']['Current Balance'] = balance
 def get_mass_data():
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
@@ -52,11 +62,13 @@ def get_mass_data():
 def get_prices():
     cmc_api_key = 'a98e9495-0d8f-438b-8691-cb08d162cd59'
     cmc = coinmarketcapapi.CoinMarketCapAPI(cmc_api_key)
-    for token in ['Chia', 'MASS']:
+    for token in ['Chia', 'MASS', 'Arweave']:
         if token == 'Chia':
             symbol = 'XCH'
         if token == 'MASS':
             symbol = 'MASS'
+        if token == 'Arweave':
+            symbol = 'AR'
         call = cmc.cryptocurrency_quotes_latest(symbol=symbol, convert='USD').data
         token_dict[token]['Current Price'] = round(call[symbol]['quote']['USD']['price'], 2)
 
@@ -112,6 +124,10 @@ try:
     get_mass_data()
 except:
     print('Unable to Update MASS')
+try:
+    get_weave_data()
+except:
+    print('Unable to get Arweave Data')
 try:
     get_prices()
 except:
