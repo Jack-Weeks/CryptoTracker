@@ -70,7 +70,7 @@ def get_prices():
         if token == 'Arweave':
             symbol = 'AR'
         call = cmc.cryptocurrency_quotes_latest(symbol=symbol, convert='USD').data
-        token_dict[token]['Current Price'] = round(call[symbol]['quote']['USD']['price'], 2)
+        token_dict[token]['Current Price'] = float(round(call[symbol]['quote']['USD']['price'], 2))
 
     ### Update CSV
     ### Update Json
@@ -85,24 +85,28 @@ for card in cards:
 #### Prices ####
     if price != 0:
         try:
-            token_dict[coin]['Current Price'] = price
+            token_dict[coin]['Current Price'] = float(price)
         except:
             print('Cannot update price for', coin)
     ## TRY
     for i in x['harvesters']:
         try:
             if token_dict[coin]["Symbol"] == str((i['data']['crypto'])).upper():
-                if coin in ['Chia', 'Flax', 'SIT']:
-                    balance = i['data']['pendingBalance'] + i['data']['collateralBalance'] + i['data']['walletBalance']
-                    url = f'https://{coin.lower()}.posat.io/address/{token_dict[coin]["Addy"]}'
-                    request = requests.get(url)
-                    soup = BeautifulSoup(request.text, parser='xml')
-                    balance = balance + float(soup.find('div', {'class': 'float-end'}).findNext('strong').text.split()[0])
-                    if balance != 0:
-                        token_dict[coin]['Current Balance'] = balance
+                    if coin in ['Chia', 'Flax', 'SIT']:
+                        balance = i['data']['wallets'][2]['collateralBalance']/1000000000000 + i['data']['wallets'][2]['pendingBalance']/1000000000000\
+                                  + i['data']['balance']
+                        url = f'https://{coin.lower()}.posat.io/address/{token_dict[coin]["Addy"]}'
+                        request = requests.get(url)
+                        soup = BeautifulSoup(request.text, parser='xml')
+                        balance = balance + float(soup.find('div', {'class': 'float-end'}).findNext('strong').text.split()[0])
+                        EC = i['data']['wallets'][2]['capacity']/1000000000000
+                        if EC != 0:
+                            token_dict[coin]['EC'] = EC
+                        if balance != 0:
+                            token_dict[coin]['Current Balance'] = balance
         except:
-            pass
-    if coin not in ['Chia','Flax']:
+            print(coin ,'nope')
+    if coin not in ['Chia', 'Flax']:
         try:
             url = f'https://{coin.lower()}.posat.io/address/{token_dict[coin]["Addy"]}'
             request = requests.get(url)

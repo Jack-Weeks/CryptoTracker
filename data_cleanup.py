@@ -21,3 +21,14 @@ def data_cleanup():
     grouped['Balance'] = grouped2.values
     grouped = grouped.reset_index()
     grouped.to_csv(path + 'Totals_data.csv', index=False)
+
+    df = pd.read_csv(path + 'daily_gains.csv', index_col=False)
+    df['Date'] = pd.to_datetime(df['Date'])
+    grouped = df.groupby(pd.Grouper(key='Date', freq='30min')).mean()
+    grouped2 = grouped['Balance'].interpolate(method='linear')
+    grouped['Balance'] = grouped2.values
+    grouped = grouped.reset_index()
+    grouped.to_csv(path + 'daily_gains.csv', index=False)
+
+
+data_cleanup()

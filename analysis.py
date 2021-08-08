@@ -6,17 +6,17 @@ def analysis():
     todays_gain = 0
     todays_gain_pct = 0
     plotting_path = 'docs/graphing/data/'
-    with open('output.json', "r") as file:
-        data = json.load(file)
-    for token in data.keys():
+    with open(r"D:\Programming\pythonProject\addy.json", "r") as file:
+        token_dict = json.load(file)
+    for token in token_dict.keys():
         try:
             # USD_GBP = yf.download('GBPUSD=X', period='1d', interval='1h')
             # exchange = USD_GBP['Close'][-1]
-            df = pd.read_csv(plotting_path + token + '_data.csv')
+            df = pd.read_csv(plotting_path + token_dict[token]['Symbol'] + '_data.csv')
             df['Date'] = pd.to_datetime(df['Date'])
             df['% Change_in_Balance'] = (df.Balance.pct_change(periods=12)) * 100
-            df['Balance_Diff'] = df.Balance.diff()
-            df['Value_Dollars'] = df['Balance'] * data[token]['Current Price']
+            df['Balance_Diff'] = df['Balance'].diff()
+            df['Value_Dollars'] = df['Balance'] * float(token_dict[token]['Current Price'])
             # df['Value_Pounds'] = df['Value_Dollars'] / exchange
             df['Change_in_Value'] = df['Balance_Diff'] * df['Price']
 
@@ -43,20 +43,19 @@ def analysis():
             if math.isinf(diff):
                 diff = 100
             average_daily_difference = round(y.mean(), 5)
-            average_daily_dollar_gainz = round(average_daily_difference * data[token]['Current Price'], 2)
+            average_daily_dollar_gainz = round(average_daily_difference * token_dict[token]['Current Price'], 2)
 
             average_weekly_difference = round(z.mean(), 5)
-            average_weekly_dollar_gainz = round(average_weekly_difference * data[token]['Current Price'], 2)
+            average_weekly_dollar_gainz = round(average_weekly_difference * token_dict[token]['Current Price'], 2)
 
             average_monthly_difference = round(p.mean(), 5)
-            average_monthly_dollar_gainz = round(average_monthly_difference * data[token]['Current Price'], 2)
+            average_monthly_dollar_gainz = round(average_monthly_difference * token_dict[token]['Current Price'], 2)
 
             # data[token]['Average Hourly Increase'] = average_hourly_difference
             # data[token]['Average Hourly Value Increase'] = average_hourly_dollar_gainz
-            data[token]['Current Value'] = '$' + str(round(df.iloc[-1:]['Value_Dollars'].values[0], 2))
-            data[token]['Daily Increase'] = str(round(hourly_diff, 5)) + ' ' + token
-            data[token]['Daily Value Increase'] = '$' + str(round(hourly_diff * data[token]['Current Price'], 2))
-            data[token]['Daily % Change'] = str(round(hourly_diff_pct, 2)) + '%'
+            token_dict[token]['Daily Increase'] = str(round(hourly_diff, 5)) + ' ' + token
+            token_dict[token]['Daily Value Increase'] = '$' + str(round(hourly_diff * token_dict[token]['Current Price'], 2))
+            token_dict[token]['Daily % Change'] = str(round(hourly_diff_pct, 2)) + '%'
 
             # data[token]['Average_Weekly_Increase'] = average_weekly_difference
             # data[token]['Average_Weekly_Value_Increase'] = average_weekly_dollar_gainz
@@ -64,23 +63,22 @@ def analysis():
             # data[token]['Average_Monthly_Increase'] = average_monthly_difference
             # data[token]['Average_Monthly_Value_Increase'] = average_monthly_dollar_gainz
             df['Date'] = df['Date'].dt.strftime('%d/%m')
-            df.to_csv(plotting_path + token + '_analysis.csv', index=False)
-            df.to_excel(token + '_analysis.xls', index=False)
+            df.to_csv(plotting_path + token_dict[token]['Symbol'] + '_analysis.csv', index=False)
         except:
-            try:
-                df = pd.read_csv(plotting_path + token + '_data.csv')
-                df['Date'] = pd.to_datetime(df['Date'])
-                y = df.groupby(pd.Grouper(key='Date', freq='30min'))['Balance'].mean().to_frame()
-                df['Date'] = df['Date'].dt.strftime('%d/%m')
-                todays_gain_pct = round(y['Balance'].pct_change(periods = 48).values[-1], 2)*100
-                todays_gain = round(y.iloc[-49:]['Balance'].diff(periods=48).values[-1], 3)
-                new_df = y['Balance'].diff(periods=48).round(2)
-                new_df = new_df.reset_index()
-                new_df['Date'].dt.strftime('%d/%m')
-                new_df.to_csv(plotting_path + 'daily_gains.csv', index=False)
+            print(token)
 
-            except:
-                print('ya dingus')
+
+    df = pd.read_csv(plotting_path + 'Totals' + '_data.csv')
+    df['Date'] = pd.to_datetime(df['Date'])
+    y = df.groupby(pd.Grouper(key='Date', freq='30min'))['Balance'].mean().to_frame()
+    df['Date'] = df['Date'].dt.strftime('%d/%m')
+    todays_gain_pct = round(y['Balance'].pct_change(periods = 48).values[-1], 2)*100
+    todays_gain = round(y.iloc[-49:]['Balance'].diff(periods=48).values[-1], 3)
+    new_df = y['Balance'].diff(periods=48).round(2)
+    new_df = new_df.reset_index()
+    new_df['Date'].dt.strftime('%d/%m')
+    new_df.to_csv(plotting_path + 'daily_gains.csv', index=False)
+
 
 
 
@@ -90,20 +88,20 @@ def analysis():
 
 
     total = 0
-    for i in data.keys():
+    for i in token_dict.keys():
         try:
-            price = data[i]['Current Price']
-            quantity = float(data[i]['Current Balance'][:-len(i)].strip())
+            price = token_dict[i]['Current Price']
+            quantity = float(token_dict[i]['Current Balance'])
             total += price * quantity
         except:
             pass
-    data['Totals'] = {'Total': round(total, 2),
+    token_dict['Total'] = {'Total': round(total, 2),
                       "Today's Gain $": todays_gain,
                       "Today's % Gain": todays_gain_pct}
     print(total, todays_gain)
-    with open("output.json", "w") as outfile:
-        json.dump(data, outfile, indent=4)
-    return data
+    with open(r"D:\Programming\pythonProject\addy.json", "w") as outfile:
+        json.dump(token_dict, outfile, indent=4)
+    return token_dict
 
 
-
+analysis()
