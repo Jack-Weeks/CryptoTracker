@@ -108,4 +108,3 @@ def analysis():
     return token_dict
 
 
-analysis()

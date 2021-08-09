@@ -2,24 +2,24 @@
     "Chia": {
         "Addy": "xch1zxnqwv585mua5u98dhhgadxft7u9lys78vuluwtmmy273r984t9qycrtp6",
         "Symbol": "XCH",
-        "Current Price": 258.52,
-        "Current Balance": 0.632881815246,
-        "Daily Increase": "0.04026 Chia",
-        "Daily Value Increase": "$10.41",
-        "Daily % Change": "6.79%",
-        "EC": 57.219420195,
-        "Current Value": 163.6126068773959
+        "Current Price": 261.55,
+        "Current Balance": 0.633544492165,
+        "Daily Increase": "0.04059 Chia",
+        "Daily Value Increase": "$10.62",
+        "Daily % Change": "6.85%",
+        "EC": 62.94479058,
+        "Current Value": 165.70356192575576
     },
     "Flax": {
         "Addy": "xfx1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpsppsn",
         "Symbol": "XFX",
-        "Current Price": 0.50269,
-        "Current Balance": 15.06569362111,
-        "Daily Increase": "-8.4621 Flax",
-        "Daily Value Increase": "$-4.25",
-        "Daily % Change": "-42.24%",
-        "EC": 55.69951149,
-        "Current Value": 7.573373526395786
+        "Current Price": 0.18267,
+        "Current Balance": 15.075028481746,
+        "Daily Increase": "-4.9583 Flax",
+        "Daily Value Increase": "$-0.91",
+        "Daily % Change": "-24.75%",
+        "EC": 58.21364619,
+        "Current Value": 2.7537554527605415
     },
     "Chaingreen": {
         "Addy": "cgn1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqhv4ltn",
@@ -35,13 +35,13 @@
     "Spare": {
         "Addy": "spare1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq5d8mr7",
         "Symbol": "SPARE",
-        "Current Price": 0.04442,
+        "Current Price": 0.04491,
         "Balance": 76.0,
         "Current Balance": 92.0,
         "Daily Increase": "4.0 Spare",
         "Daily Value Increase": "$0.18",
         "Daily % Change": "4.55%",
-        "Current Value": 4.08664
+        "Current Value": 4.13172
     },
     "SIT": {
         "Addy": "tsit1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpznr54",
@@ -56,68 +56,68 @@
     "Goji": {
         "Addy": "xgj1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqtwvszp",
         "Symbol": "XGJ",
-        "Current Price": 0.0591,
+        "Current Price": 0.05974,
         "Balance": 20.0,
-        "Current Balance": 22.0,
-        "Daily Increase": "2.0 Goji",
-        "Daily Value Increase": "$0.12",
-        "Daily % Change": "10.0%",
-        "Current Value": 1.3002
+        "Current Balance": 24.0,
+        "Daily Increase": "4.0 Goji",
+        "Daily Value Increase": "$0.24",
+        "Daily % Change": "20.0%",
+        "Current Value": 1.43376
     },
     "Flora": {
         "Addy": "xfl1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq6pfh2u",
         "Symbol": "XFL",
-        "Current Price": 0.06104,
+        "Current Price": 0.0617,
         "Balance": 52.0,
         "Current Balance": 72.0,
         "Daily Increase": "0.0 Flora",
         "Daily Value Increase": "$0.0",
         "Daily % Change": "0.0%",
-        "Current Value": 4.39488
+        "Current Value": 4.4424
     },
     "Hddcoin": {
         "Addy": "hdd1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqxh7a5l",
         "Symbol": "HDD",
-        "Current Price": 0.04145,
+        "Current Price": 0.0419,
         "Balance": 39.0,
         "Current Balance": 45.0,
         "Daily Increase": "4.0 Hddcoin",
         "Daily Value Increase": "$0.17",
         "Daily % Change": "9.76%",
-        "Current Value": 1.86525
+        "Current Value": 1.8855
     },
     "Avocado": {
         "Addy": "avo1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqmwdx0l",
         "Symbol": "AVO",
-        "Current Price": 0.05588,
+        "Current Price": 0.05649,
         "Balance": 30.0,
         "Current Balance": 40.0,
         "Daily Increase": "0.0 Avocado",
         "Daily Value Increase": "$0.0",
         "Daily % Change": "0.0%",
-        "Current Value": 2.2352
+        "Current Value": 2.2596
     },
     "DogeChia": {
         "Addy": "xdg1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq78gzm8",
         "Symbol": "XDG",
-        "Current Price": 0.06085,
+        "Current Price": 0.06151,
         "Balance": 52.0,
         "Current Balance": 56.0,
         "Daily Increase": "0.0 DogeChia",
         "Daily Value Increase": "$0.0",
         "Daily % Change": "0.0%",
-        "Current Value": 3.4076
+        "Current Value": 3.44456
     },
     "Kale": {
         "Addy": "xka1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqpyak5r",
         "Symbol": "XKA",
-        "Current Price": 0.04524,
+        "Current Price": 0.04574,
         "Balance": 34.0,
         "Current Balance": 36.0,
         "Daily Increase": "0.0 Kale",
         "Daily Value Increase": "$0.0",
         "Daily % Change": "0.0%",
-        "Current Value": 1.62864
+        "Current Value": 1.64664
     },
     "Wheat": {
         "Addy": "wheat1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqlnvvlx",
@@ -125,77 +125,77 @@
         "Current Price": 0,
         "Balance": 0,
         "Current Balance": 0,
-        "Daily Increase": 0,
-        "Daily Value Increase": 0,
-        "Daily % Change": 0,
+        "Daily Increase": "0 Wheat",
+        "Daily Value Increase": "$0",
+        "Daily % Change": "0.0%",
         "Current Value": 0.0
     },
     "Tad": {
         "Addy": "tad1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqlkz8a9",
         "Symbol": "TAD",
-        "Current Price": 0.01596,
+        "Current Price": 0.01614,
         "Balance": 34.0,
         "Current Balance": 32.0,
         "Daily Increase": "4.0 Tad",
         "Daily Value Increase": "$0.06",
         "Daily % Change": "14.29%",
-        "Current Value": 0.51072
+        "Current Value": 0.51648
     },
     "Apple": {
         "Addy": "apple1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq0ulyqr",
         "Symbol": "APPLE",
-        "Current Price": 0.05305,
+        "Current Price": 0.05363,
         "Balance": 20.0,
         "Current Balance": 28.0,
         "Daily Increase": "8.0 Apple",
-        "Daily Value Increase": "$0.42",
+        "Daily Value Increase": "$0.43",
         "Daily % Change": "40.0%",
-        "Current Value": 1.4854
+        "Current Value": 1.5016399999999999
     },
     "MASS": {
         "Addy": "ms1qq0zvnsm7vf43mkvh6p8nuhe7f9r2l923tmtr56enrj97tv8sg0lcqv90zht",
         "Current Balance": 53.10098485,
-        "Current Price": 0.95,
+        "Current Price": 0.94,
         "Symbol": "MASS",
         "Daily Increase": "9.28107 MASS",
-        "Daily Value Increase": "$8.82",
+        "Daily Value Increase": "$8.72",
         "Daily % Change": "21.18%",
-        "Current Value": 50.4459356075
+        "Current Value": 49.914925759
     },
     "Maize": {
         "Addy": "xmz1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkqaa97j3",
         "Symbol": "XMZ",
-        "Current Price": 0.09363,
+        "Current Price": 0.09466,
         "Balance": 4.0,
         "Current Balance": 10.0,
         "Daily Increase": "0 Maize",
         "Daily Value Increase": "$0.0",
         "Daily % Change": "0.0%",
-        "Current Value": 0.9363
+        "Current Value": 0.9465999999999999
     },
     "Arweave": {
         "Addy": "RzfJuyW51BmAVet9imfhcKBFDMskJcSlNXdPHH9sWHE",
         "Symbol": "AR",
         "Current Balance": 0.12603747,
-        "Current Price": 15.37,
-        "Daily Increase": "0.08496 Arweave",
-        "Daily Value Increase": "$1.31",
-        "Daily % Change": "67.41%",
-        "Current Value": 1.9371959139000001
+        "Current Price": 15.31,
+        "Daily Increase": "0.0 Arweave",
+        "Daily Value Increase": "$0.0",
+        "Daily % Change": "0.0%",
+        "Current Value": 1.9296336657000002
     },
     "Melati": {
         "Addy": "xmx1jsrene5l6kvmkazpgcynz9x38sfgk2w965re9f6g0rla3ahyptkq2tv5py",
         "Symbol": "XMX",
-        "Current Price": 0.04013,
+        "Current Price": 0.04057,
         "Current Balance": 6.0,
         "Daily Increase": "0 Melati",
         "Daily Value Increase": "$0.0",
         "Daily % Change": "0.0%",
-        "Current Value": 0.24078
+        "Current Value": 0.24342000000000003
     },
     "Total": {
-        "Total": 285.19,
-        "Today's Gain $": 15.23,
+        "Total": 282.28,
+        "Today's Gain $": 14.697,
         "Today's % Gain": 6.0
     }
 }
