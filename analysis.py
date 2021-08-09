@@ -1,5 +1,6 @@
 def analysis():
     import pandas as pd
+    from CryptoDash.create import make_html
     import json
     import yfinance as yf
     import math
@@ -70,10 +71,10 @@ def analysis():
 
     df = pd.read_csv(plotting_path + 'Totals' + '_data.csv')
     df['Date'] = pd.to_datetime(df['Date'])
-    y = df.groupby(pd.Grouper(key='Date', freq='30min'))['Balance'].mean().to_frame()
+    y = df.groupby(pd.Grouper(key='Date', freq='1 H'))['Balance'].mean().to_frame()
     df['Date'] = df['Date'].dt.strftime('%d/%m')
-    todays_gain_pct = round(y['Balance'].pct_change(periods = 48).values[-1], 2)*100
-    todays_gain = round(y.iloc[-49:]['Balance'].diff(periods=48).values[-1], 3)
+    todays_gain_pct = round(y['Balance'].pct_change(periods = 24).values[-1], 2)*100
+    todays_gain = round(y.iloc[-25:]['Balance'].diff(periods=24).values[-1], 3)
     new_df = y['Balance'].diff(periods=48).round(2)
     new_df = new_df.reset_index()
     new_df['Date'].dt.strftime('%d/%m')
@@ -93,6 +94,7 @@ def analysis():
             price = token_dict[i]['Current Price']
             quantity = float(token_dict[i]['Current Balance'])
             total += price * quantity
+            token_dict[i]['Current Value'] = price * quantity
         except:
             pass
     token_dict['Total'] = {'Total': round(total, 2),
@@ -101,6 +103,8 @@ def analysis():
     print(total, todays_gain)
     with open(r"D:\Programming\pythonProject\addy.json", "w") as outfile:
         json.dump(token_dict, outfile, indent=4)
+    with open('addy.json', 'r') as outy:
+        make_html(json.load(outy), 'docs/index.html')
     return token_dict
 
 

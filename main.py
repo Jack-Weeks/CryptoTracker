@@ -306,7 +306,7 @@ def main():
         f.close()
     with open("README.md", "a") as outfile:
         json.dump(data, outfile, indent=4)
-    with open('output.json', 'r') as outy:
+    with open('addy.json', 'r') as outy:
         make_html(json.load(outy), 'docs/index.html')
 
     return data

@@ -6,7 +6,7 @@ small_tile_col = '#1F395E'
 
 def get_color(value):
     print(value, type(value))
-    if type(value) == float:
+    if (type(value) == float) or (type(value) == int):
         print(str(value))
         if str(value)[0] == '-':
             return '#B93535'
@@ -74,7 +74,7 @@ def make_html(data, path):
                     <div class="row">
                       <div class="col-sm-6 text-left">
                         <h6 class="card-subtitle text-muted" style="padding:2%">Total gains</h6>
-                        <h2 class="card-title" style="font-size:32px"><strong>${data['Totals']['Total']} <span style='color:{get_color(data['Totals']["Today's Gain $"])};font-size:22px'>${data['Totals']["Today's Gain $"]}</span></strong></h2>
+                        <h2 class="card-title" style="font-size:32px"><strong>${data['Total']['Total']} <span style='color:{get_color(data['Total']["Today's Gain $"])};font-size:22px'>${data['Total']["Today's Gain $"]}</span></strong></h2>
                       </div>
                     </div>
                   </div>
@@ -94,7 +94,7 @@ def make_html(data, path):
                     <div class="row">
                       <div class="col-sm-6 text-left">
                         <h6 class="card-subtitle text-muted" style="padding:2%">Daily gains</h6>
-                        <h2 class="card-title" style="font-size:32px"><strong>${data['Totals']["Today's Gain $"]}</strong></h2>
+                        <h2 class="card-title" style="font-size:32px"><strong>${data['Total']["Today's Gain $"]}</strong></h2>
                       </div>
                     </div>
                   </div>
@@ -120,7 +120,7 @@ def make_html(data, path):
                                       <div class="row">
         """)
         for item in data.keys():
-            if item != 'Totals':
+            if item != 'Total':
                 openfile.write(f"""
                                             <div class="col-xl-2 col-lg-3 col-md-4 col-6">
                                                               <div class="card" style="background-color:{small_tile_col};height:10rem">
@@ -128,7 +128,7 @@ def make_html(data, path):
                                                           <h6 class="card-subtitle" style="font-size: 22px">{item}</h6>
                                                       </div>
                                                       <div class="card-body" style="text-align: right">
-                                                          <h4 class="card-title" style="font-size:24px"><strong>{data[item]['Current Balance'].split()[0]} <span style="color:{get_color(data[item]['Daily % Change'])};font-size:18px;font-weight:600">{data[item]['Daily % Change']}</span></strong></h4>
+                                                          <h4 class="card-title" style="font-size:24px"><strong>{data[item]['Current Balance']} <span style="color:{get_color(data[item]['Daily % Change'])};font-size:18px;font-weight:600">{data[item]['Daily % Change']}</span></strong></h4>
                                                           <h6 class="card-subtitle mb-2 text-muted" style="font-size: 16px">{data[item]['Current Value']}</h6>
                                                       </div>
                                                   </div>
@@ -146,7 +146,7 @@ def make_html(data, path):
 
 
         for item in data.keys():
-            if item != 'Totals':
+            if item != 'Total':
                 openfile.write(f"""
                     <div class="card" style="padding: 3%;background-color: {big_tile_col};">
                               <div class="row">
